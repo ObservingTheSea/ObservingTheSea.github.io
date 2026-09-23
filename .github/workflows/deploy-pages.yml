@@ -26,6 +26,13 @@ jobs:
         with:
           node-version: 20
 
+      - name: Fetch content data (passages / stories / prebuilt data)
+        run: |
+          curl -L --retry 3 -o /tmp/data-source.zip "https://github.com/wuwangzhang1216/ChinaTextbookStudyFree/releases/download/v1.1.0-assets/data-source.zip"
+          unzip -o -q /tmp/data-source.zip -d data
+          curl -L --retry 3 -o /tmp/data.zip "https://github.com/wuwangzhang1216/ChinaTextbookStudyFree/releases/download/v1.1.0-assets/data.zip"
+          unzip -o -q /tmp/data.zip -d apps/web/public/data
+
       - name: Install dependencies
         run: npm install
 
