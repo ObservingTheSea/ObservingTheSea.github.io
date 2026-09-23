@@ -29,9 +29,17 @@ jobs:
       - name: Fetch content data (passages / stories / prebuilt data)
         run: |
           curl -L --retry 3 -o /tmp/data-source.zip "https://github.com/wuwangzhang1216/ChinaTextbookStudyFree/releases/download/v1.1.0-assets/data-source.zip"
-          unzip -o -q /tmp/data-source.zip -d data
           curl -L --retry 3 -o /tmp/data.zip "https://github.com/wuwangzhang1216/ChinaTextbookStudyFree/releases/download/v1.1.0-assets/data.zip"
-          unzip -o -q /tmp/data.zip -d apps/web/public/data
+          python3 - <<'PY'
+          import zipfile
+          jobs = [("/tmp/data-source.zip", "data"), ("/tmp/data.zip", "apps/web/public/data")]
+          for src, dst in jobs:
+              with zipfile.ZipFile(src) as z:
+                  for info in z.infolist():
+                      info.filename = info.filename.replace("\\", "/")
+                      z.extract(info, dst)
+              print("extracted:", src, "->", dst)
+          PY
 
       - name: Install dependencies
         run: npm install
