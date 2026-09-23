@@ -26,19 +26,25 @@ jobs:
         with:
           node-version: 20
 
-      - name: Fetch content data (passages / stories / prebuilt data)
+      - name: Fetch content data (passages / stories / prebuilt data / audio)
         run: |
           curl -L --retry 3 -o /tmp/data-source.zip "https://github.com/wuwangzhang1216/ChinaTextbookStudyFree/releases/download/v1.1.0-assets/data-source.zip"
           curl -L --retry 3 -o /tmp/data.zip "https://github.com/wuwangzhang1216/ChinaTextbookStudyFree/releases/download/v1.1.0-assets/data.zip"
+          curl -L --retry 3 -o /tmp/audio.tar.gz "https://github.com/wuwangzhang1216/ChinaTextbookStudyFree/releases/download/v1.1.0-assets/audio.tar.gz"
           python3 - <<'PY'
-          import zipfile
-          jobs = [("/tmp/data-source.zip", "data"), ("/tmp/data.zip", "apps/web/public/data")]
-          for src, dst in jobs:
+          import zipfile, tarfile
+          for src, dst in [("/tmp/data-source.zip", "data"), ("/tmp/data.zip", "apps/web/public/data")]:
               with zipfile.ZipFile(src) as z:
                   for info in z.infolist():
                       info.filename = info.filename.replace("\\", "/")
                       z.extract(info, dst)
               print("extracted:", src, "->", dst)
+          with tarfile.open("/tmp/audio.tar.gz") as t:
+              try:
+                  t.extractall("apps/web/public", filter="data")
+              except TypeError:
+                  t.extractall("apps/web/public")
+          print("extracted: audio -> apps/web/public/audio")
           PY
 
       - name: Install dependencies
@@ -46,6 +52,36 @@ jobs:
 
       - name: Build static site
         run: npm run build
+
+      - name: Prune unused audio (keep only referenced)
+        run: |
+          python3 - <<'PY'
+          import os, re
+          out = "apps/web/out"
+          audio_re = re.compile(r'/audio/([0-9a-f]{2})/([0-9a-f]+\.opus)')
+          refs = set()
+          for root, dirs, files in os.walk(os.path.join(out, "data")):
+              for f in files:
+                  if not f.endswith(".json"):
+                      continue
+                  t = open(os.path.join(root, f), encoding="utf-8", errors="ignore").read()
+                  for a, b in audio_re.findall(t):
+                      refs.add(a + "/" + b)
+          print("referenced audio files:", len(refs))
+          audio_root = os.path.join(out, "audio")
+          removed = kept = 0
+          for b in os.listdir(audio_root):
+              bd = os.path.join(audio_root, b)
+              if not os.path.isdir(bd):
+                  continue
+              for fn in os.listdir(bd):
+                  if (b + "/" + fn) in refs:
+                      kept += 1
+                  else:
+                      os.remove(os.path.join(bd, fn))
+                      removed += 1
+          print(f"kept: {kept}, removed: {removed}")
+          PY
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
