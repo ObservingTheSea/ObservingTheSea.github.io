@@ -6,6 +6,16 @@ collect_texts.py — 扫描 output/ 下所有 quizzes，抽取需要 TTS 的文�
 每条文本会被分配一个 profile（speaker / instruction / language），
 profile 取自首次出现该文本的 (subject, grade) 组合。
 
+用法:
+  python scripts/tts/collect_texts.py
+  python scripts/tts/collect_texts.py --list
+  python scripts/tts/collect_texts.py --book english-g3up-2022
+  python scripts/tts/collect_texts.py --book g1up,chinese-g1up
+  python scripts/tts/collect_texts.py --book 三年级上册-2022
+
+不传 --book 时收集全部教材并覆盖 manifest.json。
+传入 --book 时 manifest 只含这些教材，同样覆盖该文件。
+
 输出:
   scripts/tts/manifest.json
   {
@@ -22,6 +32,7 @@ profile 取自首次出现该文本的 (subject, grade) 组合。
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import re
@@ -30,10 +41,16 @@ from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts" / "quiz"))
+from subjects import parse_book_id  # noqa: E402
+
 OUTPUT_DIR = ROOT / "output"
 PASSAGES_DIR = ROOT / "data" / "passages"
 STORIES_DIR = ROOT / "data" / "stories"
 MANIFEST_PATH = Path(__file__).resolve().parent / "manifest.json"
+
+# 题库文件是「教材大纲 stem + _unitN.json」
+UNIT_SUFFIX_RE = re.compile(r"_unit\d+$")
 
 # ---------------------------------------------------------------------------
 # 文件名 → 年级
@@ -186,15 +203,196 @@ def is_speakable(text: str) -> bool:
     return True
 
 
+def compact(text: str) -> str:
+    """去掉空白，让「教科书 · 数学」和「教科书·数学」能对上。"""
+    return re.sub(r"\s+", "", text)
+
+
+def quiz_textbook_stem(filename: str) -> str:
+    return UNIT_SUFFIX_RE.sub("", Path(filename).stem)
+
+
+def book_id_for(subject: str, stem: str) -> str | None:
+    parsed = parse_book_id(stem, subject)
+    return parsed[2] if parsed else None
+
+
+class BookFilter:
+    """--book 的匹配器。tokens 为空表示不过滤。
+
+    一个 token 命中教材，当且仅当：
+    - 与 bookId 完全相同（g1up、english-g3up-2022）
+    - 或出现在教材显示名里（三年级上册-2022、数学一年级上册）
+    显示名匹配会忽略空白。bookId 不用子串，避免 g3up 带上 english-g3up。
+    """
+
+    def __init__(self, tokens: list[str]):
+        self.tokens = tokens
+        self.hits: dict[str, set[str]] = {t: set() for t in tokens}
+
+    @property
+    def active(self) -> bool:
+        return bool(self.tokens)
+
+    def allow(self, book_id: str | None, label: str | None = None) -> bool:
+        if not self.active:
+            return True
+        label_c = compact(label) if label else ""
+        matched = False
+        for token in self.tokens:
+            token_c = compact(token)
+            hit = (book_id is not None and book_id == token) or (
+                bool(label_c) and bool(token_c) and token_c in label_c
+            )
+            if not hit:
+                continue
+            self.hits[token].add(book_id or label or token)
+            matched = True
+        return matched
+
+    def unmatched(self) -> list[str]:
+        return [t for t, ids in self.hits.items() if not ids]
+
+
+def parse_book_args(raw: list[str]) -> list[str]:
+    tokens: list[str] = []
+    seen: set[str] = set()
+    for item in raw:
+        for part in item.split(","):
+            part = part.strip()
+            if part and part not in seen:
+                seen.add(part)
+                tokens.append(part)
+    return tokens
+
+
+def discover_books() -> dict[str, dict]:
+    """bookId -> {subject, label}。题库优先，课文/故事补没有题库的书。"""
+    books: dict[str, dict] = {}
+
+    if OUTPUT_DIR.exists():
+        for subject_dir in sorted(p for p in OUTPUT_DIR.iterdir() if p.is_dir()):
+            quiz_dir = subject_dir / "quizzes"
+            if not quiz_dir.exists():
+                continue
+            for fp in sorted(quiz_dir.glob("*.json")):
+                stem = quiz_textbook_stem(fp.name)
+                book_id = book_id_for(subject_dir.name, stem)
+                if not book_id or book_id in books:
+                    continue
+                books[book_id] = {"subject": subject_dir.name, "label": stem}
+
+    for root in (PASSAGES_DIR, STORIES_DIR):
+        if not root.exists():
+            continue
+        for fp in sorted(root.rglob("*.json")):
+            if fp.name.endswith(".draft.json") or ".cache" in fp.parts:
+                continue
+            try:
+                doc = json.loads(fp.read_text(encoding="utf-8"))
+            except Exception:
+                continue
+            book_id = doc.get("bookId") or fp.stem
+            if book_id in books:
+                continue
+            books[book_id] = {
+                "subject": doc.get("subject") or fp.parent.name,
+                "label": doc.get("textbook") or book_id,
+            }
+    return books
+
+
+def list_books(tokens: list[str]) -> None:
+    books = discover_books()
+    book_filter = BookFilter(tokens)
+    rows = []
+    for book_id, info in books.items():
+        if not book_filter.allow(book_id, info["label"]):
+            continue
+        rows.append((info["subject"], book_id, info["label"]))
+
+    missing = book_filter.unmatched()
+    if missing:
+        print("❌ 没有匹配到这些教材:", ", ".join(missing), file=sys.stderr)
+        print("   用 --list 查看全部 bookId", file=sys.stderr)
+        sys.exit(1)
+
+    if not rows:
+        print("（没有发现教材）")
+        return
+
+    print(f"{'bookId':<24} {'学科':<10} 教材")
+    for subject, book_id, label in sorted(rows):
+        print(f"{book_id:<24} {subject:<10} {label}")
+    print(f"\n共 {len(rows)} 本")
+
+
+def build_parser() -> argparse.ArgumentParser:
+    p = argparse.ArgumentParser(
+        description="抽取需要 TTS 的文本，可按教材过滤后写入 manifest.json"
+    )
+    p.add_argument(
+        "--book",
+        action="append",
+        default=[],
+        metavar="BOOK",
+        help=(
+            "只收集指定教材，可重复，也可用逗号分隔。"
+            "可填 bookId（english-g3up-2022、g1up），"
+            "或教材名的一部分（三年级上册-2022、数学一年级上册）。"
+            "不传则收集全部。"
+        ),
+    )
+    p.add_argument(
+        "--list",
+        action="store_true",
+        help="列出教材的 bookId 后退出，不写 manifest",
+    )
+    return p
+
+
 # ---------------------------------------------------------------------------
 # 主流程
 # ---------------------------------------------------------------------------
-def collect():
+def collect(tokens: list[str] | None = None):
+    book_filter = BookFilter(tokens or [])
     if not OUTPUT_DIR.exists():
         sys.exit(f"❌ 找不到 output 目录: {OUTPUT_DIR}")
 
     seen: dict[str, dict] = {}
     stats = {"per_subject": {}, "per_field": {}}
+    selected: set[str] = set()
+    labels: dict[str, str] = {}
+
+    def push(text: str, field: str, subject: str, grade: int):
+        text = normalize(text or "")
+        if not is_speakable(text):
+            return
+        h = text_hash(text)
+        if h in seen:
+            return
+        lang = detect_language(text, subject)
+        speaker, instruction = pick_profile(subject, grade, lang)
+        seen[h] = {
+            "hash": h,
+            "text": text,
+            "audio_rel": f"{h[:2]}/{h}.opus",
+            "language": lang,
+            "speaker": speaker,
+            "instruction": instruction,
+            "field": field,
+            "subject": subject,
+            "grade": grade,
+        }
+        stats["per_subject"][subject] = stats["per_subject"].get(subject, 0) + 1
+        stats["per_field"][field] = stats["per_field"].get(field, 0) + 1
+
+    def note_book(book_id: str | None, label: str = ""):
+        if not book_id:
+            return
+        selected.add(book_id)
+        if label and book_id not in labels:
+            labels[book_id] = label
 
     subjects = sorted(p.name for p in OUTPUT_DIR.iterdir() if p.is_dir())
 
@@ -205,6 +403,11 @@ def collect():
 
         files = sorted(quiz_dir.glob("*.json"))
         for fp in files:
+            stem = quiz_textbook_stem(fp.name)
+            book_id = book_id_for(subject, stem)
+            if not book_filter.allow(book_id, stem):
+                continue
+            note_book(book_id, stem)
             grade = parse_grade(fp.name) or 3  # 兜底
             try:
                 data = json.loads(fp.read_text(encoding="utf-8"))
@@ -212,49 +415,26 @@ def collect():
                 print(f"⚠️  解析失败 {fp.name}: {e}", file=sys.stderr)
                 continue
 
-            def push(text: str, field: str):
-                text = normalize(text or "")
-                if not is_speakable(text):
-                    return
-                h = text_hash(text)
-                if h in seen:
-                    return
-                lang = detect_language(text, subject)
-                speaker, instruction = pick_profile(subject, grade, lang)
-                seen[h] = {
-                    "hash": h,
-                    "text": text,
-                    "audio_rel": f"{h[:2]}/{h}.opus",
-                    "language": lang,
-                    "speaker": speaker,
-                    "instruction": instruction,
-                    "field": field,
-                    "subject": subject,
-                    "grade": grade,
-                }
-                stats["per_subject"][subject] = stats["per_subject"].get(subject, 0) + 1
-                stats["per_field"][field] = stats["per_field"].get(field, 0) + 1
-
             # 题库题目
             for section in ("unit_test", "exam"):
                 qs = (data.get(section) or {}).get("questions") or []
                 for q in qs:
-                    push(q.get("question", ""), "question")
+                    push(q.get("question", ""), "question", subject, grade)
                     for opt in q.get("options") or []:
                         # 去掉 "A. " "A、" 前缀，避免每个选项都被念成 "A 点"
                         clean = re.sub(r"^[A-Da-d][.、]\s*", "", opt)
-                        push(clean, "option")
+                        push(clean, "option", subject, grade)
                     # 答案解析也读出来（用户翻看错题时可听）
-                    push(q.get("explanation", ""), "explanation")
+                    push(q.get("explanation", ""), "explanation", subject, grade)
 
             # 知识点摘要
             for ks in data.get("knowledge_summary") or []:
-                push(ks.get("point", ""), "kp_point")
-                push(ks.get("core_concept", ""), "kp_core")
-                push(ks.get("key_formula", ""), "kp_formula")
-                push(ks.get("tips", ""), "kp_tips")
+                push(ks.get("point", ""), "kp_point", subject, grade)
+                push(ks.get("core_concept", ""), "kp_core", subject, grade)
+                push(ks.get("key_formula", ""), "kp_formula", subject, grade)
+                push(ks.get("tips", ""), "kp_tips", subject, grade)
                 for cm in ks.get("common_mistakes") or []:
-                    push(cm, "kp_mistake")
+                    push(cm, "kp_mistake", subject, grade)
 
     # ---------------------------------------------------------
     # 课文原文（语文/英语）—— data/passages/{subject}/{bookId}.json
@@ -271,7 +451,12 @@ def collect():
                 continue
 
             subject = pdoc.get("subject") or passages_file.parent.name
-            grade = pdoc.get("grade") or parse_grade(passages_file.stem) or 3
+            label = pdoc.get("textbook") or ""
+            book_id = pdoc.get("bookId") or passages_file.stem
+            if not book_filter.allow(book_id, label):
+                continue
+            note_book(book_id, label)
+            grade = pdoc.get("grade") or parse_grade(label) or parse_grade(passages_file.stem) or 3
 
             for passage in pdoc.get("passages") or []:
                 pid = passage.get("id", "")
@@ -347,7 +532,12 @@ def collect():
                 continue
 
             subject = sdoc.get("subject") or stories_file.parent.name
-            grade = sdoc.get("grade") or parse_grade(stories_file.stem) or 3
+            label = sdoc.get("textbook") or ""
+            book_id = sdoc.get("bookId") or stories_file.stem
+            if not book_filter.allow(book_id, label):
+                continue
+            note_book(book_id, label)
+            grade = sdoc.get("grade") or parse_grade(label) or parse_grade(stories_file.stem) or 3
 
             for story in sdoc.get("stories") or []:
                 slang = "English" if story.get("language") == "English" else "Chinese"
@@ -379,23 +569,36 @@ def collect():
 
                 # 故事题目/选项/解析
                 for q in story.get("questions") or []:
-                    push(q.get("question", ""), "story_question")
+                    push(q.get("question", ""), "story_question", subject, grade)
                     for opt in q.get("options") or []:
-                        push(opt, "story_option")
-                    push(q.get("explanation", ""), "story_explanation")
+                        push(opt, "story_option", subject, grade)
+                    push(q.get("explanation", ""), "story_explanation", subject, grade)
+
+    missing = book_filter.unmatched()
+    if missing:
+        print("❌ 没有匹配到这些教材:", ", ".join(missing), file=sys.stderr)
+        print("   用 --list 查看全部 bookId，manifest 未改写", file=sys.stderr)
+        sys.exit(1)
 
     items = list(seen.values())
     manifest = {
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "total_unique": len(items),
         "stats": stats,
-        "items": items,
     }
+    if book_filter.active:
+        manifest["books"] = sorted(selected)
+    manifest["items"] = items
     MANIFEST_PATH.write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
     print(f"✅ 写入 {MANIFEST_PATH}")
+    if book_filter.active:
+        print("   教材:")
+        for book_id in sorted(selected):
+            print(f"     - {book_id}  {labels.get(book_id, '')}")
+        print("   ⚠️  manifest 只含以上教材，已覆盖原文件。恢复全量请不带 --book 再跑一次。")
     print(f"   独立文本: {len(items)}")
     print("   分学科:")
     for k, v in sorted(stats["per_subject"].items()):
@@ -405,5 +608,14 @@ def collect():
         print(f"     - {k:14s} {v}")
 
 
+def main(argv: list[str] | None = None):
+    args = build_parser().parse_args(argv)
+    tokens = parse_book_args(args.book)
+    if args.list:
+        list_books(tokens)
+        return
+    collect(tokens)
+
+
 if __name__ == "__main__":
-    collect()
+    main()

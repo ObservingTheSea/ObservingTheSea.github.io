@@ -1,0 +1,720 @@
+{
+  "textbook": "人教版 PEP 英语三年级上册",
+  "unit": "第4单元 Plants around us",
+  "unit_number": 4,
+  "unit_test": {
+    "title": "PEP三年级上册 Unit 4 Plants around us 单元测试卷",
+    "total_score": 100,
+    "time_minutes": 40,
+    "questions": [
+      {
+        "id": 1,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "水果与自然环境词汇",
+        "question": "'apple' 的意思是苹果。",
+        "options": [],
+        "answer": "对",
+        "explanation": "'apple' 是苹果的意思，属于本单元基础水果词汇。"
+      },
+      {
+        "id": 2,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "水果与自然环境词汇",
+        "question": "'water' 的意思是太阳。",
+        "options": [],
+        "answer": "错",
+        "explanation": "'water' 的意思是水，'sun' 才是太阳。水是植物生长的重要要素。"
+      },
+      {
+        "id": 3,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "字母Mm-Pp的语音与书写",
+        "question": "字母 'Oo' 的小写形式是 'q'。",
+        "options": [],
+        "answer": "错",
+        "explanation": "字母 'Oo' 的小写形式是 'o'，不是 'q'。书写时要注意区分。"
+      },
+      {
+        "id": 4,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "字母Mm-Pp的语音与书写",
+        "question": "字母 'Pp' 在单词 'pen' 中发 /p/ 的音。",
+        "options": [],
+        "answer": "对",
+        "explanation": "字母 Pp 在 pen, pig 等单词首位通常发 /p/ 的音。"
+      },
+      {
+        "id": 5,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 3,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "'We can plant new trees.' 的意思是我们可以种新树。",
+        "options": [],
+        "answer": "对",
+        "explanation": "'plant new trees' 意为种新树，'We can...' 表示我们可以做某事，表达环保行动。"
+      },
+      {
+        "id": 6,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "水果与自然环境词汇",
+        "question": "选出代表“香蕉”的英文单词：",
+        "options": [
+          "apple",
+          "banana",
+          "orange",
+          "pear"
+        ],
+        "answer": "banana",
+        "explanation": "banana 是香蕉的意思，属于本单元要求掌握的水果词汇。"
+      },
+      {
+        "id": 7,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "水果与自然环境词汇",
+        "question": "植物生长需要阳光，阳光的英文单词是：",
+        "options": [
+          "air",
+          "water",
+          "sun",
+          "moon"
+        ],
+        "answer": "sun",
+        "explanation": "sun 是太阳、阳光的意思，是植物生长的关键要素之一。"
+      },
+      {
+        "id": 8,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "水果与自然环境词汇",
+        "question": "'orange' 的中文意思是：",
+        "options": [
+          "苹果",
+          "橘子",
+          "香蕉",
+          "梨"
+        ],
+        "answer": "橘子",
+        "explanation": "orange 可以表示橘子或橙子，也可以表示橙色。"
+      },
+      {
+        "id": 9,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "字母Mm-Pp的语音与书写",
+        "question": "下列哪个单词是以字母 Mm 开头的？",
+        "options": [
+          "nose",
+          "monkey",
+          "pig",
+          "dog"
+        ],
+        "answer": "monkey",
+        "explanation": "monkey 以字母 m 开头，nose 以 n 开头，pig 以 p 开头，dog 以 d 开头。"
+      },
+      {
+        "id": 10,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Mm-Pp的语音与书写",
+        "question": "字母 Nn 后面紧跟着的字母是：",
+        "options": [
+          "Mm",
+          "Pp",
+          "Oo",
+          "Qq"
+        ],
+        "answer": "Oo",
+        "explanation": "26个英文字母顺序为 ...Mm, Nn, Oo, Pp...，所以 Nn 后面是 Oo。"
+      },
+      {
+        "id": 11,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Mm-Pp的语音与书写",
+        "question": "选出含有字母 Pp 的单词：",
+        "options": [
+          "map",
+          "net",
+          "pig",
+          "box"
+        ],
+        "answer": "pig",
+        "explanation": "pig（猪）以字母 p 开头，包含 Pp。"
+      },
+      {
+        "id": 12,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "如果你想说“我们可以浇花”，你应该说：",
+        "options": [
+          "We can water the flowers.",
+          "We can plant new trees.",
+          "I like flowers.",
+          "Look at the flowers."
+        ],
+        "answer": "We can water the flowers.",
+        "explanation": "'water' 在这里作动词，表示浇水。'We can water the flowers.' 意为我们可以浇花。"
+      },
+      {
+        "id": 13,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "— What can we do? — We can ___.",
+        "options": [
+          "plant new trees",
+          "like apples",
+          "eat bananas",
+          "see sun"
+        ],
+        "answer": "plant new trees",
+        "explanation": "问句问“我们能做什么？”，回答应使用 'We can + 动词原形' 表达环保行动，如 plant new trees（种新树）。"
+      },
+      {
+        "id": 14,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "水果与自然环境词汇",
+        "question": "我们呼吸需要什么？",
+        "options": [
+          "water",
+          "sun",
+          "air",
+          "apple"
+        ],
+        "answer": "air",
+        "explanation": "air 是空气的意思，人和植物都需要空气。"
+      },
+      {
+        "id": 15,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "'We can ___ the flowers.' 空格处填入最合适的词：",
+        "options": [
+          "water",
+          "sun",
+          "air",
+          "tree"
+        ],
+        "answer": "water",
+        "explanation": "water 在这里作动词，表示给……浇水。water the flowers 意为浇花。"
+      },
+      {
+        "id": 16,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "水果与自然环境词汇",
+        "question": "I like to eat an ___. (我喜欢吃一个苹果)",
+        "options": [],
+        "answer": "apple",
+        "explanation": "apple 意为苹果，an apple 一个苹果。注意前面用不定冠词 an。"
+      },
+      {
+        "id": 17,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "水果与自然环境词汇",
+        "question": "Plants need ___ and water. (植物需要阳光和水)",
+        "options": [],
+        "answer": "sun",
+        "explanation": "sun 意为太阳、阳光。植物生长离不开阳光和水。"
+      },
+      {
+        "id": 18,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "We can ___ the flowers. (我们可以浇花)",
+        "options": [],
+        "answer": "water",
+        "explanation": "water 在此处作动词，意为浇水。water the flowers 浇花。"
+      },
+      {
+        "id": 19,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "We can plant new ___. (我们可以种新树)",
+        "options": [],
+        "answer": "trees",
+        "explanation": "plant new trees 意为种新树。tree 的复数形式是 trees。"
+      },
+      {
+        "id": 20,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "水果与自然环境词汇",
+        "question": "将下列英文单词与对应的中文意思连线配对：",
+        "options": [
+          "apple",
+          "banana",
+          "water",
+          "sun",
+          "水",
+          "太阳",
+          "香蕉",
+          "苹果"
+        ],
+        "answer": "A-4,B-3,C-1,D-2",
+        "explanation": "apple-苹果，banana-香蕉，water-水，sun-太阳。"
+      },
+      {
+        "id": 21,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "将下列英文短语与对应的中文意思连线配对：",
+        "options": [
+          "plant trees",
+          "water flowers",
+          "clean air",
+          "love nature",
+          "清洁空气",
+          "热爱自然",
+          "种树",
+          "浇花"
+        ],
+        "answer": "A-3,B-4,C-1,D-2",
+        "explanation": "plant trees-种树，water flowers-浇花，clean air-清洁空气，love nature-热爱自然。"
+      },
+      {
+        "id": 22,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "将下列单词排列成一个正确的句子：",
+        "options": [
+          "can",
+          "water",
+          "flowers",
+          "We",
+          "the"
+        ],
+        "answer": "We,can,water,the,flowers",
+        "explanation": "句型结构：We can + 动词原形 + 宾语。We can water the flowers. 我们可以浇花。"
+      },
+      {
+        "id": 23,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "将下列单词排列成一个正确的句子：",
+        "options": [
+          "new",
+          "plant",
+          "can",
+          "trees",
+          "We"
+        ],
+        "answer": "We,can,plant,new,trees",
+        "explanation": "句型结构：We can + 动词原形 + 宾语。We can plant new trees. 我们可以种新树。"
+      }
+    ]
+  },
+  "exam": {
+    "title": "PEP三年级上册 Unit 4 Plants around us 综合测试卷",
+    "total_score": 100,
+    "time_minutes": 60,
+    "questions": [
+      {
+        "id": 1,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "水果与自然环境词汇",
+        "question": "'banana' 的意思是香蕉。",
+        "options": [],
+        "answer": "对",
+        "explanation": "banana 是香蕉，属于本单元核心水果词汇。"
+      },
+      {
+        "id": 2,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "字母Mm-Pp的语音与书写",
+        "question": "字母 'Nn' 的大写形式是 'M'。",
+        "options": [],
+        "answer": "错",
+        "explanation": "字母 'Nn' 的大写形式是 'N'，'M' 是 'Mm' 的大写。"
+      },
+      {
+        "id": 3,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "字母Mm-Pp的语音与书写",
+        "question": "'mother' 这个单词是以字母 Mm 开头的。",
+        "options": [],
+        "answer": "对",
+        "explanation": "mother 首字母是 m，属于字母 Mm 的学习范围。"
+      },
+      {
+        "id": 4,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 3,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "'We can water the flowers.' 这句话的意思是我们可以种树。",
+        "options": [],
+        "answer": "错",
+        "explanation": "water the flowers 是浇花的意思，plant new trees 才是种树。"
+      },
+      {
+        "id": 5,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 3,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "植物生长只需要水，不需要阳光和空气。",
+        "options": [],
+        "answer": "错",
+        "explanation": "植物生长需要水(water)、阳光(sun)和空气(air)，缺一不可。"
+      },
+      {
+        "id": 6,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "水果与自然环境词汇",
+        "question": "选出代表“苹果”的英文单词：",
+        "options": [
+          "orange",
+          "banana",
+          "apple",
+          "sun"
+        ],
+        "answer": "apple",
+        "explanation": "apple 是苹果的意思。"
+      },
+      {
+        "id": 7,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "水果与自然环境词汇",
+        "question": "鱼在水里游，水的英文单词是：",
+        "options": [
+          "sun",
+          "air",
+          "water",
+          "apple"
+        ],
+        "answer": "water",
+        "explanation": "water 是水的意思，也是植物生长的要素。"
+      },
+      {
+        "id": 8,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Mm-Pp的语音与书写",
+        "question": "按字母表顺序，排在 Nn 和 Pp 中间的字母是：",
+        "options": [
+          "Mm",
+          "Oo",
+          "Qq",
+          "Rr"
+        ],
+        "answer": "Oo",
+        "explanation": "字母表顺序为 Mm, Nn, Oo, Pp，所以 Nn 和 Pp 中间是 Oo。"
+      },
+      {
+        "id": 9,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "你想告诉同学我们可以种树，你应该说：",
+        "options": [
+          "We can plant new trees.",
+          "We like trees.",
+          "I have a tree.",
+          "Look at the tree."
+        ],
+        "answer": "We can plant new trees.",
+        "explanation": "'We can plant new trees.' 意为我们可以种新树，表达环保行动建议。"
+      },
+      {
+        "id": 10,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "— Can you water the flowers? — ___",
+        "options": [
+          "Yes, I can.",
+          "Yes, I am.",
+          "No, I don't.",
+          "I like water."
+        ],
+        "answer": "Yes, I can.",
+        "explanation": "Can引导的一般疑问句，肯定回答用 Yes, 主语 + can."
+      },
+      {
+        "id": 11,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "水果与自然环境词汇",
+        "question": "'orange' 除了表示橘子，还可以表示什么颜色？",
+        "options": [
+          "红色",
+          "蓝色",
+          "橙色",
+          "绿色"
+        ],
+        "answer": "橙色",
+        "explanation": "orange 既可以是名词“橘子/橙子”，也可以是形容词“橙色的”。"
+      },
+      {
+        "id": 12,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Mm-Pp的语音与书写",
+        "question": "下列哪个单词的首字母发音与其他三个不同？",
+        "options": [
+          "map",
+          "monkey",
+          "nose",
+          "mouth"
+        ],
+        "answer": "nose",
+        "explanation": "map, monkey, mouth 都以字母 m 开头，而 nose 以字母 n 开头。"
+      },
+      {
+        "id": 13,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Mm-Pp的语音与书写",
+        "question": "单词 'park' 是以哪个字母开头的？",
+        "options": [
+          "Mm",
+          "Nn",
+          "Oo",
+          "Pp"
+        ],
+        "answer": "Pp",
+        "explanation": "park 的首字母是 p，属于 Pp 的范畴。"
+      },
+      {
+        "id": 14,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "我们要保护环境，下面哪个行为是正确的？",
+        "options": [
+          "water the flowers",
+          "cut down trees",
+          "throw rubbish",
+          "pick flowers"
+        ],
+        "answer": "water the flowers",
+        "explanation": "water the flowers（浇花）是保护植物的正确行为，其他选项都是破坏环境的行为。"
+      },
+      {
+        "id": 15,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "Plants need ___, water and air to grow. (植物生长需要___、水和空气)",
+        "options": [
+          "sun",
+          "moon",
+          "star",
+          "cloud"
+        ],
+        "answer": "sun",
+        "explanation": "植物生长需要阳光(sun)、水(water)和空气(air)。"
+      },
+      {
+        "id": 16,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "水果与自然环境词汇",
+        "question": "I want to eat a ___. (我想吃一根香蕉)",
+        "options": [],
+        "answer": "banana",
+        "explanation": "banana 意为香蕉，a banana 一根香蕉。"
+      },
+      {
+        "id": 17,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "水果与自然环境词汇",
+        "question": "Plants need ___ to live. (植物需要空气来生存)",
+        "options": [],
+        "answer": "air",
+        "explanation": "air 意为空气，是植物生存必不可少的要素。"
+      },
+      {
+        "id": 18,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "We can ___ new trees in spring. (春天我们可以种新树)",
+        "options": [],
+        "answer": "plant",
+        "explanation": "plant 在此处作动词，意为种植。plant new trees 种新树。"
+      },
+      {
+        "id": 19,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "Let's ___ the flowers together. (让我们一起浇花吧)",
+        "options": [],
+        "answer": "water",
+        "explanation": "water 作动词表示浇水。Let's 后接动词原形。"
+      },
+      {
+        "id": 20,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "水果与自然环境词汇",
+        "question": "将下列英文单词与对应的中文意思连线配对：",
+        "options": [
+          "orange",
+          "air",
+          "tree",
+          "flower",
+          "花",
+          "树",
+          "空气",
+          "橘子"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "orange-橘子，air-空气，tree-树，flower-花。"
+      },
+      {
+        "id": 21,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "将下列英文短语与对应的中文意思连线配对：",
+        "options": [
+          "water the plants",
+          "plant trees",
+          "love the earth",
+          "protect nature",
+          "保护自然",
+          "热爱地球",
+          "种树",
+          "给植物浇水"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "water the plants-给植物浇水，plant trees-种树，love the earth-热爱地球，protect nature-保护自然。"
+      },
+      {
+        "id": 22,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "将下列单词排列成一个正确的句子：",
+        "options": [
+          "can",
+          "We",
+          "water",
+          "plants",
+          "the"
+        ],
+        "answer": "We,can,water,the,plants",
+        "explanation": "句型结构：We can + 动词原形 + 宾语。We can water the plants. 我们可以给植物浇水。"
+      },
+      {
+        "id": 23,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "植物保护与行动建议",
+        "question": "将下列单词排列成一个正确的句子：",
+        "options": [
+          "need",
+          "Plants",
+          "and",
+          "water",
+          "sun"
+        ],
+        "answer": "Plants,need,water,and,sun",
+        "explanation": "句型结构：主语 + 谓语 + 宾语。Plants need water and sun. 植物需要水和阳光。"
+      }
+    ]
+  },
+  "knowledge_summary": [
+    {
+      "point": "水果与自然环境词汇",
+      "core_concept": "掌握apple, banana, orange等水果词汇及air, water, sun等植物生长要素词汇。",
+      "key_formula": "词汇记忆点：分类记忆法。水果类(apple, banana, orange)；自然要素类(air, water, sun)。注意元音字母开头的单词前用 an，如 an apple, an orange。",
+      "common_mistakes": [
+        "混淆 water 的名词（水）和动词（浇水）用法",
+        "orange 忘记它也有颜色的含义",
+        "air 拼写错误写成 are"
+      ],
+      "tips": "结合生活实际，观察家里的水果和户外的自然环境，边看边读英文单词，加深印象。"
+    },
+    {
+      "point": "植物保护与行动建议",
+      "core_concept": "运用'We can water the flowers', 'We can plant new trees'等句型表达环保行动。",
+      "key_formula": "语法规则：We can + 动词原形 + 宾语。can 是情态动词，后面必须跟动词原形，不能加 s/es/ing/to。",
+      "common_mistakes": [
+        "can 后面加了动词的第三人称单数形式（如 We can waters...）",
+        "把 plant 只当名词（植物），忘记它也可以作动词（种植）",
+        "water 只记得是水，不知道可以作动词浇花"
+      ],
+      "tips": "多做动作模拟练习，一边做浇花、种树的动作，一边大声说出英文句子，做到知行合一。"
+    },
+    {
+      "point": "字母Mm-Pp的语音与书写",
+      "core_concept": "掌握字母Mm, Nn, Oo, Pp的规范书写及其在单词首位的发音辨析。",
+      "key_formula": "书写规则：大写字母占上两格，小写字母根据字母本身特点占格（如m,n,o占中格，p占中下格）。发音规律：Mm发/m/，Nn发/n/，Oo发短元音/ɒ/或长元音/əʊ/，Pp发/p/。",
+      "common_mistakes": [
+        "大小写字母占格不规范，特别是 p 的下半部分没有写到下格",
+        "把大写 N 和大写 M 的笔画写混",
+        "小写 o 和小写 q 混淆"
+      ],
+      "tips": "利用四线三格本反复描红练习，边写边读出字母名称音和在单词中的发音，形成肌肉记忆和听觉记忆的双重巩固。"
+    }
+  ]
+}

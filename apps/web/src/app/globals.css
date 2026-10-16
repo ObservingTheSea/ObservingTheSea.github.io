@@ -98,6 +98,9 @@ h3,
 .btn-chunky-ghost:hover {
   color: #4b4b4b;
 }
+.theme-dark .btn-chunky-ghost:hover {
+  color: var(--app-ink);
+}
 .btn-chunky:hover {
   filter: brightness(1.06);
 }
@@ -315,4 +318,14 @@ button:focus-visible,
 .theme-dark .btn-chunky-disabled {
   background-color: var(--app-bg-softer);
   color: var(--app-ink-softer);
+}
+
+/* 答题页背景。浅色用装备的课堂背景（缺省 #F7F7F7）；
+ * 暗色默认换成 night，避免 .text-ink 被提亮后糊在浅底上。
+ * 深色场景背景通过 --lesson-bg-dark 保留。 */
+.lesson-canvas {
+  background: var(--lesson-bg, #F7F7F7);
+}
+.theme-dark .lesson-canvas {
+  background: var(--lesson-bg-dark, var(--app-bg));
 }

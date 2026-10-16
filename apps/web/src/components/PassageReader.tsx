@@ -225,6 +225,7 @@ export function PassageReader({ passage, backHref }: Props) {
   }, [recordings, passage]);
 
   const hasAnyAudio = passage.sentences.some(s => s.audio);
+  // 诗和儿歌居中，不显示逐句按钮。phonics、vocabulary 逐条点读，不放这里。
   const isPoem =
     passage.kind === "poem" ||
     passage.kind === "ancient_poem" ||

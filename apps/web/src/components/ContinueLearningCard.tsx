@@ -24,6 +24,13 @@ import { playSfx } from "@/lib/sfx";
 import { haptic } from "@/lib/haptic";
 import type { Book, SubjectId } from "@/types";
 
+/** 原版在前，有年份的按年份升序。 */
+function editionRank(edition?: string): number {
+  if (!edition) return -1;
+  const n = Number(edition);
+  return Number.isFinite(n) ? n : 9999;
+}
+
 /** 从 lessonId 反推 bookId —— pattern: {bookId}-u{N}-kp{M} */
 function parseBookId(lessonId: string): string | null {
   const m = lessonId.match(/^(.+?)-u\d+-kp\d+$/);
@@ -159,11 +166,13 @@ export function CurrentBookBadge({
 
   const cur = SUBJECT_STYLE[subjectOf(book)];
 
-  // 学科序 + 学期序（上册在前）
+  // 学科序 + 学期序（上册在前）+ 版本（原版在前）
   const sorted = [...gradeBooks].sort((a, b) => {
     const so = SUBJECT_ORDER.indexOf(subjectOf(a)) - SUBJECT_ORDER.indexOf(subjectOf(b));
     if (so !== 0) return so;
-    return (a.semester === "up" ? 0 : 1) - (b.semester === "up" ? 0 : 1);
+    const sem = (a.semester === "up" ? 0 : 1) - (b.semester === "up" ? 0 : 1);
+    if (sem !== 0) return sem;
+    return editionRank(a.edition) - editionRank(b.edition);
   });
 
   function choose(b: Book) {

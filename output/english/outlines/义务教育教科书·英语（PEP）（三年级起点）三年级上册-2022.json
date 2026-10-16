@@ -1,0 +1,270 @@
+{
+  "textbook": "三年级上册",
+  "units": [
+    {
+      "unit_number": 1,
+      "title": "Making friends",
+      "knowledge_points": [
+        {
+          "name": "自我介绍与社交问候",
+          "description": "运用'I'm...'或'My name is...'进行自我介绍，并熟练使用'Hello/Hi', 'Nice to meet you'及其回应。",
+          "difficulty": 1,
+          "question_types": [
+            "填空",
+            "选择",
+            "连线/匹配"
+          ]
+        },
+        {
+          "name": "身体部位词汇辨识",
+          "description": "掌握eye, mouth, ear, hand, arm等身体部位词汇的听、说、认读。",
+          "difficulty": 1,
+          "question_types": [
+            "填空",
+            "连线/匹配",
+            "操作题"
+          ]
+        },
+        {
+          "name": "祈使句动作指令理解",
+          "description": "听懂并执行'Wave your hand', 'Point to your mouth'等身体动作指令。",
+          "difficulty": 2,
+          "question_types": [
+            "操作题",
+            "判断"
+          ]
+        },
+        {
+          "name": "良好友谊行为表达",
+          "description": "理解并表达share, help, listen, smile, play together等描述友谊的动词短语。",
+          "difficulty": 2,
+          "question_types": [
+            "填空",
+            "选择",
+            "规律探索"
+          ]
+        }
+      ]
+    },
+    {
+      "unit_number": 2,
+      "title": "Different families",
+      "knowledge_points": [
+        {
+          "name": "家庭成员称谓",
+          "description": "听、说、认读并拼写grandmother, grandfather, mother, father, sister, brother等成员词汇。",
+          "difficulty": 2,
+          "question_types": [
+            "填空",
+            "选择",
+            "连线/匹配"
+          ]
+        },
+        {
+          "name": "家庭成员身份询问与介绍",
+          "description": "掌握'This is my...'介绍句型及'Is this/that your...?'一般疑问句的问答。",
+          "difficulty": 3,
+          "question_types": [
+            "填空",
+            "选择",
+            "应用题"
+          ]
+        },
+        {
+          "name": "字母Ee-Hh的语音与书写",
+          "description": "掌握字母Ee, Ff, Gg, Hh的规范书写及其在单词首位的发音规律。",
+          "difficulty": 2,
+          "question_types": [
+            "填空",
+            "判断",
+            "操作题"
+          ]
+        }
+      ]
+    },
+    {
+      "unit_number": 3,
+      "title": "Our animal friends",
+      "knowledge_points": [
+        {
+          "name": "宠物与野生动物分类",
+          "description": "辨识dog, cat, rabbit等宠物词汇及panda, tiger, elephant等野生动物词汇。",
+          "difficulty": 1,
+          "question_types": [
+            "填空",
+            "连线/匹配",
+            "排序/比较"
+          ]
+        },
+        {
+          "name": "拥有物与喜好表达",
+          "description": "运用'Do you have a pet?'询问及使用'I like...'表达对动物的喜好。",
+          "difficulty": 2,
+          "question_types": [
+            "选择",
+            "应用题",
+            "填空"
+          ]
+        },
+        {
+          "name": "动物特征描述",
+          "description": "使用big, small, tall, fast, cute等形容词描述动物的生理特征。",
+          "difficulty": 2,
+          "question_types": [
+            "填空",
+            "选择",
+            "判断"
+          ]
+        },
+        {
+          "name": "字母Ii-Ll的语音与书写",
+          "description": "掌握字母Ii, Jj, Kk, Ll的规范书写及其发音词例（如ill, job, Kim, leg）。",
+          "difficulty": 2,
+          "question_types": [
+            "填空",
+            "连线/匹配"
+          ]
+        }
+      ]
+    },
+    {
+      "unit_number": 4,
+      "title": "Plants around us",
+      "knowledge_points": [
+        {
+          "name": "水果与自然环境词汇",
+          "description": "掌握apple, banana, orange等水果词汇及air, water, sun等植物生长要素词汇。",
+          "difficulty": 1,
+          "question_types": [
+            "填空",
+            "连线/匹配"
+          ]
+        },
+        {
+          "name": "植物保护与行动建议",
+          "description": "运用'We can water the flowers', 'We can plant new trees'等句型表达环保行动。",
+          "difficulty": 3,
+          "question_types": [
+            "应用题",
+            "填空",
+            "选择"
+          ]
+        },
+        {
+          "name": "字母Mm-Pp的语音与书写",
+          "description": "掌握字母Mm, Nn, Oo, Pp的规范书写及其在单词首位的发音辨析。",
+          "difficulty": 2,
+          "question_types": [
+            "填空",
+            "判断"
+          ]
+        }
+      ]
+    },
+    {
+      "unit_number": 5,
+      "title": "The colourful world",
+      "knowledge_points": [
+        {
+          "name": "基础颜色词汇辨析",
+          "description": "认读red, blue, yellow, green, orange, purple, brown, white, pink等颜色单词。",
+          "difficulty": 1,
+          "question_types": [
+            "连线/匹配",
+            "填空",
+            "选择"
+          ]
+        },
+        {
+          "name": "颜色询问与逻辑混合",
+          "description": "询问颜色'What colour is it?'并理解颜色混合规律（如Blue and yellow make green）。",
+          "difficulty": 2,
+          "question_types": [
+            "填空",
+            "选择",
+            "规律探索"
+          ]
+        },
+        {
+          "name": "字母Qq-Uu的语音与书写",
+          "description": "掌握字母Qq, Rr, Ss, Tt, Uu的规范书写及其首字母发音规律。",
+          "difficulty": 2,
+          "question_types": [
+            "填空",
+            "判断",
+            "操作题"
+          ]
+        }
+      ]
+    },
+    {
+      "unit_number": 6,
+      "title": "Useful numbers",
+      "knowledge_points": [
+        {
+          "name": "基数词1-10的认读",
+          "description": "听、说、读、写数字one至ten，并能按顺序排列。",
+          "difficulty": 1,
+          "question_types": [
+            "填空",
+            "排序/比较",
+            "连线/匹配"
+          ]
+        },
+        {
+          "name": "年龄与数量询问",
+          "description": "运用'How old are you?'及'How many + 复数名词?'进行日常数据查询。",
+          "difficulty": 3,
+          "question_types": [
+            "应用题",
+            "填空",
+            "选择"
+          ]
+        },
+        {
+          "name": "字母Vv-Zz的语音与书写",
+          "description": "掌握字母Vv, Ww, Xx, Yy, Zz的规范书写及其发音辨析。",
+          "difficulty": 2,
+          "question_types": [
+            "填空",
+            "判断"
+          ]
+        }
+      ]
+    },
+    {
+      "unit_number": 7,
+      "title": "Revision & Recycle",
+      "knowledge_points": [
+        {
+          "name": "社交礼仪综合应用",
+          "description": "综合复习做客礼仪（knock, share, say hello）及赠送礼物等交际用语。",
+          "difficulty": 3,
+          "question_types": [
+            "选择",
+            "应用题"
+          ]
+        },
+        {
+          "name": "26个字母全表回顾",
+          "description": "准确书写并识别A-Z全部26个英文字母的大小写形式。",
+          "difficulty": 2,
+          "question_types": [
+            "填空",
+            "操作题"
+          ]
+        },
+        {
+          "name": "综合场景词汇归类",
+          "description": "对全册动物、家庭、颜色、数字、植物等主题词汇进行逻辑归纳与应用。",
+          "difficulty": 3,
+          "question_types": [
+            "连线/匹配",
+            "规律探索",
+            "填空"
+          ]
+        }
+      ]
+    }
+  ]
+}

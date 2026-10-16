@@ -28,7 +28,7 @@ export function SpeechBubble({ text, tone = "neutral" }: SpeechBubbleProps) {
       animate={{ scale: 1, opacity: 1, x: 0 }}
       exit={{ scale: 0.7, opacity: 0, x: -8 }}
       transition={{ type: "spring", damping: 16, stiffness: 320 }}
-      className={`relative inline-block h-8 px-3.5 inline-flex items-center rounded-2xl border-2 font-extrabold text-sm whitespace-nowrap ${colors.border} ${colors.text} ${colors.bg}`}
+      className={`relative h-8 px-3.5 inline-flex items-center rounded-2xl border-2 font-extrabold text-sm whitespace-nowrap ${colors.border} ${colors.text} ${colors.bg}`}
       style={{ boxShadow: colors.shadow }}
     >
       {text}

@@ -3,8 +3,12 @@ pipeline.py - 中国小学多学科教材 → AI题库生成 Pipeline v3
 
 支持学科：math / chinese / english / science
 
+模型与密钥都从项目根目录 .env 读取：
+    配置了 OPENROUTER_API_KEY 时走 OpenRouter，否则走百炼
+    （DASHSCOPE_API_KEY + DASHSCOPE_API_URL）。
+    两个提供方共用 EXTRACT_MODEL、GENERATE_MODEL。
+
 使用方法：
-    export OPENROUTER_API_KEY="sk-or-..."
     pip install openai requests pypdf
 
     python pipeline.py --subject math                       # 数学全量（默认）
@@ -62,19 +66,46 @@ from subjects import (
 # ============================================================
 # 配置
 # ============================================================
-OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
-if not OPENROUTER_API_KEY:
-    print("错误: 请设置环境变量 OPENROUTER_API_KEY")
-    print("  export OPENROUTER_API_KEY='sk-or-...'")
+def _env(name: str) -> str:
+    return os.environ.get(name, "").strip()
+
+
+def _require_env(name: str) -> str:
+    value = _env(name)
+    if not value:
+        print(f"错误: 请在 .env 中配置 {name}")
+        sys.exit(1)
+    return value
+
+
+OPENROUTER_API_KEY = _env("OPENROUTER_API_KEY")
+DASHSCOPE_API_KEY = _env("DASHSCOPE_API_KEY")
+DASHSCOPE_BASE_URL = _env("DASHSCOPE_API_URL")
+
+if OPENROUTER_API_KEY:
+    LLM_PROVIDER = "openrouter"
+    client = OpenAI(
+        base_url="https://openrouter.ai/api/v1",
+        api_key=OPENROUTER_API_KEY,
+    )
+elif DASHSCOPE_API_KEY:
+    if not DASHSCOPE_BASE_URL:
+        print("错误: 请在 .env 中配置 DASHSCOPE_API_URL")
+        sys.exit(1)
+    LLM_PROVIDER = "bailian"
+    client = OpenAI(
+        base_url=DASHSCOPE_BASE_URL.rstrip("/"),
+        api_key=DASHSCOPE_API_KEY,
+        timeout=600,
+    )
+else:
+    print("错误: 未配置模型密钥")
+    print("  OpenRouter: 在 .env 中设置 OPENROUTER_API_KEY")
+    print("  百炼:       在 .env 中设置 DASHSCOPE_API_KEY 与 DASHSCOPE_API_URL")
     sys.exit(1)
 
-client = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key=OPENROUTER_API_KEY,
-)
-
-EXTRACT_MODEL = "google/gemini-3.1-flash-lite-preview"
-GENERATE_MODEL = "google/gemini-3-flash-preview"
+EXTRACT_MODEL = _require_env("EXTRACT_MODEL")
+GENERATE_MODEL = _require_env("GENERATE_MODEL")
 
 MAX_WORKERS = 8  # 并发数
 
@@ -82,6 +113,69 @@ EXTRA_HEADERS = {
     "HTTP-Referer": "https://github.com/textbook-quiz",
     "X-OpenRouter-Title": "TextbookQuizPipeline",
 }
+
+
+def chat_complete(
+    *,
+    model: str,
+    messages: list,
+    max_tokens: int,
+    response_format: dict | None = None,
+):
+    """统一补上各提供方特有参数。OpenRouter 路径与原先调用保持一致。"""
+    kwargs: dict = {
+        "model": model,
+        "messages": messages,
+        "max_tokens": max_tokens,
+    }
+    if response_format is not None:
+        kwargs["response_format"] = response_format
+    if LLM_PROVIDER == "openrouter":
+        kwargs["extra_headers"] = EXTRA_HEADERS
+        kwargs["extra_body"] = {"usage": {"include": True}}
+    else:
+        # 百炼文档：结构化输出时不要设 max_tokens，否则 JSON 可能被截断
+        if response_format is not None:
+            kwargs.pop("max_tokens", None)
+        kwargs["extra_body"] = {"enable_thinking": False}
+    return client.chat.completions.create(**kwargs)
+
+
+def pdf_user_content(prompt: str, pdf_b64: str, filename: str) -> list:
+    """OpenRouter 用 image_url 传 PDF；百炼 PDF 理解要用 type=file。"""
+    if LLM_PROVIDER == "bailian":
+        return [
+            {
+                "type": "file",
+                "file": {
+                    "file_data": f"data:application/pdf;base64,{pdf_b64}",
+                    "filename": filename,
+                },
+            },
+            {"type": "text", "text": prompt},
+        ]
+    return [
+        {"type": "text", "text": prompt},
+        {
+            "type": "image_url",
+            "image_url": {"url": f"data:application/pdf;base64,{pdf_b64}"},
+        },
+    ]
+
+
+def parse_json_content(content: str | None) -> dict:
+    text = (content or "").strip()
+    if not text:
+        raise ValueError("模型返回空内容")
+    if text.startswith("```"):
+        lines = text.splitlines()
+        if lines and lines[0].startswith("```"):
+            lines = lines[1:]
+        if lines and lines[-1].strip() == "```":
+            lines = lines[:-1]
+        text = "\n".join(lines).strip()
+    return json.loads(text)
+
 
 GITHUB_RAW_BASE = "https://raw.githubusercontent.com/TapXWorld/ChinaTextbook/master"
 
@@ -94,7 +188,7 @@ OUTPUT_DIR = PROJECT_ROOT / "output"
 COST_STATS = {
     "extract": {"calls": 0, "prompt_tokens": 0, "completion_tokens": 0, "cost": 0.0},
     "outline": {"calls": 0, "prompt_tokens": 0, "completion_tokens": 0, "cost": 0.0},
-    "quiz":    {"calls": 0, "prompt_tokens": 0, "completion_tokens": 0, "cost": 0.0},
+    "quiz": {"calls": 0, "prompt_tokens": 0, "completion_tokens": 0, "cost": 0.0},
 }
 _COST_LOCK = threading.Lock()
 
@@ -121,17 +215,40 @@ def print_cost_summary() -> None:
     print(f"\n{'=' * 60}")
     print("API 用量与费用统计")
     print(f"{'=' * 60}")
-    print(f"{'步骤':<10}{'调用次数':<10}{'输入tokens':<14}{'输出tokens':<14}{'费用(USD)':<12}")
+    cost_label = "费用(USD)" if LLM_PROVIDER == "openrouter" else "费用"
+    print(
+        f"{'步骤':<10}{'调用次数':<10}{'输入tokens':<14}{'输出tokens':<14}{cost_label:<12}"
+    )
     total_calls = total_pin = total_pout = total_cost = 0
-    for step, label in [("extract", "PDF提取"), ("outline", "大纲生成"), ("quiz", "题目生成")]:
+    for step, label in [
+        ("extract", "PDF提取"),
+        ("outline", "大纲生成"),
+        ("quiz", "题目生成"),
+    ]:
         s = COST_STATS[step]
-        print(f"{label:<10}{s['calls']:<10}{s['prompt_tokens']:<14,}{s['completion_tokens']:<14,}${s['cost']:<11.4f}")
+        cost_cell = (
+            f"${s['cost']:<11.4f}"
+            if LLM_PROVIDER == "openrouter"
+            else f"{s['cost']:<12.4f}"
+        )
+        print(
+            f"{label:<10}{s['calls']:<10}{s['prompt_tokens']:<14,}{s['completion_tokens']:<14,}{cost_cell}"
+        )
         total_calls += s["calls"]
         total_pin += s["prompt_tokens"]
         total_pout += s["completion_tokens"]
         total_cost += s["cost"]
     print("-" * 60)
-    print(f"{'合计':<10}{total_calls:<10}{total_pin:<14,}{total_pout:<14,}${total_cost:<11.4f}")
+    total_cost_cell = (
+        f"${total_cost:<11.4f}"
+        if LLM_PROVIDER == "openrouter"
+        else f"{total_cost:<12.4f}"
+    )
+    print(
+        f"{'合计':<10}{total_calls:<10}{total_pin:<14,}{total_pout:<14,}{total_cost_cell}"
+    )
+    if LLM_PROVIDER == "bailian":
+        print("百炼兼容接口不返回美元金额，费用列为 0 时只统计 token。")
     print(f"{'=' * 60}")
 
 
@@ -181,7 +298,9 @@ def migrate_legacy_math_data_if_needed() -> None:
 # ============================================================
 # Step 0: 下载 PDF
 # ============================================================
-def download_pdf(filename: str, subject_cfg: SubjectConfig, dirs: dict[str, Path]) -> Path:
+def download_pdf(
+    filename: str, subject_cfg: SubjectConfig, dirs: dict[str, Path]
+) -> Path:
     out_path = dirs["pdf"] / filename
     if out_path.exists():
         print(f"  [跳过] {filename} 已存在")
@@ -251,23 +370,15 @@ def extract_batch(
         prev_summary=prev_summary if prev_summary else "（这是第一批，无前置内容）",
     )
 
-    completion = client.chat.completions.create(
+    completion = chat_complete(
         model=EXTRACT_MODEL,
         messages=[
             {
                 "role": "user",
-                "content": [
-                    {"type": "text", "text": prompt},
-                    {
-                        "type": "image_url",
-                        "image_url": {"url": f"data:application/pdf;base64,{pdf_b64}"},
-                    },
-                ],
+                "content": pdf_user_content(prompt, pdf_b64, batch_path.name),
             }
         ],
         max_tokens=8000,
-        extra_headers=EXTRA_HEADERS,
-        extra_body={"usage": {"include": True}},
     )
     record_usage("extract", completion)
 
@@ -345,18 +456,15 @@ def extract_pdf_full(
         publisher_label=subject_cfg["publisher_label"],
         curriculum=subject_cfg["curriculum"],
     )
-    completion = client.chat.completions.create(
+    completion = chat_complete(
         model=GENERATE_MODEL,
         messages=[{"role": "user", "content": outline_prompt}],
         max_tokens=8000,
         response_format={"type": "json_schema", "json_schema": OUTLINE_SCHEMA},
-        extra_headers=EXTRA_HEADERS,
-        extra_body={"usage": {"include": True}},
     )
     record_usage("outline", completion)
 
-    json_str = completion.choices[0].message.content.strip()
-    outline_json = json.loads(json_str)
+    outline_json = parse_json_content(completion.choices[0].message.content)
 
     (dirs["outline"] / f"{stem}.json").write_text(
         json.dumps(outline_json, ensure_ascii=False, indent=2), encoding="utf-8"
@@ -369,7 +477,9 @@ def extract_pdf_full(
 # ============================================================
 # Step 4: 生成题目 + 知识点全解
 # ============================================================
-def generate_quiz_for_unit(subject_cfg: SubjectConfig, textbook: str, unit: dict) -> dict:
+def generate_quiz_for_unit(
+    subject_cfg: SubjectConfig, textbook: str, unit: dict
+) -> dict:
     kp_detail = build_knowledge_points_detail(unit)
 
     prompt_template = getattr(P, subject_cfg["quiz_prompt"])
@@ -384,18 +494,15 @@ def generate_quiz_for_unit(subject_cfg: SubjectConfig, textbook: str, unit: dict
 
     print(f"    [生成] 第{unit['unit_number']}单元: {unit['title']}")
 
-    completion = client.chat.completions.create(
+    completion = chat_complete(
         model=GENERATE_MODEL,
         messages=[{"role": "user", "content": prompt}],
         max_tokens=16000,
         response_format={"type": "json_schema", "json_schema": schema},
-        extra_headers=EXTRA_HEADERS,
-        extra_body={"usage": {"include": True}},
     )
     record_usage("quiz", completion)
 
-    content = completion.choices[0].message.content.strip()
-    return json.loads(content)
+    return parse_json_content(completion.choices[0].message.content)
 
 
 def generate_knowledge_markdown(quiz_data: dict) -> str:
@@ -452,30 +559,40 @@ def validate_quiz(quiz_data: dict, subject_cfg: SubjectConfig) -> list[str]:
 
             # 题型必须在学科允许列表中
             if qtype not in allowed_types:
-                issues.append(f"[{test_key}] 题{qid} 题型 {qtype} 不在学科允许列表 {sorted(allowed_types)}")
+                issues.append(
+                    f"[{test_key}] 题{qid} 题型 {qtype} 不在学科允许列表 {sorted(allowed_types)}"
+                )
 
             # choice 必须 4 项
             if qtype == "choice":
                 if len(opts) != 4:
-                    issues.append(f"[{test_key}] 选择题{qid} options 应为 4 项，实际 {len(opts)}")
+                    issues.append(
+                        f"[{test_key}] 选择题{qid} options 应为 4 项，实际 {len(opts)}"
+                    )
                 if ans:
                     # 容忍空格差异
                     ans_norm = "".join(ans.split())
                     opts_norm = ["".join(o.split()) for o in opts]
                     if ans not in opts and ans_norm not in opts_norm:
-                        issues.append(f"[{test_key}] 选择题{qid} answer 不在 options 中")
+                        issues.append(
+                            f"[{test_key}] 选择题{qid} answer 不在 options 中"
+                        )
 
             # true_false 答案
             if qtype == "true_false":
                 if ans not in ("对", "错"):
-                    issues.append(f"[{test_key}] 判断题{qid} answer 应为'对'或'错'，实际 '{ans}'")
+                    issues.append(
+                        f"[{test_key}] 判断题{qid} answer 应为'对'或'错'，实际 '{ans}'"
+                    )
                 if opts:
                     issues.append(f"[{test_key}] 判断题{qid} 不应有 options")
 
             # fill_blank（数字）
             if qtype in ("fill_blank", "calculation"):
                 if not ans.isdigit():
-                    issues.append(f"[{test_key}] {qtype}题{qid} answer 应为纯整数字符串，实际 '{ans}'")
+                    issues.append(
+                        f"[{test_key}] {qtype}题{qid} answer 应为纯整数字符串，实际 '{ans}'"
+                    )
                 if opts:
                     issues.append(f"[{test_key}] {qtype}题{qid} 不应有 options")
 
@@ -489,11 +606,15 @@ def validate_quiz(quiz_data: dict, subject_cfg: SubjectConfig) -> list[str]:
             # matching
             if qtype == "matching":
                 if len(opts) != 8:
-                    issues.append(f"[{test_key}] 连线题{qid} options 应为 8 项（前4左+后4右），实际 {len(opts)}")
+                    issues.append(
+                        f"[{test_key}] 连线题{qid} options 应为 8 项（前4左+后4右），实际 {len(opts)}"
+                    )
                 # answer 形式 "A-1,B-2,C-3,D-4"
                 parts = [p.strip() for p in ans.split(",")]
                 if len(parts) != 4:
-                    issues.append(f"[{test_key}] 连线题{qid} answer 应有 4 对，实际 {len(parts)}")
+                    issues.append(
+                        f"[{test_key}] 连线题{qid} answer 应有 4 对，实际 {len(parts)}"
+                    )
                 else:
                     keys = sorted(p.split("-")[0] for p in parts if "-" in p)
                     vals = sorted(p.split("-")[1] for p in parts if "-" in p)
@@ -505,10 +626,14 @@ def validate_quiz(quiz_data: dict, subject_cfg: SubjectConfig) -> list[str]:
             # word_order
             if qtype == "word_order":
                 if not (2 <= len(opts) <= 6):
-                    issues.append(f"[{test_key}] 排序题{qid} options 应为 2-6 项，实际 {len(opts)}")
+                    issues.append(
+                        f"[{test_key}] 排序题{qid} options 应为 2-6 项，实际 {len(opts)}"
+                    )
                 ans_parts = [p.strip() for p in ans.split(",")]
                 if sorted(ans_parts) != sorted(opts):
-                    issues.append(f"[{test_key}] 排序题{qid} answer 词语集合与 options 不匹配")
+                    issues.append(
+                        f"[{test_key}] 排序题{qid} answer 词语集合与 options 不匹配"
+                    )
 
             # 答案非空
             if not ans.strip():
@@ -580,7 +705,9 @@ def process_textbook(filename: str, subject_id: str, batch_size: int = 10):
         quiz_file.write_text(
             json.dumps(quiz_data, ensure_ascii=False, indent=2), encoding="utf-8"
         )
-        knowledge_file.write_text(generate_knowledge_markdown(quiz_data), encoding="utf-8")
+        knowledge_file.write_text(
+            generate_knowledge_markdown(quiz_data), encoding="utf-8"
+        )
         return unit, issues
 
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
@@ -619,6 +746,7 @@ def run_subject(subject_id: str, only: str | None, batch_size: int):
         except Exception as e:
             print(f"  [错误] {filename}: {e}")
             import traceback
+
             traceback.print_exc()
             continue
 
@@ -627,26 +755,36 @@ def run_subject(subject_id: str, only: str | None, batch_size: int):
 # CLI 入口
 # ============================================================
 def main():
-    parser = argparse.ArgumentParser(description="小学多学科教材 AI 题库生成 Pipeline v3")
+    parser = argparse.ArgumentParser(
+        description="小学多学科教材 AI 题库生成 Pipeline v3"
+    )
     parser.add_argument(
-        "--subject", type=str, default="math",
+        "--subject",
+        type=str,
+        default="math",
         choices=["math", "chinese", "english", "science", "all"],
         help="要处理的学科（默认 math）",
     )
     parser.add_argument(
-        "--batch-size", type=int, default=10,
+        "--batch-size",
+        type=int,
+        default=10,
         help="PDF 拆分时每批页数（默认10）",
     )
     parser.add_argument(
-        "--only", type=str, default=None,
+        "--only",
+        type=str,
+        default=None,
         help="只处理包含该关键词的教材，如 '三年级上册'",
     )
     parser.add_argument(
-        "--dry-run", action="store_true",
+        "--dry-run",
+        action="store_true",
         help="只显示会处理哪些教材，不实际执行",
     )
     parser.add_argument(
-        "--list-subjects", action="store_true",
+        "--list-subjects",
+        action="store_true",
         help="列出所有已配置学科和教材清单后退出",
     )
     args = parser.parse_args()
@@ -670,6 +808,9 @@ def main():
 
     print("=" * 60)
     print("小学多学科教材 AI 题库生成 Pipeline v3")
+    print(f"模型提供方: {LLM_PROVIDER}")
+    if LLM_PROVIDER == "bailian":
+        print(f"百炼地址: {DASHSCOPE_BASE_URL}")
     print(f"提取模型: {EXTRACT_MODEL}")
     print(f"生成模型: {GENERATE_MODEL}")
     print(f"每批页数: {args.batch_size}")
@@ -710,7 +851,9 @@ def main():
                 total_issues += len(data.get("_validation_issues", []))
             except Exception:
                 pass
-        print(f"  [{sid}] {len(outlines)} 本大纲 / {len(quizzes)} 单元题库 / {total_q} 题 / {total_issues} 项警告")
+        print(
+            f"  [{sid}] {len(outlines)} 本大纲 / {len(quizzes)} 单元题库 / {total_q} 题 / {total_issues} 项警告"
+        )
     print(f"{'=' * 60}")
 
     print_cost_summary()

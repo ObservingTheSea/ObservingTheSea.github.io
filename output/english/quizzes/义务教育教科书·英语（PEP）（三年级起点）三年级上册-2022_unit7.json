@@ -1,0 +1,715 @@
+{
+  "textbook": "人教版PEP英语三年级上册",
+  "unit": "第7单元 Revision & Recycle",
+  "unit_number": 7,
+  "unit_test": {
+    "title": "PEP英语三年级上册第7单元测试卷",
+    "total_score": 100,
+    "time_minutes": 40,
+    "questions": [
+      {
+        "id": 1,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "社交礼仪综合应用",
+        "question": "'Nice to meet you.' 是初次见面时常用的问候语。",
+        "options": [],
+        "answer": "对",
+        "explanation": "初次见面或经人介绍认识新朋友时，我们通常说 'Nice to meet you.'（很高兴见到你），这是基本的社交礼仪。"
+      },
+      {
+        "id": 2,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "26个字母全表回顾",
+        "question": "英文字母表中一共有28个字母。",
+        "options": [],
+        "answer": "错",
+        "explanation": "英文字母表中一共有26个字母，从A到Z。"
+      },
+      {
+        "id": 3,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "'red', 'blue', 'green' 都是表示颜色的单词。",
+        "options": [],
+        "answer": "对",
+        "explanation": "red（红色）、blue（蓝色）、green（绿色）都属于颜色类主题词汇。"
+      },
+      {
+        "id": 4,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "社交礼仪综合应用",
+        "question": "去别人家做客时，进门前应该先敲门（knock）。",
+        "options": [],
+        "answer": "对",
+        "explanation": "去别人家做客的礼仪中，进门之前要先敲门（knock），得到允许后再进去，这是礼貌的表现。"
+      },
+      {
+        "id": 5,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "'dog', 'cat', 'pen' 都是动物类单词。",
+        "options": [],
+        "answer": "错",
+        "explanation": "'dog'（狗）和 'cat'（猫）是动物，但 'pen'（钢笔）是文具，不属于动物类。"
+      },
+      {
+        "id": 6,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "社交礼仪综合应用",
+        "question": "当别人对你说 'Thank you.' 时，你应该怎么回答？",
+        "options": [
+          "You're welcome.",
+          "I'm fine.",
+          "Goodbye.",
+          "Hello."
+        ],
+        "answer": "You're welcome.",
+        "explanation": "当别人感谢你（Thank you.）时，礼貌的回答是 'You're welcome.'（不客气）。"
+      },
+      {
+        "id": 7,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "26个字母全表回顾",
+        "question": "在26个英文字母中，字母 'F' 后面的一个字母是什么？",
+        "options": [
+          "E",
+          "G",
+          "H",
+          "D"
+        ],
+        "answer": "G",
+        "explanation": "按照英文字母表的顺序：...D, E, F, G, H...，所以 'F' 后面的字母是 'G'。"
+      },
+      {
+        "id": 8,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "下列哪个单词属于“家庭”主题的词汇？",
+        "options": [
+          "mother",
+          "monkey",
+          "morning",
+          "mouth"
+        ],
+        "answer": "mother",
+        "explanation": "mother（妈妈）属于家庭成员词汇；monkey（猴子）是动物，morning（早晨）是时间，mouth（嘴巴）是身体部位。"
+      },
+      {
+        "id": 9,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "社交礼仪综合应用",
+        "question": "你想和朋友分享你的食物，你可以说：",
+        "options": [
+          "Let's share!",
+          "Let's go!",
+          "Let's sing!",
+          "Let's jump!"
+        ],
+        "answer": "Let's share!",
+        "explanation": "share 意为“分享”。想和朋友分享东西时，可以说 'Let's share!'（我们一起分享吧！）。"
+      },
+      {
+        "id": 10,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "26个字母全表回顾",
+        "question": "下列哪一组字母全部是元音字母？",
+        "options": [
+          "A, E, I, O, U",
+          "B, C, D, E, F",
+          "A, B, C, D, E",
+          "X, Y, Z, A, E"
+        ],
+        "answer": "A, E, I, O, U",
+        "explanation": "英语中的五个元音字母分别是 A, E, I, O, U。"
+      },
+      {
+        "id": 11,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "— How many apples do you have? — I have ___.",
+        "options": [
+          "five",
+          "red",
+          "big",
+          "apple"
+        ],
+        "answer": "five",
+        "explanation": "'How many...' 提问数量，回答需要用数字。选项中只有 'five'（五）是数字。"
+      },
+      {
+        "id": 12,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "社交礼仪综合应用",
+        "question": "你去同学家做客，见到同学的妈妈，你应该先说什么？",
+        "options": [
+          "Hello! Nice to meet you.",
+          "Goodbye!",
+          "Thank you.",
+          "I have a pen."
+        ],
+        "answer": "Hello! Nice to meet you.",
+        "explanation": "作为客人见到长辈，首先要打招呼问好并表达见到对方很高兴，'Hello! Nice to meet you.' 是最合适的社交礼仪用语。"
+      },
+      {
+        "id": 13,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "26个字母全表回顾",
+        "question": "小写字母 'b' 对应的大写字母是哪一个？",
+        "options": [
+          "D",
+          "B",
+          "P",
+          "R"
+        ],
+        "answer": "B",
+        "explanation": "字母 b 的大写形式是 B。注意不要和小写字母 d（大写D）混淆。"
+      },
+      {
+        "id": 14,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "找出不同类的一项：",
+        "options": [
+          "bear",
+          "bird",
+          "black",
+          "dog"
+        ],
+        "answer": "black",
+        "explanation": "bear（熊）、bird（鸟）、dog（狗）都是动物，而 black（黑色）是颜色，与其他三个不同类。"
+      },
+      {
+        "id": 15,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "社交礼仪综合应用",
+        "question": "朋友过生日，你送给他一份礼物，你应该说：",
+        "options": [
+          "This is for you. Happy birthday!",
+          "I am hungry.",
+          "Look at me.",
+          "What's your name?"
+        ],
+        "answer": "This is for you. Happy birthday!",
+        "explanation": "赠送礼物时的交际用语是 'This is for you.'（这是给你的），结合生日场景加上 'Happy birthday!' 最为恰当。"
+      },
+      {
+        "id": 16,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "26个字母全表回顾",
+        "question": "请补全字母表顺序：A, B, C, D, ___",
+        "options": [],
+        "answer": "e",
+        "explanation": "按照字母表顺序，D 后面是 E。根据填空要求需全部小写，故填 e。"
+      },
+      {
+        "id": 17,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "I see a ___ (红色的) apple.",
+        "options": [],
+        "answer": "red",
+        "explanation": "红色的英文是 red。句意：我看到一个红色的苹果。"
+      },
+      {
+        "id": 18,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "社交礼仪综合应用",
+        "question": "当你想和别人分享玩具时，你可以说：Let's ___.",
+        "options": [],
+        "answer": "share",
+        "explanation": "share 意为“分享”，Let's share. 意为“我们一起分享吧。”符合做客与分享的礼仪语境。"
+      },
+      {
+        "id": 19,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "My father and my mother are my ___.",
+        "options": [],
+        "answer": "parents",
+        "explanation": "爸爸和妈妈合称为父母，英文是 parents。考查家庭主题词汇的逻辑归纳。"
+      },
+      {
+        "id": 20,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "请将左边的英文单词与右边对应的中文意思连线配对。",
+        "options": [
+          "cat",
+          "yellow",
+          "three",
+          "brother",
+          "三",
+          "兄弟",
+          "黄色",
+          "猫"
+        ],
+        "answer": "A-4,B-3,C-1,D-2",
+        "explanation": "cat（猫）对应4；yellow（黄色）对应3；three（三）对应1；brother（兄弟）对应2。这些词分别属于动物、颜色、数字和家庭主题。"
+      },
+      {
+        "id": 21,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "社交礼仪综合应用",
+        "question": "请将左边的英文短语与右边对应的中文意思连线配对。",
+        "options": [
+          "say hello",
+          "knock the door",
+          "give a gift",
+          "nice to meet you",
+          "很高兴见到你",
+          "敲门",
+          "打招呼",
+          "送礼物"
+        ],
+        "answer": "A-3,B-2,C-4,D-1",
+        "explanation": "say hello（打招呼）对应3；knock the door（敲门）对应2；give a gift（送礼物）对应4；nice to meet you（很高兴见到你）对应1。这些都是本册重点复习的社交礼仪用语。"
+      },
+      {
+        "id": 22,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "社交礼仪综合应用",
+        "question": "请将下列单词排成一个正确的句子：",
+        "options": [
+          "meet",
+          "Nice",
+          "you",
+          "to"
+        ],
+        "answer": "Nice,to,meet,you",
+        "explanation": "正确语序为 'Nice to meet you.'（很高兴见到你）。句首单词 Nice 首字母大写。自检：options集合等于answer分割后的集合，长度均为4。"
+      },
+      {
+        "id": 23,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "请将下列单词排成一个正确的句子：",
+        "options": [
+          "have",
+          "I",
+          "pen",
+          "a"
+        ],
+        "answer": "I,have,a,pen",
+        "explanation": "正确语序为 'I have a pen.'（我有一支钢笔）。主语 I 放在句首且大写。自检：options集合等于answer分割后的集合，长度均为4。"
+      }
+    ]
+  },
+  "exam": {
+    "title": "PEP英语三年级上册第7单元期末测试卷",
+    "total_score": 100,
+    "time_minutes": 60,
+    "questions": [
+      {
+        "id": 1,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "26个字母全表回顾",
+        "question": "大写字母 'M' 对应的小写字母是 'm'。",
+        "options": [],
+        "answer": "对",
+        "explanation": "字母 M 的小写形式确实是 m。"
+      },
+      {
+        "id": 2,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "'one, two, three, four' 都是表示数字的单词。",
+        "options": [],
+        "answer": "对",
+        "explanation": "one(1), two(2), three(3), four(4) 均属于数字类主题词汇。"
+      },
+      {
+        "id": 3,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "社交礼仪综合应用",
+        "question": "收到别人的礼物时，我们应该说 'Goodbye.'。",
+        "options": [],
+        "answer": "错",
+        "explanation": "收到礼物时，出于礼貌我们应该说 'Thank you.'（谢谢），而不是 'Goodbye.'（再见）。"
+      },
+      {
+        "id": 4,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "26个字母全表回顾",
+        "question": "英文字母表中的最后一个字母是 'Y'。",
+        "options": [],
+        "answer": "错",
+        "explanation": "英文字母表共26个字母，最后一个字母是 'Z'，而不是 'Y'。"
+      },
+      {
+        "id": 5,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 3,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "'flower' 和 'tree' 都可以归类到植物类词汇中。",
+        "options": [],
+        "answer": "对",
+        "explanation": "flower（花）和 tree（树）都属于自然界中的植物，归类为植物类主题是正确的。"
+      },
+      {
+        "id": 6,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "26个字母全表回顾",
+        "question": "字母表中排在 'J' 前面的字母是哪一个？",
+        "options": [
+          "K",
+          "I",
+          "L",
+          "H"
+        ],
+        "answer": "I",
+        "explanation": "字母表顺序为 ...H, I, J, K...，所以排在 J 前面的是 I。"
+      },
+      {
+        "id": 7,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "Which one is an animal?（下面哪一个是动物？）",
+        "options": [
+          "pig",
+          "bag",
+          "leg",
+          "big"
+        ],
+        "answer": "pig",
+        "explanation": "pig（猪）是动物。bag（书包）是物品，leg（腿）是身体部位，big（大的）是形容词。"
+      },
+      {
+        "id": 8,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "社交礼仪综合应用",
+        "question": "你想把苹果分享给好朋友，你会说：",
+        "options": [
+          "Here you are. Let's share.",
+          "I like apples.",
+          "This is a red apple.",
+          "How many apples?"
+        ],
+        "answer": "Here you are. Let's share.",
+        "explanation": "分享物品时，递给对方并说 'Here you are. Let's share.'（给你。我们一起分享吧。）最符合社交礼仪。"
+      },
+      {
+        "id": 9,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "26个字母全表回顾",
+        "question": "下列哪一项包含了所有元音字母的正确书写？",
+        "options": [
+          "A, E, I, O, U",
+          "a, b, c, d, e",
+          "A, B, I, O, U",
+          "E, I, O, U, Y"
+        ],
+        "answer": "A, E, I, O, U",
+        "explanation": "英语中的五个元音字母是 A, E, I, O, U。选项A完全正确。"
+      },
+      {
+        "id": 10,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "— What colour is it? — It's ___.",
+        "options": [
+          "orange",
+          "seven",
+          "sister",
+          "tiger"
+        ],
+        "answer": "orange",
+        "explanation": "'What colour...' 提问颜色，回答需要是颜色词。orange 可以表示橙色（也可以表示橘子，此处作颜色解）。其他选项 seven 是数字，sister 是家人，tiger 是动物。"
+      },
+      {
+        "id": 11,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "社交礼仪综合应用",
+        "question": "你去拜访老师，走到办公室门前，首先应该怎么做？",
+        "options": [
+          "Knock the door and say hello.",
+          "Run into the room.",
+          "Sing a song.",
+          "Eat some food."
+        ],
+        "answer": "Knock the door and say hello.",
+        "explanation": "根据做客礼仪，到达门口应先敲门（knock the door），进入后主动问好（say hello），这体现了良好的社交素养。"
+      },
+      {
+        "id": 12,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "找规律填空：two, four, six, ___",
+        "options": [
+          "eight",
+          "seven",
+          "nine",
+          "ten"
+        ],
+        "answer": "eight",
+        "explanation": "two(2), four(4), six(6) 是连续的偶数，下一个偶数是 eight(8)。考查数字词汇的逻辑归纳能力。"
+      },
+      {
+        "id": 13,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "26个字母全表回顾",
+        "question": "如果按字母表顺序排列以下单词，排在最前面的是哪一个？",
+        "options": [
+          "cat",
+          "apple",
+          "dog",
+          "bear"
+        ],
+        "answer": "apple",
+        "explanation": "比较首字母：c(cat), a(apple), d(dog), b(bear)。在字母表中 a 排在最前，因此 apple 排在第一位。"
+      },
+      {
+        "id": 14,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "社交礼仪综合应用",
+        "question": "当你要离开朋友家时，你应该说：",
+        "options": [
+          "Goodbye!",
+          "Hello!",
+          "I'm five.",
+          "Nice to meet you."
+        ],
+        "answer": "Goodbye!",
+        "explanation": "告别时的标准交际用语是 'Goodbye!'（再见）。"
+      },
+      {
+        "id": 15,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "'grandfather' 属于以下哪个类别的词汇？",
+        "options": [
+          "family",
+          "animal",
+          "colour",
+          "number"
+        ],
+        "answer": "family",
+        "explanation": "grandfather（爷爷/外公）属于 family（家庭）类别的词汇。"
+      },
+      {
+        "id": 16,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "26个字母全表回顾",
+        "question": "写出字母表中 'x' 后面的两个小写字母：x, ___, z",
+        "options": [],
+        "answer": "y",
+        "explanation": "字母表末尾的顺序是 ...w, x, y, z。x 和 z 之间的字母是 y。"
+      },
+      {
+        "id": 17,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "I have a pet. It is a ___. It says 'Woof! Woof!'",
+        "options": [],
+        "answer": "dog",
+        "explanation": "发出 'Woof! Woof!'（汪汪）叫声的动物是 dog（狗）。考查动物词汇的实际应用。"
+      },
+      {
+        "id": 18,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "社交礼仪综合应用",
+        "question": "A: This gift is for you. B: ___.",
+        "options": [],
+        "answer": "thank you",
+        "explanation": "收到礼物（gift）时，应该表达感谢，回答 'Thank you.'。根据填空题规则，答案需全部小写，故填 thank you。"
+      },
+      {
+        "id": 19,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "Look at the ___. It is green and beautiful. (提示：一种植物)",
+        "options": [],
+        "answer": "tree",
+        "explanation": "根据提示“一种植物”以及“它是绿色的且很美”，结合本册词汇，tree（树）符合要求。"
+      },
+      {
+        "id": 20,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "请将左边的英文单词与右边对应的中文意思连线配对。",
+        "options": [
+          "panda",
+          "green",
+          "five",
+          "sister",
+          "姐妹",
+          "五",
+          "绿色",
+          "熊猫"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "panda（熊猫）对应4；green（绿色）对应3；five（五）对应2；sister（姐妹）对应1。涵盖了动物、颜色、数字、家庭四大主题。"
+      },
+      {
+        "id": 21,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "社交礼仪综合应用",
+        "question": "请将左边的情景用语与右边对应的中文意思连线配对。",
+        "options": [
+          "knock knock",
+          "let's share",
+          "happy birthday",
+          "this is for you",
+          "这是给你的",
+          "生日快乐",
+          "让我们分享吧",
+          "咚咚（敲门声）"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "knock knock（咚咚/敲门声）对应4；let's share（让我们分享吧）对应3；happy birthday（生日快乐）对应2；this is for you（这是给你的）对应1。考查社交礼仪综合应用的英汉匹配。"
+      },
+      {
+        "id": 22,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "社交礼仪综合应用",
+        "question": "请将下列单词排成一个正确的句子：",
+        "options": [
+          "share",
+          "Let's",
+          "please"
+        ],
+        "answer": "Let's,share,please",
+        "explanation": "正确语序为 'Let's share, please.'（请让我们一起分享吧。）Let's 位于句首首字母大写。自检：options集合等于answer分割后的集合，长度均为3。"
+      },
+      {
+        "id": 23,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "综合场景词汇归类",
+        "question": "请将下列单词排成一个正确的句子：",
+        "options": [
+          "see",
+          "I",
+          "birds",
+          "three"
+        ],
+        "answer": "I,see,three,birds",
+        "explanation": "正确语序为 'I see three birds.'（我看见三只鸟。）主语 I 放句首，动词 see，数量词 three 修饰名词 birds。自检：options集合等于answer分割后的集合，长度均为4。"
+      }
+    ]
+  },
+  "knowledge_summary": [
+    {
+      "point": "社交礼仪综合应用",
+      "core_concept": "掌握并综合运用做客、分享、问候及赠送礼物等日常交际用语，培养跨文化交际意识与基本礼仪素养。",
+      "key_formula": "1. 见面问候：Hello! / Hi! / Nice to meet you.\n2. 敲门礼仪：Knock the door. / Knock knock.\n3. 分享用语：Let's share.\n4. 赠送礼物：This is for you. / Here you are.\n5. 表达感谢：Thank you. -> You're welcome.",
+      "common_mistakes": [
+        "收到礼物时忘记说 Thank you，或者误用 Goodbye 回应。",
+        "混淆分享（share）和其他动作指令（如 sing, jump）。",
+        "在不恰当的场合使用初次见面的用语 Nice to meet you（如对已经很熟的同学反复说）。"
+      ],
+      "tips": "可以通过角色扮演（Role-play）模拟去同学家做客的完整流程：敲门(knock) -> 问好(say hello) -> 分享食物/玩具(share) -> 赠送礼物(give a gift) -> 道别(say goodbye)，将孤立的句型串联成有意义的语境。"
+    },
+    {
+      "point": "26个字母全表回顾",
+      "core_concept": "熟练认读、准确书写26个英文字母的大小写形式，掌握字母表的先后顺序，能区分元音字母与辅音字母。",
+      "key_formula": "1. 字母总数：26个（A-Z）。\n2. 元音字母：A, E, I, O, U（大小写均需掌握）。\n3. 易混淆字母对比：b/d, p/q, M/W, I/l。\n4. 书写规范：占格要准确，大写字母占上两格，小写字母根据具体字母占格不同。",
+      "common_mistakes": [
+        "手写体中 b 和 d、p 和 q 镜像混淆。",
+        "认为字母表有28个字母，或记错字母的先后顺序（如把 H 和 K 的位置搞混）。",
+        "元音字母漏掉某个或把 Y 当作纯元音字母。"
+      ],
+      "tips": "利用《ABC Song》字母歌进行旋律记忆；对于易混淆字母，可借助身体动作或形象联想（如：b的肚子朝右像6，d的肚子朝左；p向下，q向上）。平时多在四线三格中进行规范书写练习。"
+    },
+    {
+      "point": "综合场景词汇归类",
+      "core_concept": "能够将全册所学的零散词汇按照主题（如动物、家庭、颜色、数字、植物等）进行逻辑分类，并在具体语境中正确提取和应用。",
+      "key_formula": "1. 动物类 (Animals): cat, dog, pig, bear, bird, panda, monkey, tiger...\n2. 家庭类 (Family): father, mother, brother, sister, grandfather, grandmother, parents...\n3. 颜色类 (Colours): red, yellow, green, blue, black, white, orange...\n4. 数字类 (Numbers): one, two, three, four, five, six, seven, eight, nine, ten...\n5. 植物类 (Plants): flower, tree...",
+      "common_mistakes": [
+        "一词多义导致的分类错误，例如 orange 既可以是颜色（橙色）也可以是水果（橘子），脱离语境容易分错类。",
+        "拼写相似导致张冠李戴，如 mouth（嘴巴）和 mouse（老鼠），monkey（猴子）和 mother（妈妈）。",
+        "做找规律题时，无法识别数字递增或字母排序的隐藏逻辑。"
+      ],
+      "tips": "建议学生在复习时画“思维导图（Mind Map）”，中心词写 Theme（主题），分支写具体的英文单词。做题时遇到“找出不同类”的题型，先在心里把四个选项都翻译成中文，再判断它们所属的类别，最后挑出那个“异类”。"
+    }
+  ]
+}

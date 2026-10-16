@@ -17,7 +17,6 @@ story_pipeline.py — LLM 生成分级故事 + 阅读理解题 Pipeline
 import os
 import sys
 import json
-import re
 import time
 import threading
 import argparse
@@ -48,7 +47,7 @@ from prompts_story import (                         # from scripts/stories/
     GRADE_CONSTRAINTS_CHINESE,
     GRADE_CONSTRAINTS_ENGLISH,
 )
-from subjects import SUBJECTS, get_grade_semester   # from scripts/quiz/
+from subjects import SUBJECTS, get_grade_semester, parse_book_id  # from scripts/quiz/
 
 # ============================================================
 # 配置
@@ -97,38 +96,6 @@ def record_usage(completion) -> None:
         COST_STATS["completion_tokens"] += pout
         if cost is not None:
             COST_STATS["cost"] += float(cost)
-
-
-# ============================================================
-# 年级提取
-# ============================================================
-GRADE_MAP = {"一": 1, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6}
-
-
-def extract_grade(stem: str) -> int:
-    """从文件名提取年级数字。匹配 'X年级上/下册' 模式，避免被 '三年级起点' 误导。"""
-    import re
-    m = re.search(r"([一二三四五六])年级[上下]册", stem)
-    if m:
-        return GRADE_MAP[m.group(1)]
-    # fallback: 从后往前找最后一个 "X年级"
-    for ch in ["六", "五", "四", "三", "二", "一"]:
-        idx = stem.rfind(f"{ch}年级")
-        if idx >= 0:
-            return GRADE_MAP[ch]
-    return 3
-
-
-def extract_semester(stem: str) -> str:
-    if "下册" in stem:
-        return "down"
-    return "up"
-
-
-def make_book_id(subject: str, grade: int, semester: str) -> str:
-    """生成 bookId，如 chinese-g3up。"""
-    sem = "up" if semester == "up" else "down"
-    return f"{subject}-g{grade}{sem}"
 
 
 # ============================================================
@@ -280,9 +247,11 @@ def process_textbook(
         print(f"  [跳过] 大纲无单元信息")
         return
 
-    grade = extract_grade(stem)
-    semester = extract_semester(stem)
-    book_id = make_book_id(subject, grade, semester)
+    parsed = parse_book_id(stem, subject)
+    if not parsed:
+        print(f"  [跳过] 无法从文件名解析年级/学期: {stem}")
+        return
+    grade, semester, book_id, _edition = parsed
     textbook_name = outline.get("textbook", get_grade_semester(stem))
 
     # 缓存目录

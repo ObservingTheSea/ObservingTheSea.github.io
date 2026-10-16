@@ -166,31 +166,27 @@ export function PathMap({
   const sectionRefs = useRef(new Map<number, HTMLDivElement | null>());
   const [activeUnitNum, setActiveUnitNum] = useState<number>(unitEntries[0]?.[0] ?? 1);
 
-  // sticky top 值 = 元素在文档流里的原始 offsetTop —— 这样吸附时 y 位置不变
+  // 窄屏 top 写在 class 的 top-[53px] 里，与教材顶栏对齐。
+  // 这里只量 banner 自身高度，给单元切换的观察区留出顶栏 + banner 的空隙。
   const stickyRef = useRef<HTMLDivElement>(null);
-  const [stickyTop, setStickyTop] = useState<number | null>(null);
+  const [stickInset, setStickInset] = useState(80);
 
   useLayoutEffect(() => {
+    const el = stickyRef.current;
+    if (!el) return;
     function measure() {
-      if (typeof window === "undefined") return;
       const isLg = window.matchMedia("(min-width: 1024px)").matches;
-      if (!isLg) {
-        setStickyTop(null);
-        return;
-      }
-      const el = stickyRef.current;
-      if (!el) return;
-      let y = 0;
-      let cur: HTMLElement | null = el;
-      while (cur) {
-        y += cur.offsetTop;
-        cur = cur.offsetParent as HTMLElement | null;
-      }
-      setStickyTop(y);
+      const top = isLg ? 0 : 53;
+      setStickInset(Math.round(top + el.getBoundingClientRect().height));
     }
     measure();
+    const ro = typeof ResizeObserver !== "undefined" ? new ResizeObserver(measure) : null;
+    ro?.observe(el);
     window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
+    return () => {
+      window.removeEventListener("resize", measure);
+      ro?.disconnect();
+    };
   }, []);
 
   useEffect(() => {
@@ -208,7 +204,7 @@ export function PathMap({
       },
       {
         // 观察"进入屏幕上半部分"的元素
-        rootMargin: "-80px 0px -55% 0px",
+        rootMargin: `-${stickInset}px 0px -55% 0px`,
         threshold: 0,
       },
     );
@@ -216,7 +212,7 @@ export function PathMap({
       if (el) observer.observe(el);
     });
     return () => observer.disconnect();
-  }, [unitEntries]);
+  }, [unitEntries, stickInset]);
 
   function handleChestClick(slot: ChestSlot) {
     const afterStatus = statuses[slot.afterLessonId];
@@ -277,8 +273,7 @@ export function PathMap({
       {/* === sticky 单元 banner === */}
       <div
         ref={stickyRef}
-        className="sticky top-0 z-20 -mx-4 px-4 lg:mx-0 lg:px-0 pt-2 pb-3 bg-bg-soft/0 lg:bg-transparent"
-        style={stickyTop !== null ? { top: stickyTop } : undefined}
+        className="sticky top-[53px] z-20 -mx-4 px-4 lg:top-0 lg:mx-0 lg:px-0 pt-2 pb-3 bg-bg-soft lg:bg-transparent"
       >
         {topSlot && <div className="hidden lg:block mb-3">{topSlot}</div>}
         <AnimatePresence mode="wait">

@@ -67,3 +67,7 @@ release-assets/
 
 # generated content source (real dir in main tree, symlink in worktrees)
 /data
+
+
+.codegraph
+frontend

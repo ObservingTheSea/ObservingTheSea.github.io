@@ -11,6 +11,8 @@ pipeline.py 和 prompts.py 都从这里取数。新增学科只需在此加一�
 """
 
 from __future__ import annotations
+
+import re
 from typing import TypedDict, Literal
 
 SubjectId = Literal["math", "chinese", "english", "science"]
@@ -21,10 +23,10 @@ class SubjectConfig(TypedDict):
     curriculum: str
     github_path: str
     publisher_label: str
-    textbooks: list[str]       # PDF 文件名（不含路径，含 .pdf 后缀）
+    textbooks: list[str]  # PDF 文件名（不含路径，含 .pdf 后缀）
     grade_range: tuple[int, int]
-    quiz_prompt: str           # prompts.py 中的常量名
-    quiz_schema: str           # prompts.py 中的 schema 名
+    quiz_prompt: str  # prompts.py 中的常量名
+    quiz_schema: str  # prompts.py 中的 schema 名
     question_types: list[str]
 
 
@@ -84,7 +86,13 @@ CHINESE: SubjectConfig = {
     "grade_range": (1, 6),
     "quiz_prompt": "QUIZ_PROMPT_CHINESE",
     "quiz_schema": "QUIZ_SCHEMA_CHINESE",
-    "question_types": ["true_false", "choice", "fill_blank_text", "word_order", "matching"],
+    "question_types": [
+        "true_false",
+        "choice",
+        "fill_blank_text",
+        "word_order",
+        "matching",
+    ],
 }
 
 
@@ -109,11 +117,18 @@ ENGLISH: SubjectConfig = {
         "义务教育教科书·英语（三年级起点）四年级下册.pdf",
         "义务教育教科书·英语（三年级起点）五年级下册.pdf",
         "义务教育教科书·英语（三年级起点）六年级下册.pdf",
+        "义务教育教科书·英语（PEP）（三年级起点）三年级上册-2022.pdf",
     ],
     "grade_range": (3, 6),
     "quiz_prompt": "QUIZ_PROMPT_ENGLISH",
     "quiz_schema": "QUIZ_SCHEMA_ENGLISH",
-    "question_types": ["true_false", "choice", "fill_blank_text", "word_order", "matching"],
+    "question_types": [
+        "true_false",
+        "choice",
+        "fill_blank_text",
+        "word_order",
+        "matching",
+    ],
 }
 
 
@@ -184,3 +199,31 @@ def get_grade_semester(stem: str) -> str:
             if needle in stem:
                 return needle
     return "未知年级"
+
+
+# 与 apps/web/scripts/build-data.ts 的 parseStem 对齐。
+# 版本号只取「X年级上/下册」之后的四位年份（-2022、（2024））。
+# 没有年份视为原版，book_id 不加后缀，避免冲掉已有进度。
+_GRADE_CN = {"一": 1, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6}
+_GRADE_SEM_RE = re.compile(r"([一二三四五六])年级(上|下)册")
+_EDITION_RE = re.compile(r"[-_·.\s（(]*((?:19|20)\d{2})")
+
+
+def parse_book_id(stem: str, subject_id: str) -> tuple[int, str, str, str | None] | None:
+    """(grade, semester, book_id, edition)。
+
+    math 维持 g3up；其他学科加前缀 english-g3up。
+    「年级册」后带年份时再加后缀：english-g3up-2022。
+    """
+    m = _GRADE_SEM_RE.search(stem)
+    if not m:
+        return None
+    grade = _GRADE_CN[m.group(1)]
+    semester = "up" if m.group(2) == "上" else "down"
+    base = f"g{grade}{semester}"
+    book_id = base if subject_id == "math" else f"{subject_id}-{base}"
+    em = _EDITION_RE.match(stem[m.end() :])
+    edition = em.group(1) if em else None
+    if edition:
+        book_id = f"{book_id}-{edition}"
+    return grade, semester, book_id, edition

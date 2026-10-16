@@ -62,6 +62,13 @@ const THEMES: Record<SubjectId, SubjectTheme> = {
 
 const SUBJECT_ORDER: SubjectId[] = ["math", "chinese", "english", "science"];
 
+/** 原版在前，有年份的按年份升序。 */
+function editionRank(edition?: string): number {
+  if (!edition) return -1;
+  const n = Number(edition);
+  return Number.isFinite(n) ? n : 9999;
+}
+
 export default async function GradePage({ params }: { params: Promise<{ grade: string }> }) {
   const { grade } = await params;
   const gradeNum = Number(grade);
@@ -77,9 +84,13 @@ export default async function GradePage({ params }: { params: Promise<{ grade: s
     if (!bySubject.has(sid)) bySubject.set(sid, []);
     bySubject.get(sid)!.push(b);
   }
-  // 单本内按学期：上册 → 下册
+  // 单本内：上册 → 下册，同一册原版在前、年份升序
   for (const [, arr] of bySubject) {
-    arr.sort((a, b) => (a.semester === "up" ? -1 : 1) - (b.semester === "up" ? -1 : 1));
+    arr.sort((a, b) => {
+      const sem = (a.semester === "up" ? 0 : 1) - (b.semester === "up" ? 0 : 1);
+      if (sem !== 0) return sem;
+      return editionRank(a.edition) - editionRank(b.edition);
+    });
   }
 
   return (
@@ -161,6 +172,7 @@ export default async function GradePage({ params }: { params: Promise<{ grade: s
                           <div className="text-base lg:text-xl font-extrabold leading-tight truncate mt-0.5">
                             {book.gradeName}
                             {book.semesterName}
+                            {book.edition ? ` · ${book.edition}版` : ""}
                           </div>
                           <div className="text-[11px] lg:text-xs font-semibold opacity-85 mt-0.5 lg:mt-1">
                             {book.unitsCount} 单元 · {book.lessonsCount} 节小课

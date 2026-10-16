@@ -1,0 +1,719 @@
+{
+  "textbook": "人教版PEP英语三年级上册",
+  "unit": "Unit 5 The colourful world",
+  "unit_number": 5,
+  "unit_test": {
+    "title": "Unit 5 The colourful world 单元测试卷",
+    "total_score": 100,
+    "time_minutes": 40,
+    "questions": [
+      {
+        "id": 1,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "'red' 的意思是红色。",
+        "options": [],
+        "answer": "对",
+        "explanation": "red 是红色的意思，这是本单元最基础的颜色词汇。"
+      },
+      {
+        "id": 2,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "'blue' 的意思是绿色。",
+        "options": [],
+        "answer": "错",
+        "explanation": "blue 是蓝色的意思，green 才是绿色。注意区分这两个颜色词。"
+      },
+      {
+        "id": 3,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "Red and yellow make orange.（红色和黄色混合变成橙色。）",
+        "options": [],
+        "answer": "对",
+        "explanation": "根据颜色混合规律，红色(red)加黄色(yellow)混合后确实会变成橙色(orange)。"
+      },
+      {
+        "id": 4,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "字母Qq-Uu的语音与书写",
+        "question": "字母 'Rr' 的小写形式是 'p'。",
+        "options": [],
+        "answer": "错",
+        "explanation": "字母 Rr 的小写形式是 r，而 p 是 Pp 的小写形式。书写时要注意区分。"
+      },
+      {
+        "id": 5,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "'white' 的意思是白色。",
+        "options": [],
+        "answer": "对",
+        "explanation": "white 表示白色，是本单元要求掌握的基础颜色词汇之一。"
+      },
+      {
+        "id": 6,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "What colour is the banana? (香蕉是什么颜色的？)",
+        "options": [
+          "red",
+          "yellow",
+          "blue",
+          "purple"
+        ],
+        "answer": "yellow",
+        "explanation": "banana 是香蕉，香蕉通常是黄色的(yellow)。"
+      },
+      {
+        "id": 7,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "What colour is the sky? (天空是什么颜色的？)",
+        "options": [
+          "green",
+          "orange",
+          "pink",
+          "blue"
+        ],
+        "answer": "blue",
+        "explanation": "sky 是天空，晴朗的天空是蓝色的(blue)。"
+      },
+      {
+        "id": 8,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "I have a red apple. 句中 'red' 的意思是：",
+        "options": [
+          "绿色的",
+          "红色的",
+          "黄色的",
+          "棕色的"
+        ],
+        "answer": "红色的",
+        "explanation": "red 意为“红色的”，用来修饰名词 apple。"
+      },
+      {
+        "id": 9,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "The grass (草) is ___.",
+        "options": [
+          "white",
+          "brown",
+          "green",
+          "pink"
+        ],
+        "answer": "green",
+        "explanation": "grass 是草，草的颜色是绿色的(green)。"
+      },
+      {
+        "id": 10,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "Blue and yellow make ___.",
+        "options": [
+          "red",
+          "purple",
+          "orange",
+          "green"
+        ],
+        "answer": "green",
+        "explanation": "蓝色(blue)和黄色(yellow)混合在一起会变成绿色(green)，这是基本的颜色混合规律。"
+      },
+      {
+        "id": 11,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "—What colour is it? —___",
+        "options": [
+          "It's a book.",
+          "It's blue.",
+          "I'm fine.",
+          "My name is Tom."
+        ],
+        "answer": "It's blue.",
+        "explanation": "问句 What colour is it? 是在询问颜色，回答应该包含具体的颜色词，如 It's blue."
+      },
+      {
+        "id": 12,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "Red and white make ___.",
+        "options": [
+          "brown",
+          "black",
+          "pink",
+          "purple"
+        ],
+        "answer": "pink",
+        "explanation": "红色(red)和白色(white)混合在一起会变成粉色(pink)。"
+      },
+      {
+        "id": 13,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Qq-Uu的语音与书写",
+        "question": "Which word starts with the letter 'S'?",
+        "options": [
+          "queen",
+          "tiger",
+          "sun",
+          "umbrella"
+        ],
+        "answer": "sun",
+        "explanation": "sun 的首字母是 Ss。queen 首字母是 Q，tiger 首字母是 T，umbrella 首字母是 U。"
+      },
+      {
+        "id": 14,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "Look at my ___ bag. (看我的棕色书包。)",
+        "options": [
+          "brown",
+          "blue",
+          "black",
+          "white"
+        ],
+        "answer": "brown",
+        "explanation": "中文提示为“棕色”，对应的英文单词是 brown。"
+      },
+      {
+        "id": 15,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "___ and yellow make green.",
+        "options": [
+          "Red",
+          "White",
+          "Blue",
+          "Black"
+        ],
+        "answer": "Blue",
+        "explanation": "根据颜色混合规律，蓝色(Blue)加黄色(yellow)等于绿色(green)。"
+      },
+      {
+        "id": 16,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "The snow (雪) is ___.",
+        "options": [],
+        "answer": "white",
+        "explanation": "snow 是雪，雪的颜色是白色的，填 white。注意全部小写。"
+      },
+      {
+        "id": 17,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "An orange is ___.",
+        "options": [],
+        "answer": "orange",
+        "explanation": "orange 既可以表示橙子，也可以表示橙色。这里指橙子的颜色是橙色的。"
+      },
+      {
+        "id": 18,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "Red and blue make ___.",
+        "options": [],
+        "answer": "purple",
+        "explanation": "红色(red)和蓝色(blue)混合会变成紫色(purple)。"
+      },
+      {
+        "id": 19,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "What ___ is it?",
+        "options": [],
+        "answer": "colour",
+        "explanation": "询问颜色的固定句型是 What colour is it? 缺少的单词是 colour。"
+      },
+      {
+        "id": 20,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "请将下列英文颜色单词与对应的中文意思连线配对。",
+        "options": [
+          "red",
+          "green",
+          "blue",
+          "yellow",
+          "黄色",
+          "蓝色",
+          "绿色",
+          "红色"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "red对应红色(4)，green对应绿色(3)，blue对应蓝色(2)，yellow对应黄色(1)。"
+      },
+      {
+        "id": 21,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "请将下列英文颜色单词与对应的中文意思连线配对。",
+        "options": [
+          "white",
+          "pink",
+          "brown",
+          "purple",
+          "紫色",
+          "棕色",
+          "粉色",
+          "白色"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "white对应白色(4)，pink对应粉色(3)，brown对应棕色(2)，purple对应紫色(1)。"
+      },
+      {
+        "id": 22,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "将下列单词排列成一个正确的句子：",
+        "options": [
+          "it",
+          "is",
+          "What",
+          "colour"
+        ],
+        "answer": "What,colour,is,it",
+        "explanation": "询问颜色的特殊疑问句结构为：What colour + is + 主语? 即 What colour is it?"
+      },
+      {
+        "id": 23,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "将下列单词排列成一个正确的句子：",
+        "options": [
+          "make",
+          "and",
+          "Yellow",
+          "blue",
+          "green"
+        ],
+        "answer": "Yellow,and,blue,make,green",
+        "explanation": "描述颜色混合规律的陈述句结构为：颜色A + and + 颜色B + make + 颜色C。即 Yellow and blue make green."
+      }
+    ]
+  },
+  "exam": {
+    "title": "Unit 5 The colourful world 综合考试卷",
+    "total_score": 100,
+    "time_minutes": 60,
+    "questions": [
+      {
+        "id": 1,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "'yellow' 的意思是黄色。",
+        "options": [],
+        "answer": "对",
+        "explanation": "yellow 是黄色的意思，属于本单元基础颜色词汇。"
+      },
+      {
+        "id": 2,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "Blue and red make green.（蓝色和红色混合变成绿色。）",
+        "options": [],
+        "answer": "错",
+        "explanation": "蓝色(blue)和红色(red)混合会变成紫色(purple)，而不是绿色。蓝色加黄色才变成绿色。"
+      },
+      {
+        "id": 3,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "字母Qq-Uu的语音与书写",
+        "question": "字母 'Uu' 的大写形式是 'V'。",
+        "options": [],
+        "answer": "错",
+        "explanation": "字母 Uu 的大写形式是 U，V 是 Vv 的大写形式。要注意区分 U 和 V 的书写。"
+      },
+      {
+        "id": 4,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "'orange' 可以表示一种颜色，意思是橙色。",
+        "options": [],
+        "answer": "对",
+        "explanation": "orange 既可以作名词表示“橙子/橘子”，也可以作形容词表示“橙色的”。"
+      },
+      {
+        "id": 5,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "字母Qq-Uu的语音与书写",
+        "question": "'queen' 这个单词是以字母 'Qq' 开头的。",
+        "options": [],
+        "answer": "对",
+        "explanation": "queen 的首字母是 q，符合字母 Qq 的发音规律。"
+      },
+      {
+        "id": 6,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "What colour is the tomato? (番茄是什么颜色的？)",
+        "options": [
+          "blue",
+          "red",
+          "white",
+          "brown"
+        ],
+        "answer": "red",
+        "explanation": "tomato 是番茄，成熟的番茄是红色的(red)。"
+      },
+      {
+        "id": 7,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "—What colour is your pen? —It's ___.",
+        "options": [
+          "a pen",
+          "purple",
+          "five",
+          "good"
+        ],
+        "answer": "purple",
+        "explanation": "问句在询问钢笔的颜色，答语必须是一个颜色词，四个选项中只有 purple（紫色）是颜色词。"
+      },
+      {
+        "id": 8,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "___ and blue make purple.",
+        "options": [
+          "Yellow",
+          "Green",
+          "Red",
+          "White"
+        ],
+        "answer": "Red",
+        "explanation": "根据颜色混合规律，红色(Red)加上蓝色(blue)会混合成紫色(purple)。"
+      },
+      {
+        "id": 9,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "I see a black cat and a white dog. What colours are they?",
+        "options": [
+          "Black and white.",
+          "Red and blue.",
+          "Green and yellow.",
+          "Pink and brown."
+        ],
+        "answer": "Black and white.",
+        "explanation": "题目提到 black cat（黑猫）和 white dog（白狗），所以它们的颜色是黑色和白色。"
+      },
+      {
+        "id": 10,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Qq-Uu的语音与书写",
+        "question": "Which letter comes after 'Tt'?",
+        "options": [
+          "Ss",
+          "Rr",
+          "Uu",
+          "Qq"
+        ],
+        "answer": "Uu",
+        "explanation": "字母表顺序为 Q, R, S, T, U。排在 Tt 后面的字母是 Uu。"
+      },
+      {
+        "id": 11,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "If you mix all the colours together, what do you get?",
+        "options": [
+          "white",
+          "pink",
+          "black",
+          "yellow"
+        ],
+        "answer": "black",
+        "explanation": "在颜料混合中，将所有颜色混合在一起通常会得到黑色或深色，本题选 black。这是一道提高题。"
+      },
+      {
+        "id": 12,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "The panda (熊猫) is ___ and white.",
+        "options": [
+          "red",
+          "blue",
+          "black",
+          "green"
+        ],
+        "answer": "black",
+        "explanation": "熊猫的颜色是黑白相间的，因此填 black。black and white 意为“黑白的”。"
+      },
+      {
+        "id": 13,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Qq-Uu的语音与书写",
+        "question": "Which word starts with the letter 'T'?",
+        "options": [
+          "red",
+          "tiger",
+          "sun",
+          "queen"
+        ],
+        "answer": "tiger",
+        "explanation": "tiger 的首字母是 t。red 首字母是 r，sun 首字母是 s，queen 首字母是 q。"
+      },
+      {
+        "id": 14,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "What colour is the leaf (树叶) in autumn (秋天)?",
+        "options": [
+          "green",
+          "pink",
+          "blue",
+          "brown"
+        ],
+        "answer": "brown",
+        "explanation": "春天的树叶是绿色的(green)，但到了秋天(autumn)，树叶枯萎会变成棕色(brown)或黄色。考查生活常识与颜色词的结合。"
+      },
+      {
+        "id": 15,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "'pink' 的意思是：",
+        "options": [
+          "紫色",
+          "粉色",
+          "棕色",
+          "白色"
+        ],
+        "answer": "粉色",
+        "explanation": "pink 意为“粉色/粉红色”。purple 是紫色，brown 是棕色，white 是白色。"
+      },
+      {
+        "id": 16,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "Yellow and blue make ___.",
+        "options": [],
+        "answer": "green",
+        "explanation": "黄色(yellow)和蓝色(blue)混合会变成绿色(green)。"
+      },
+      {
+        "id": 17,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "Red and yellow make ___.",
+        "options": [],
+        "answer": "orange",
+        "explanation": "红色(red)和黄色(yellow)混合会变成橙色(orange)。这是一道提高题，需要牢记颜色混合公式。"
+      },
+      {
+        "id": 18,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Qq-Uu的语音与书写",
+        "question": "The letter after 'Ss' is ___.",
+        "options": [],
+        "answer": "tt",
+        "explanation": "在字母表 Qq, Rr, Ss, Tt, Uu 的顺序中，排在 Ss 后面的是 Tt，按照题目要求全小写填 tt。"
+      },
+      {
+        "id": 19,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "The leaves (树叶) are ___ in spring (春天).",
+        "options": [],
+        "answer": "green",
+        "explanation": "春天(spring)的树叶(leaves)是绿色的(green)。"
+      },
+      {
+        "id": 20,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "基础颜色词汇辨析",
+        "question": "请将下列英文颜色单词与对应的中文意思连线配对。",
+        "options": [
+          "orange",
+          "purple",
+          "pink",
+          "brown",
+          "棕色",
+          "粉色",
+          "紫色",
+          "橙色"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "orange对应橙色(4)，purple对应紫色(3)，pink对应粉色(2)，brown对应棕色(1)。"
+      },
+      {
+        "id": 21,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "字母Qq-Uu的语音与书写",
+        "question": "请将下列英文单词与首字母对应的中文含义连线配对。",
+        "options": [
+          "queen",
+          "rabbit",
+          "sun",
+          "tiger",
+          "老虎",
+          "太阳",
+          "兔子",
+          "女王"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "queen(Qq)意为女王(4)，rabbit(Rr)意为兔子(3)，sun(Ss)意为太阳(2)，tiger(Tt)意为老虎(1)。考查字母发音与词汇的综合运用。"
+      },
+      {
+        "id": 22,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "将下列单词排列成一个正确的句子：",
+        "options": [
+          "make",
+          "Red",
+          "yellow",
+          "and",
+          "orange"
+        ],
+        "answer": "Red,and,yellow,make,orange",
+        "explanation": "颜色混合句型：颜色A + and + 颜色B + make + 颜色C。即 Red and yellow make orange."
+      },
+      {
+        "id": 23,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "颜色询问与逻辑混合",
+        "question": "将下列单词排列成一个正确的句子：",
+        "options": [
+          "colour",
+          "favourite",
+          "is",
+          "My",
+          "blue"
+        ],
+        "answer": "My,favourite,colour,is,blue",
+        "explanation": "表达“我最喜欢的颜色是……”的句型为：My favourite colour is + 颜色词。即 My favourite colour is blue. 此题为提高题。"
+      }
+    ]
+  },
+  "knowledge_summary": [
+    {
+      "point": "基础颜色词汇辨析",
+      "core_concept": "认读并理解 red, blue, yellow, green, orange, purple, brown, white, pink 等颜色单词的含义及用法。",
+      "key_formula": "颜色词可作形容词修饰名词（如 a red apple），也可作表语放在 be 动词之后（如 It is red.）。记忆口诀：红red黄yellow，蓝blue绿green，橙orange紫purple，粉pink白white棕brown。",
+      "common_mistakes": [
+        "拼写错误：如将 yellow 拼成 yelow，将 purple 拼成 purpel。",
+        "词义混淆：将 blue（蓝色）和 black（黑色）混淆，或将 brown（棕色）和 blue（蓝色）混淆。",
+        "词性误用：不知道 orange 既能表示水果也能表示颜色。"
+      ],
+      "tips": "利用身边的实物进行颜色指认练习；制作颜色闪卡（Flashcards），正面涂色，背面写英文单词，反复翻转记忆；结合自然事物联想，如 sky-blue, grass-green, snow-white。"
+    },
+    {
+      "point": "颜色询问与逻辑混合",
+      "core_concept": "掌握询问颜色的核心句型 'What colour is it?' 以及颜色混合的基本科学规律。",
+      "key_formula": "询问颜色句型：What colour + is + 主语? 答语：It's + 颜色. / 颜色混合公式：Red + Yellow = Orange; Blue + Yellow = Green; Red + Blue = Purple; Red + White = Pink.",
+      "common_mistakes": [
+        "问答不匹配：听到 What colour is it? 却回答 It's a book. 而非颜色词。",
+        "混合规律记反：认为 Red and blue make green（应为 purple）。",
+        "漏掉疑问词：提问时只说 Colour is it? 漏掉了 What。"
+      ],
+      "tips": "通过美术课的水彩调色实验来验证英语中的颜色混合规律，做到跨学科融合记忆；多做情景对话练习，强化 What colour 连读的语感。"
+    },
+    {
+      "point": "字母Qq-Uu的语音与书写",
+      "core_concept": "规范书写 Qq, Rr, Ss, Tt, Uu 五个字母的大小写，并掌握它们在常见单词中的首字母发音。",
+      "key_formula": "书写规则：大写字母占上两格（一二线之间），小写字母按各自规则占格（如 q 占中下格，t 占上中格）。发音代表词：Qq-queen, Rr-rabbit/red, Ss-sun, Tt-tiger, Uu-umbrella。",
+      "common_mistakes": [
+        "大小写混淆：把大写 U 写成 V，或者小写 r 写得像 v。",
+        "笔顺错误：字母 q 的竖画没有向下伸出第四线，或者 t 的横画位置不对。",
+        "发音张冠李戴：看到 queen 读成 sun 的音。"
+      ],
+      "tips": "在四线三格本上进行描红和临摹练习，强调占格规范；利用字母歌或 Chant（如 Q is for queen, qu-qu-queen）辅助记忆发音规律；对比易混字母（如 b/d/p/q, u/v）进行专项辨析。"
+    }
+  ]
+}

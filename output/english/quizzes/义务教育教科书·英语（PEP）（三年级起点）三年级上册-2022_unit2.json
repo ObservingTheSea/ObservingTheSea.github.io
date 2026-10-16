@@ -1,0 +1,716 @@
+{
+  "textbook": "PEP",
+  "unit": "三年级上册 Unit 2 Different families",
+  "unit_number": 2,
+  "unit_test": {
+    "title": "Unit 2 Different families 单元测试卷",
+    "total_score": 100,
+    "time_minutes": 40,
+    "questions": [
+      {
+        "id": 1,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "家庭成员称谓",
+        "question": "'mother' 的意思是妈妈。",
+        "options": [],
+        "answer": "对",
+        "explanation": "'mother' 是妈妈的英文单词，属于本单元核心家庭成员词汇。"
+      },
+      {
+        "id": 2,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "家庭成员称谓",
+        "question": "'brother' 的意思是姐妹。",
+        "options": [],
+        "answer": "错",
+        "explanation": "'brother' 的意思是兄弟（哥哥或弟弟），'sister' 才是姐妹。注意区分这两个词的性别含义。"
+      },
+      {
+        "id": 3,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "字母Ee-Hh的语音与书写",
+        "question": "大写字母 F 和小写字母 f 是一对。",
+        "options": [],
+        "answer": "对",
+        "explanation": "Ff 是本单元要求掌握的字母之一，大写 F 和小写 f 是同一个字母的大小写形式。"
+      },
+      {
+        "id": 4,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "'Is this your father?' 的正确回答可以是 'Yes, it is.'。",
+        "options": [],
+        "answer": "对",
+        "explanation": "对于 'Is this/that your...?' 引导的一般疑问句，肯定回答用 'Yes, it is.'，否定回答用 'No, it isn't.'。"
+      },
+      {
+        "id": 5,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "字母Ee-Hh的语音与书写",
+        "question": "字母 Gg 在单词首位时通常发 /dʒ/ 的音，例如 girl。",
+        "options": [],
+        "answer": "对",
+        "explanation": "字母 Gg 在 girl、grandfather 等单词词首发 /g/ 或 /dʒ/ 的音，本单元重点感知其在单词首位的发音规律。"
+      },
+      {
+        "id": 6,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "家庭成员称谓",
+        "question": "'爸爸' 的英文单词是什么？",
+        "options": [
+          "mother",
+          "father",
+          "sister",
+          "brother"
+        ],
+        "answer": "father",
+        "explanation": "'father' 意为爸爸，'mother' 是妈妈，'sister' 是姐妹，'brother' 是兄弟。"
+      },
+      {
+        "id": 7,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "家庭成员称谓",
+        "question": "'grandmother' 的中文意思是什么？",
+        "options": [
+          "爷爷",
+          "奶奶/外婆",
+          "爸爸",
+          "姐姐"
+        ],
+        "answer": "奶奶/外婆",
+        "explanation": "'grandmother' 由 grand（祖辈）+ mother（母亲）组成，意思是奶奶或外婆。"
+      },
+      {
+        "id": 8,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "家庭成员称谓",
+        "question": "下列哪个单词表示 '姐妹'？",
+        "options": [
+          "brother",
+          "father",
+          "sister",
+          "mother"
+        ],
+        "answer": "sister",
+        "explanation": "'sister' 意为姐妹。'brother' 是兄弟，'father' 是爸爸，'mother' 是妈妈。"
+      },
+      {
+        "id": 9,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "当你想向别人介绍你的妈妈时，你应该说：",
+        "options": [
+          "This is my mother.",
+          "Is this your mother?",
+          "Who is she?",
+          "She is a teacher."
+        ],
+        "answer": "This is my mother.",
+        "explanation": "介绍家人时使用句型 'This is my...'（这是我的……）。"
+      },
+      {
+        "id": 10,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "— Is that your brother?\n— ________",
+        "options": [
+          "Yes, it is.",
+          "Yes, he is.",
+          "Yes, she is.",
+          "Yes, I am."
+        ],
+        "answer": "Yes, it is.",
+        "explanation": "问句主语是 'that'，回答时要用 'it' 来指代，即 'Yes, it is.' 或 'No, it isn't.'。这是三年级学生常犯的错误。"
+      },
+      {
+        "id": 11,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "选择正确的句子补全对话：\nA: Who is he?\nB: ________",
+        "options": [
+          "He is my father.",
+          "She is my mother.",
+          "This is a book.",
+          "I am fine."
+        ],
+        "answer": "He is my father.",
+        "explanation": "问句用 'he' 提问男性，答句也要用 'He is...' 来回答，且 'father' 是男性家庭成员。"
+      },
+      {
+        "id": 12,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "字母Ee-Hh的语音与书写",
+        "question": "下列哪组字母的排列顺序是正确的？",
+        "options": [
+          "E, F, G, H",
+          "E, G, F, H",
+          "H, G, F, E",
+          "F, E, H, G"
+        ],
+        "answer": "E, F, G, H",
+        "explanation": "字母表中 E, F, G, H 是按顺序排列的，这也是本单元重点学习的四个字母。"
+      },
+      {
+        "id": 13,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "字母Ee-Hh的语音与书写",
+        "question": "小写字母 'g' 对应的大写字母是哪个？",
+        "options": [
+          "J",
+          "G",
+          "C",
+          "Q"
+        ],
+        "answer": "G",
+        "explanation": "小写字母 g 对应的大写字母是 G。注意不要和 J、C、Q 混淆。"
+      },
+      {
+        "id": 14,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "家庭成员称谓",
+        "question": "My grandfather's son is my ________. (我爷爷的儿子是我的____。)",
+        "options": [
+          "father",
+          "brother",
+          "grandfather",
+          "sister"
+        ],
+        "answer": "father",
+        "explanation": "这是一道逻辑推理题。爷爷（grandfather）的儿子（son）通常是自己的爸爸（father）。"
+      },
+      {
+        "id": 15,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "选出与其他三个不同类的单词：",
+        "options": [
+          "mother",
+          "father",
+          "apple",
+          "sister"
+        ],
+        "answer": "apple",
+        "explanation": "'mother', 'father', 'sister' 都是家庭成员称谓，而 'apple' 是水果，不属于同一类。"
+      },
+      {
+        "id": 16,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "家庭成员称谓",
+        "question": "My mother's husband (丈夫) is my ________.",
+        "options": [],
+        "answer": "father",
+        "explanation": "妈妈的丈夫就是爸爸，英文是 father。注意答案全部小写。"
+      },
+      {
+        "id": 17,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "家庭成员称谓",
+        "question": "My sister and my ________ are my parents' children (孩子们).",
+        "options": [],
+        "answer": "brother",
+        "explanation": "父母的孩子们包括姐妹（sister）和兄弟（brother）。填 brother。"
+      },
+      {
+        "id": 18,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "This is ________ mother. She is beautiful. (这是我的妈妈)",
+        "options": [],
+        "answer": "my",
+        "explanation": "介绍自己的家人用 'This is my...' 句型，此处填形容词性物主代词 my（我的）。"
+      },
+      {
+        "id": 19,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Ee-Hh的语音与书写",
+        "question": "The letter after Ff is ________. (Ff后面的字母是)",
+        "options": [],
+        "answer": "gg",
+        "explanation": "字母表顺序为 Ee, Ff, Gg, Hh。Ff 后面的字母是 Gg，按题目要求填写小写 gg。"
+      },
+      {
+        "id": 20,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "家庭成员称谓",
+        "question": "将下列英文单词与对应的中文意思连线配对。",
+        "options": [
+          "grandfather",
+          "mother",
+          "brother",
+          "sister",
+          "姐妹",
+          "兄弟",
+          "妈妈",
+          "爷爷/外公"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "grandfather 对应 爷爷/外公(4)，mother 对应 妈妈(3)，brother 对应 兄弟(2)，sister 对应 姐妹(1)。"
+      },
+      {
+        "id": 21,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "家庭成员称谓",
+        "question": "将下列英文单词与对应的中文意思连线配对。",
+        "options": [
+          "father",
+          "grandmother",
+          "family",
+          "parents",
+          "父母",
+          "家庭",
+          "奶奶/外婆",
+          "爸爸"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "father 对应 爸爸(4)，grandmother 对应 奶奶/外婆(3)，family 对应 家庭(2)，parents 对应 父母(1)。"
+      },
+      {
+        "id": 22,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "将下列单词重新排列成一句通顺的话。",
+        "options": [
+          "is",
+          "This",
+          "father",
+          "my"
+        ],
+        "answer": "This,is,my,father",
+        "explanation": "根据 'This is my...' 介绍句型，正确语序为 This is my father.（这是我爸爸。）"
+      },
+      {
+        "id": 23,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "将下列单词重新排列成一句通顺的话。",
+        "options": [
+          "your",
+          "Is",
+          "this",
+          "mother"
+        ],
+        "answer": "Is,this,your,mother",
+        "explanation": "一般疑问句结构为 'Is + this/that + your + 家庭成员?'，正确语序为 Is this your mother?"
+      }
+    ]
+  },
+  "exam": {
+    "title": "Unit 2 Different families 期末考试卷",
+    "total_score": 100,
+    "time_minutes": 60,
+    "questions": [
+      {
+        "id": 1,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "家庭成员称谓",
+        "question": "'sister' 可以用来称呼哥哥。",
+        "options": [],
+        "answer": "错",
+        "explanation": "'sister' 专指女性兄弟姐妹（姐/妹），哥哥或弟弟应该用 'brother'。"
+      },
+      {
+        "id": 2,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "'This is my brother.' 这句话可以用来向别人介绍你的兄弟。",
+        "options": [],
+        "answer": "对",
+        "explanation": "'This is my...' 是标准的介绍他人的句型，用于向第三方介绍自己的家庭成员。"
+      },
+      {
+        "id": 3,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "字母Ee-Hh的语音与书写",
+        "question": "字母 Hh 的小写字母 h 占四线三格的中上两格。",
+        "options": [],
+        "answer": "对",
+        "explanation": "小写字母 h 的第一笔竖线上伸到上格，主体在中格，因此占中上两格。"
+      },
+      {
+        "id": 4,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 3,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "'Is that your sister?' 的否定回答是 'No, it is.'。",
+        "options": [],
+        "answer": "错",
+        "explanation": "一般疑问句的否定回答应该是 'No, it isn't.'。'No, it is.' 前后矛盾，是错误的语法表达。"
+      },
+      {
+        "id": 5,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 3,
+        "knowledge_point": "字母Ee-Hh的语音与书写",
+        "question": "在单词 'egg' 中，首字母 e 发的是短元音 /e/。",
+        "options": [],
+        "answer": "对",
+        "explanation": "字母 Ee 在闭音节单词 egg 的词首发短元音 /e/，符合本单元学习的语音规律。"
+      },
+      {
+        "id": 6,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "家庭成员称谓",
+        "question": "'外婆' 的英文单词是什么？",
+        "options": [
+          "grandfather",
+          "grandmother",
+          "mother",
+          "sister"
+        ],
+        "answer": "grandmother",
+        "explanation": "'grandmother' 既可以指奶奶，也可以指外婆。'grandfather' 是爷爷/外公。"
+      },
+      {
+        "id": 7,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "— Is this your sister?\n— No, ________.",
+        "options": [
+          "it isn't",
+          "it is",
+          "she isn't",
+          "he isn't"
+        ],
+        "answer": "it isn't",
+        "explanation": "问句主语是 'this'，回答时用 'it' 代替。否定回答为 'No, it isn't.'。不能用 she/he 替代 this/that。"
+      },
+      {
+        "id": 8,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "你想告诉别人 '那是我的爸爸'，应该说：",
+        "options": [
+          "That is my father.",
+          "This is my mother.",
+          "Is that your father?",
+          "Who is he?"
+        ],
+        "answer": "That is my father.",
+        "explanation": "指示远处的某人用 'That is...'，爸爸是 'father'。选项 C 是疑问句，不符合语境。"
+      },
+      {
+        "id": 9,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "家庭成员称谓",
+        "question": "My father's daughter is my ________. (我爸爸的女儿是我的____。假设我是男孩)",
+        "options": [
+          "sister",
+          "brother",
+          "mother",
+          "grandmother"
+        ],
+        "answer": "sister",
+        "explanation": "逻辑推理题：爸爸的女儿，如果我是男孩，那她就是我的姐妹（sister）。"
+      },
+      {
+        "id": 10,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "看图选句：图片上是一个女孩指着旁边的男孩。\n她最可能在说什么？",
+        "options": [
+          "This is my brother.",
+          "This is my sister.",
+          "He is my father.",
+          "She is my mother."
+        ],
+        "answer": "This is my brother.",
+        "explanation": "女孩指着旁边的男孩进行介绍，男孩是兄弟，所以用 'This is my brother.'。"
+      },
+      {
+        "id": 11,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Ee-Hh的语音与书写",
+        "question": "下列哪个单词是以字母 Hh 开头的？",
+        "options": [
+          "girl",
+          "egg",
+          "fish",
+          "hand"
+        ],
+        "answer": "hand",
+        "explanation": "'hand' 以字母 h 开头。'girl' 以 g 开头，'egg' 以 e 开头，'fish' 以 f 开头。"
+      },
+      {
+        "id": 12,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Ee-Hh的语音与书写",
+        "question": "按照字母表顺序，排在 Ff 和 Hh 中间的字母是：",
+        "options": [
+          "Ee",
+          "Gg",
+          "Ii",
+          "Dd"
+        ],
+        "answer": "Gg",
+        "explanation": "字母表顺序为 ...E, F, G, H, I...，所以 F 和 H 中间是 G。"
+      },
+      {
+        "id": 13,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "选择正确的答语：\n— Who is she?\n— ________",
+        "options": [
+          "She is my grandmother.",
+          "Yes, she is.",
+          "He is my father.",
+          "It is a pen."
+        ],
+        "answer": "She is my grandmother.",
+        "explanation": "'Who is she?' 询问女性身份，回答用 'She is...'。'grandmother' 是女性家庭成员，符合题意。"
+      },
+      {
+        "id": 14,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "家庭成员称谓",
+        "question": "Which word is different from the others? (哪个单词与其他不同类？)",
+        "options": [
+          "father",
+          "mother",
+          "hello",
+          "brother"
+        ],
+        "answer": "hello",
+        "explanation": "'father', 'mother', 'brother' 都是家庭成员名词，'hello' 是问候语，词性与类别均不同。"
+      },
+      {
+        "id": 15,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "— Is that your grandfather?\n— Yes, it is. He is very old.\n对话中谈论的人是谁？",
+        "options": [
+          "爷爷/外公",
+          "爸爸",
+          "哥哥",
+          "叔叔"
+        ],
+        "answer": "爷爷/外公",
+        "explanation": "对话中明确提到了 'grandfather'，其含义为爷爷或外公。"
+      },
+      {
+        "id": 16,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "家庭成员称谓",
+        "question": "My father's wife (妻子) is my ________.",
+        "options": [],
+        "answer": "mother",
+        "explanation": "爸爸的妻子就是妈妈，英文是 mother。考查家庭成员之间的逻辑关系。"
+      },
+      {
+        "id": 17,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "— Is this your brother?\n— No, it ________.",
+        "options": [],
+        "answer": "isnt",
+        "explanation": "一般疑问句的否定简略回答为 'No, it isn't.'。根据填空题全小写且不含标点的规则，填写 isnt。"
+      },
+      {
+        "id": 18,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "家庭成员称谓",
+        "question": "I have a big ________. I love my parents and my sister. (我有一个大家庭)",
+        "options": [],
+        "answer": "family",
+        "explanation": "根据后文提到的 parents 和 sister，可知这里说的是 '家庭'，填 family。"
+      },
+      {
+        "id": 19,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "字母Ee-Hh的语音与书写",
+        "question": "The first letter of the word 'father' is ________.",
+        "options": [],
+        "answer": "f",
+        "explanation": "'father' 的首字母是 f。本题考查单词拼写与字母识别能力，按要求填小写字母。"
+      },
+      {
+        "id": 20,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "家庭成员称谓",
+        "question": "将下列英文单词与对应的中文意思连线配对。",
+        "options": [
+          "father",
+          "sister",
+          "grandmother",
+          "brother",
+          "兄弟",
+          "奶奶/外婆",
+          "姐妹",
+          "爸爸"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "father 对应 爸爸(4)，sister 对应 姐妹(3)，grandmother 对应 奶奶/外婆(2)，brother 对应 兄弟(1)。"
+      },
+      {
+        "id": 21,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "将下列英文短语与对应的中文意思连线配对。",
+        "options": [
+          "my mother",
+          "your father",
+          "this girl",
+          "that boy",
+          "那个男孩",
+          "这个女孩",
+          "你的爸爸",
+          "我的妈妈"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "my mother 对应 我的妈妈(4)，your father 对应 你的爸爸(3)，this girl 对应 这个女孩(2)，that boy 对应 那个男孩(1)。"
+      },
+      {
+        "id": 22,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "将下列单词重新排列成一句通顺的话。",
+        "options": [
+          "my",
+          "is",
+          "This",
+          "grandfather"
+        ],
+        "answer": "This,is,my,grandfather",
+        "explanation": "运用 'This is my...' 句型介绍祖父，正确语序为 This is my grandfather. 注意句首 This 首字母大写。"
+      },
+      {
+        "id": 23,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "家庭成员身份询问与介绍",
+        "question": "将下列单词重新排列成一句通顺的话。",
+        "options": [
+          "that",
+          "your",
+          "sister",
+          "Is"
+        ],
+        "answer": "Is,that,your,sister",
+        "explanation": "一般疑问句结构 'Is that your...?'，正确语序为 Is that your sister? 注意句首 Is 首字母大写。"
+      }
+    ]
+  },
+  "knowledge_summary": [
+    {
+      "point": "家庭成员称谓",
+      "core_concept": "掌握本单元核心家庭成员名词的音、形、义及相互关系。",
+      "key_formula": "记忆口诀：Father 爸爸 Mother 妈，Brother 兄弟 Sister 她，Grandfather 爷爷 Grandmother 奶，Family 一家笑哈哈。",
+      "common_mistakes": [
+        "容易将 brother（兄弟）和 sister（姐妹）的性别弄反。",
+        "grandmother 和 grandfather 拼写较长，容易漏掉字母 d 或 r。",
+        "混淆 grandparents（祖父母）与 parents（父母）的概念范围。"
+      ],
+      "tips": "利用全家福照片进行实物指认练习，将单词与真实人物建立联系；通过画 Family Tree（家谱树）理清家庭成员间的长幼和性别关系。"
+    },
+    {
+      "point": "家庭成员身份询问与介绍",
+      "core_concept": "熟练运用 'This is my...' 进行人物介绍，以及使用 'Is this/that your...?' 及其答语进行身份确认。",
+      "key_formula": "介绍句型：This is my + 家庭成员称谓.\n一般疑问句：Is this/that your + 家庭成员称谓?\n肯定回答：Yes, it is.\n否定回答：No, it isn't.",
+      "common_mistakes": [
+        "回答 'Is this/that...?' 时，错误地用 he/she 代替 it 作为主语（如误说 Yes, he is.）。",
+        "介绍他人时忘记加物主代词 my，直接说成 'This is mother.'。",
+        "分不清 this（近指）和 that（远指）的使用场景。"
+      ],
+      "tips": "创设真实情境（如带家庭相册到课堂上），让学生两两结对互相介绍家人并提问；强调 this/that 作主语时，简短回答必须用 it 指代的语法规则。"
+    },
+    {
+      "point": "字母Ee-Hh的语音与书写",
+      "core_concept": "规范书写 Ee, Ff, Gg, Hh 四个字母的大小写，并初步感知它们在单词词首的发音规律。",
+      "key_formula": "书写规则：\n大写 E, F, G, H 占上中两格；\n小写 e, g 占中下两格（g有下伸笔画），f 占上中下三格，h 占上中两格。\n语音规律：体会辅音字母在词首的基本读音（如 f-father, h-hand）。",
+      "common_mistakes": [
+        "小写字母 f 的书写不规范，横画位置不对或未占满三格。",
+        "容易把大写 G 和大写 C 混淆，或者把小写 g 和小写 q 写反。",
+        "书写时不注意字母的倾斜度和占格比例。"
+      ],
+      "tips": "利用四线三格本进行描红和临摹练习；结合本单元学过的单词（如 father, girl, hand, egg）来记忆字母的发音和书写，做到“字不离词”。"
+    }
+  ]
+}

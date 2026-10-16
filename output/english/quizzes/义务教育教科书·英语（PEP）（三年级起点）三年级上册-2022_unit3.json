@@ -1,0 +1,729 @@
+{
+  "textbook": "人教版PEP英语三年级上册",
+  "unit": "Unit 3 Our animal friends",
+  "unit_number": 3,
+  "unit_test": {
+    "title": "PEP三年级上册 Unit 3 Our animal friends 单元测试卷",
+    "total_score": 100,
+    "time_minutes": 40,
+    "questions": [
+      {
+        "id": 1,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "宠物与野生动物分类",
+        "question": "'panda' 是一种宠物 (pet)。",
+        "options": [],
+        "answer": "错",
+        "explanation": "panda（熊猫）是野生动物 (wild animal)，不是宠物。常见的宠物有 dog, cat, rabbit 等。"
+      },
+      {
+        "id": 2,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "动物特征描述",
+        "question": "'big' 的意思是“大的”，'small' 的意思是“小的”。",
+        "options": [],
+        "answer": "对",
+        "explanation": "big 意为“大的”，small 意为“小的”，它们是一对反义词，常用于描述动物的体型。"
+      },
+      {
+        "id": 3,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "拥有物与喜好表达",
+        "question": "当别人问你 'Do you have a pet?' 时，如果你有一只猫，你可以回答 'Yes, I do.'。",
+        "options": [],
+        "answer": "对",
+        "explanation": "'Do you have a pet?' 是一般疑问句，肯定回答用 'Yes, I do.'，否定回答用 'No, I don't.'。"
+      },
+      {
+        "id": 4,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "字母Ii-Ll的语音与书写",
+        "question": "单词 'leg' 是以字母 Kk 开头的。",
+        "options": [],
+        "answer": "错",
+        "explanation": "'leg' 是以字母 Ll 开头的，Ll 的发音词例就是 leg。Kk 的发音词例是 Kim。"
+      },
+      {
+        "id": 5,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "动物特征描述",
+        "question": "我们可以用 'fast' 来形容老虎跑得很快。",
+        "options": [],
+        "answer": "对",
+        "explanation": "fast 意为“快的”，可以用来描述动物的动作特征，如老虎跑得快 (The tiger is fast.)。"
+      },
+      {
+        "id": 6,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "宠物与野生动物分类",
+        "question": "下列哪个单词表示的是宠物 (pet)？",
+        "options": [
+          "tiger",
+          "elephant",
+          "dog",
+          "panda"
+        ],
+        "answer": "dog",
+        "explanation": "dog（狗）是人类常见的宠物。tiger（老虎）、elephant（大象）、panda（熊猫）都是野生动物。"
+      },
+      {
+        "id": 7,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "宠物与野生动物分类",
+        "question": "'rabbit' 的中文意思是：",
+        "options": [
+          "老虎",
+          "兔子",
+          "大象",
+          "熊猫"
+        ],
+        "answer": "兔子",
+        "explanation": "rabbit 的中文意思是“兔子”，它是一种常见的宠物。"
+      },
+      {
+        "id": 8,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "拥有物与喜好表达",
+        "question": "你想告诉别人你喜欢猫，你应该说：",
+        "options": [
+          "I like dogs.",
+          "I like cats.",
+          "I have a cat.",
+          "I am a cat."
+        ],
+        "answer": "I like cats.",
+        "explanation": "表达喜欢某种动物用 'I like + 动物名词复数'。我喜欢猫是 'I like cats.'。"
+      },
+      {
+        "id": 9,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "动物特征描述",
+        "question": "大象 (elephant) 的体型很大，我们可以用哪个形容词来描述它？",
+        "options": [
+          "small",
+          "cute",
+          "big",
+          "fast"
+        ],
+        "answer": "big",
+        "explanation": "大象体型庞大，应该用 big（大的）来形容。small 是小的，cute 是可爱的，fast 是快的。"
+      },
+      {
+        "id": 10,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "字母Ii-Ll的语音与书写",
+        "question": "下列哪个单词包含字母 Jj 的发音？",
+        "options": [
+          "ill",
+          "job",
+          "Kim",
+          "leg"
+        ],
+        "answer": "job",
+        "explanation": "job 是以字母 Jj 开头的单词，是本单元 Jj 的发音词例。ill 对应 Ii，Kim 对应 Kk，leg 对应 Ll。"
+      },
+      {
+        "id": 11,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "拥有物与喜好表达",
+        "question": "— Do you have a pet? — _______",
+        "options": [
+          "Yes, I do.",
+          "Yes, I am.",
+          "I like pets.",
+          "It is a dog."
+        ],
+        "answer": "Yes, I do.",
+        "explanation": "以 'Do you...' 开头的一般疑问句，肯定简略回答为 'Yes, I do.'。"
+      },
+      {
+        "id": 12,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "动物特征描述",
+        "question": "Look at the monkey. It is _______.",
+        "options": [
+          "tall and big",
+          "small and cute",
+          "an elephant",
+          "have a pet"
+        ],
+        "answer": "small and cute",
+        "explanation": "猴子通常体型较小且可爱，用 small and cute 描述符合常理和语法。A选项不太符合猴子特征，C、D选项语法不通。"
+      },
+      {
+        "id": 13,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "宠物与野生动物分类",
+        "question": "Which one is a wild animal (野生动物)?",
+        "options": [
+          "cat",
+          "dog",
+          "rabbit",
+          "tiger"
+        ],
+        "answer": "tiger",
+        "explanation": "tiger（老虎）是野生动物 (wild animal)。cat（猫）、dog（狗）、rabbit（兔子）通常是宠物 (pet)。"
+      },
+      {
+        "id": 14,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Ii-Ll的语音与书写",
+        "question": "字母 'Kk' 的正确发音词例是：",
+        "options": [
+          "ill",
+          "job",
+          "Kim",
+          "leg"
+        ],
+        "answer": "Kim",
+        "explanation": "根据本单元知识点，字母 Kk 的发音词例是 Kim。ill 对应 Ii，job 对应 Jj，leg 对应 Ll。"
+      },
+      {
+        "id": 15,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "动物特征描述",
+        "question": "The cheetah (猎豹) runs very _______.",
+        "options": [
+          "big",
+          "small",
+          "cute",
+          "fast"
+        ],
+        "answer": "fast",
+        "explanation": "run 是动词“跑”，修饰跑的速度应该用副词/形容词 fast（快地）。猎豹跑得非常快。"
+      },
+      {
+        "id": 16,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "拥有物与喜好表达",
+        "question": "I _______ pandas. They are cute.",
+        "options": [],
+        "answer": "like",
+        "explanation": "表达“我喜欢……”使用句型 'I like...'。此处填 like。"
+      },
+      {
+        "id": 17,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "宠物与野生动物分类",
+        "question": "A _______ is a pet. It says \"Woof, woof\".",
+        "options": [],
+        "answer": "dog",
+        "explanation": "会发出 \"Woof, woof\" 叫声的宠物是狗 (dog)。注意答案需全部小写。"
+      },
+      {
+        "id": 18,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "拥有物与喜好表达",
+        "question": "— Do you _______ a pet? — Yes, I do.",
+        "options": [],
+        "answer": "have",
+        "explanation": "询问“你有一个宠物吗？”使用句型 'Do you have a pet?'。助动词 do 后面跟动词原形 have。"
+      },
+      {
+        "id": 19,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "动物特征描述",
+        "question": "An elephant is very _______.",
+        "options": [],
+        "answer": "big",
+        "explanation": "大象的特征是体型非常大，所以填形容词 big。"
+      },
+      {
+        "id": 20,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "宠物与野生动物分类",
+        "question": "请将下列英文动物单词与对应的中文意思连线配对。",
+        "options": [
+          "elephant",
+          "tiger",
+          "cat",
+          "panda",
+          "猫",
+          "熊猫",
+          "大象",
+          "老虎"
+        ],
+        "answer": "A-3,B-4,C-1,D-2",
+        "explanation": "elephant 是大象(3)，tiger 是老虎(4)，cat 是猫(1)，panda 是熊猫(2)。"
+      },
+      {
+        "id": 21,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "动物特征描述",
+        "question": "请将下列英文形容词与对应的中文意思连线配对。",
+        "options": [
+          "big",
+          "small",
+          "tall",
+          "fast",
+          "快的",
+          "高的",
+          "小的",
+          "大的"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "big 是大的(4)，small 是小的(3)，tall 是高的(2)，fast 是快的(1)。"
+      },
+      {
+        "id": 22,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "拥有物与喜好表达",
+        "question": "请将下列单词排成一个正确的句子：",
+        "options": [
+          "dogs",
+          "like",
+          "I"
+        ],
+        "answer": "I,like,dogs",
+        "explanation": "表达喜好的基本句型为：主语(I) + 谓语(like) + 宾语(dogs)。注意句首字母大写。自检：set一致，长度一致。"
+      },
+      {
+        "id": 23,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "拥有物与喜好表达",
+        "question": "请将下列单词排成一个正确的问句：",
+        "options": [
+          "a",
+          "have",
+          "you",
+          "pet",
+          "do"
+        ],
+        "answer": "Do,you,have,a,pet",
+        "explanation": "一般疑问句结构：助动词(Do) + 主语(you) + 动词原形(have) + 宾语(a pet)。自检：set一致，长度一致。"
+      }
+    ]
+  },
+  "exam": {
+    "title": "PEP三年级上册 Unit 3 Our animal friends 综合测试卷",
+    "total_score": 100,
+    "time_minutes": 60,
+    "questions": [
+      {
+        "id": 1,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "宠物与野生动物分类",
+        "question": "'elephant' 是一种野生动物 (wild animal)。",
+        "options": [],
+        "answer": "对",
+        "explanation": "elephant（大象）生活在野外，属于野生动物 (wild animal)。"
+      },
+      {
+        "id": 2,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "拥有物与喜好表达",
+        "question": "'I like rabbits.' 的意思是“我有兔子。”",
+        "options": [],
+        "answer": "错",
+        "explanation": "'I like rabbits.' 的意思是“我喜欢兔子。”，表达的是喜好而不是拥有。表达拥有应该说 'I have a rabbit.'。"
+      },
+      {
+        "id": 3,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "动物特征描述",
+        "question": "我们可以用 'tall' 来描述长颈鹿 (giraffe) 很高。",
+        "options": [],
+        "answer": "对",
+        "explanation": "tall 意为“高的”，适合用来描述长颈鹿等身材高大的动物。"
+      },
+      {
+        "id": 4,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "字母Ii-Ll的语音与书写",
+        "question": "单词 'ill' 是以字母 Ii 开头的。",
+        "options": [],
+        "answer": "对",
+        "explanation": "ill 是以字母 Ii 开头的单词，是本单元 Ii 的发音词例。"
+      },
+      {
+        "id": 5,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 3,
+        "knowledge_point": "拥有物与喜好表达",
+        "question": "回答 'Do you have a pet?' 时，可以说 'Yes, I like.'。",
+        "options": [],
+        "answer": "错",
+        "explanation": "以 'Do you...' 提问的句子，简略肯定回答应该是 'Yes, I do.'，不能用 'Yes, I like.'。"
+      },
+      {
+        "id": 6,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "宠物与野生动物分类",
+        "question": "下列哪个单词表示的是野生动物 (wild animal)？",
+        "options": [
+          "dog",
+          "cat",
+          "rabbit",
+          "panda"
+        ],
+        "answer": "panda",
+        "explanation": "panda（熊猫）是野生动物。dog（狗）、cat（猫）、rabbit（兔子）通常作为宠物饲养。"
+      },
+      {
+        "id": 7,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "动物特征描述",
+        "question": "'cute' 的中文意思是：",
+        "options": [
+          "大的",
+          "小的",
+          "快的",
+          "可爱的"
+        ],
+        "answer": "可爱的",
+        "explanation": "cute 是形容词，意思是“可爱的”，常用来形容小动物。big 是大的，small 是小的，fast 是快的。"
+      },
+      {
+        "id": 8,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "拥有物与喜好表达",
+        "question": "— Do you have a pet? — No, I _______.",
+        "options": [
+          "don't",
+          "doesn't",
+          "am not",
+          "not"
+        ],
+        "answer": "don't",
+        "explanation": "以 'Do you...' 开头的一般疑问句，否定简略回答为 'No, I don't.'。"
+      },
+      {
+        "id": 9,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "动物特征描述",
+        "question": "The tiger is _______. It runs very fast.",
+        "options": [
+          "small",
+          "cute",
+          "big",
+          "short"
+        ],
+        "answer": "big",
+        "explanation": "老虎体型大且跑得快，结合后半句语境，用 big（大的）描述其体型最合适。"
+      },
+      {
+        "id": 10,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Ii-Ll的语音与书写",
+        "question": "下列哪个单词的首字母是 'Ll'？",
+        "options": [
+          "ill",
+          "job",
+          "Kim",
+          "leg"
+        ],
+        "answer": "leg",
+        "explanation": "leg 的首字母是 L/l，是字母 Ll 的发音词例。ill 对应 Ii，job 对应 Jj，Kim 对应 Kk。"
+      },
+      {
+        "id": 11,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "宠物与野生动物分类",
+        "question": "My sister has a pet. It has long ears. It is a _______.",
+        "options": [
+          "tiger",
+          "elephant",
+          "rabbit",
+          "panda"
+        ],
+        "answer": "rabbit",
+        "explanation": "根据线索 'has long ears'（有长耳朵），可以推断出这种宠物是 rabbit（兔子）。"
+      },
+      {
+        "id": 12,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "拥有物与喜好表达",
+        "question": "I _______ a dog, but (但是) my brother likes cats.",
+        "options": [
+          "like",
+          "have",
+          "am",
+          "is"
+        ],
+        "answer": "have",
+        "explanation": "句意为“我有一只狗，但是我哥哥喜欢猫。”。表示“拥有”用动词 have。"
+      },
+      {
+        "id": 13,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "动物特征描述",
+        "question": "An elephant is _______ than (比) a monkey.",
+        "options": [
+          "smaller",
+          "faster",
+          "bigger",
+          "cuter"
+        ],
+        "answer": "bigger",
+        "explanation": "大象比猴子大，big 的比较级是 bigger。本题考查动物特征的比较理解。"
+      },
+      {
+        "id": 14,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "字母Ii-Ll的语音与书写",
+        "question": "找出不同类的一项：",
+        "options": [
+          "ill",
+          "job",
+          "dog",
+          "leg"
+        ],
+        "answer": "dog",
+        "explanation": "ill, job, leg 分别是本单元字母 Ii, Jj, Ll 的语音例词，而 dog 是动物词汇，不属于该字母发音词例系列。"
+      },
+      {
+        "id": 15,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "拥有物与喜好表达",
+        "question": "— What animals do you like? — _______",
+        "options": [
+          "I have a dog.",
+          "I like elephants.",
+          "Yes, I do.",
+          "It is big."
+        ],
+        "answer": "I like elephants.",
+        "explanation": "问句问的是“你喜欢什么动物？”，回答应该用 'I like + 动物.' 的句型来表达喜好。"
+      },
+      {
+        "id": 16,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "宠物与野生动物分类",
+        "question": "A panda is a wild animal. A dog is a _______.",
+        "options": [],
+        "answer": "pet",
+        "explanation": "熊猫是野生动物(wild animal)，与之相对，狗是宠物(pet)。"
+      },
+      {
+        "id": 17,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "动物特征描述",
+        "question": "The rabbit is small and _______.",
+        "options": [],
+        "answer": "cute",
+        "explanation": "兔子又小又可爱，small 意为“小的”，cute 意为“可爱的”，符合兔子的特征描述。"
+      },
+      {
+        "id": 18,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Ii-Ll的语音与书写",
+        "question": "The letter after Ii and before Kk is _______.",
+        "options": [],
+        "answer": "jj",
+        "explanation": "在字母表中，Ii 之后、Kk 之前的字母是 Jj。按照题目要求，答案需全小写，故填 jj。"
+      },
+      {
+        "id": 19,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "动物特征描述",
+        "question": "The giraffe is very _______. It can eat leaves on tall trees.",
+        "options": [],
+        "answer": "tall",
+        "explanation": "长颈鹿能够吃到高树上的树叶，说明它非常高，用形容词 tall（高的）来描述。"
+      },
+      {
+        "id": 20,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "宠物与野生动物分类",
+        "question": "请将下列英文动物单词与对应的中文意思连线配对。",
+        "options": [
+          "dog",
+          "rabbit",
+          "panda",
+          "tiger",
+          "老虎",
+          "熊猫",
+          "兔子",
+          "狗"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "dog 是狗(4)，rabbit 是兔子(3)，panda 是熊猫(2)，tiger 是老虎(1)。"
+      },
+      {
+        "id": 21,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Ii-Ll的语音与书写",
+        "question": "请将下列英文单词与对应的首字母连线配对。",
+        "options": [
+          "ill",
+          "job",
+          "Kim",
+          "leg",
+          "Ll",
+          "Ii",
+          "Jj",
+          "Kk"
+        ],
+        "answer": "A-2,B-3,C-4,D-1",
+        "explanation": "ill 首字母是 Ii(2)，job 首字母是 Jj(3)，Kim 首字母是 Kk(4)，leg 首字母是 Ll(1)。"
+      },
+      {
+        "id": 22,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "拥有物与喜好表达",
+        "question": "请将下列单词排成一个正确的问句：",
+        "options": [
+          "have",
+          "you",
+          "pet",
+          "do",
+          "a"
+        ],
+        "answer": "Do,you,have,a,pet",
+        "explanation": "一般疑问句语序：助动词(Do) + 主语(you) + 谓语(have) + 宾语(a pet)。自检：set一致，长度一致。"
+      },
+      {
+        "id": 23,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "动物特征描述",
+        "question": "请将下列单词排成一个正确的句子：",
+        "options": [
+          "is",
+          "elephant",
+          "the",
+          "big"
+        ],
+        "answer": "The,elephant,is,big",
+        "explanation": "陈述句语序：主语(The elephant) + 系动词(is) + 表语(big)。注意句首 The 首字母大写。自检：set一致，长度一致。"
+      }
+    ]
+  },
+  "knowledge_summary": [
+    {
+      "point": "宠物与野生动物分类",
+      "core_concept": "辨识并区分常见宠物与野生动物的英文名称。",
+      "key_formula": "宠物 (Pets): dog, cat, rabbit 等；野生动物 (Wild animals): panda, tiger, elephant 等。记忆口诀：家养宠物陪身边，野生动物大自然。",
+      "common_mistakes": [
+        "将 panda, tiger 误认为宠物",
+        "拼写错误，如把 rabbit 拼成 rabit，把 elephant 拼成 elefant"
+      ],
+      "tips": "可以通过生活常识进行分类记忆。去动物园看到的是 wild animals，在家里养的是 pets。建议制作动物闪卡进行图文配对练习。"
+    },
+    {
+      "point": "拥有物与喜好表达",
+      "core_concept": "运用核心句型询问是否拥有宠物以及表达对动物的喜爱之情。",
+      "key_formula": "询问拥有：'Do you have a pet?' 答：'Yes, I do.' / 'No, I don't.'；表达喜好：'I like + 动物名词复数.'（如 I like dogs.）。",
+      "common_mistakes": [
+        "回答 'Do you have...?' 时误用 'Yes, I am.'",
+        "表达喜好时忘记名词复数，说成 'I like dog.'"
+      ],
+      "tips": "强调 'Do' 问 'do' 答的原则。同时提醒学生，表达喜欢某一类事物时，可数名词通常要加 's' 变成复数形式。可通过同桌角色扮演 (Role-play) 反复操练。"
+    },
+    {
+      "point": "动物特征描述",
+      "core_concept": "使用基础形容词准确描述动物的外貌和动作特征。",
+      "key_formula": "常用形容词：big (大的), small (小的), tall (高的), fast (快的), cute (可爱的)。句型：'The/It is + 形容词.' 或 'It is + 形容词 + and + 形容词.'",
+      "common_mistakes": [
+        "混淆 big 和 small，tall 和 short 的意思",
+        "形容词位置放错，如说成 'The is big elephant.'"
+      ],
+      "tips": "利用 TPR (全身反应法) 教学，让学生边做动作边说单词（如张开双臂说 big，缩成一团说 small）。结合具体动物图片进行描述练习，做到词不离句。"
+    },
+    {
+      "point": "字母Ii-Ll的语音与书写",
+      "core_concept": "掌握 Ii, Jj, Kk, Ll 四个字母的大小写规范书写及其在单词中的基本发音。",
+      "key_formula": "发音词例对应：Ii - ill, Jj - job, Kk - Kim, Ll - leg。书写规则：注意占格，大写在上两格，小写在中格（部分如 j 在下两格）。",
+      "common_mistakes": [
+        "大小写字母书写混淆，如把小写 l 写成大写 I",
+        "发音词例张冠李戴，如把 job 记成 Kk 的例词"
+      ],
+      "tips": "通过书空练习 (Air writing) 和在四线三格本上的描红来巩固书写。利用自然拼读歌谣 (Phonics chant) 帮助记忆字母与例词的对应关系，如 'I-i-ill, J-j-job...'。"
+    }
+  ],
+  "_validation_issues": [
+    "[unit_test] 排序题23 answer 词语集合与 options 不匹配",
+    "[exam] 排序题22 answer 词语集合与 options 不匹配",
+    "[exam] 排序题23 answer 词语集合与 options 不匹配"
+  ]
+}

@@ -1,0 +1,720 @@
+{
+  "textbook": "人教版 PEP 英语三年级上册",
+  "unit": "第6单元 Useful numbers",
+  "unit_number": 6,
+  "unit_test": {
+    "title": "PEP三年级上册 Unit 6 Useful Numbers 单元测试卷",
+    "total_score": 100,
+    "time_minutes": 40,
+    "questions": [
+      {
+        "id": 1,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "字母Vv-Zz的语音与书写",
+        "question": "'Ww' 是英文字母表中的第23个字母。",
+        "options": [],
+        "answer": "对",
+        "explanation": "字母表中 V(22), W(23), X(24), Y(25), Z(26)，所以 Ww 是第23个字母。"
+      },
+      {
+        "id": 2,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "基数词1-10的认读",
+        "question": "'five' 的意思是数字 '四'。",
+        "options": [],
+        "answer": "错",
+        "explanation": "'five' 的意思是 '五'，'四' 对应的英文单词是 'four'。"
+      },
+      {
+        "id": 3,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "年龄与数量询问",
+        "question": "'How old are you?' 这句话是用来询问对方年龄的。",
+        "options": [],
+        "answer": "对",
+        "explanation": "'How old are you?' 意为 '你多大了？'，专门用于询问年龄。"
+      },
+      {
+        "id": 4,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "基数词1-10的认读",
+        "question": "数字 '8' 对应的英文单词是 'eight'。",
+        "options": [],
+        "answer": "对",
+        "explanation": "one(1), two(2), three(3), four(4), five(5), six(6), seven(7), eight(8), nine(9), ten(10)。"
+      },
+      {
+        "id": 5,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "字母Vv-Zz的语音与书写",
+        "question": "字母 'Xx' 的大写形式是 'Y'。",
+        "options": [],
+        "answer": "错",
+        "explanation": "字母 'Xx' 的大写形式是 'X'，'Yy' 的大写形式才是 'Y'。"
+      },
+      {
+        "id": 6,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基数词1-10的认读",
+        "question": "Which number is 'three'?",
+        "options": [
+          "two",
+          "three",
+          "four",
+          "five"
+        ],
+        "answer": "three",
+        "explanation": "'three' 表示数字 3。A是2，C是4，D是5。"
+      },
+      {
+        "id": 7,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基数词1-10的认读",
+        "question": "'seven' 代表数字几？",
+        "options": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "answer": "7",
+        "explanation": "'seven' 是数字 7 的英文表达。"
+      },
+      {
+        "id": 8,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "年龄与数量询问",
+        "question": "— How old are you? — I am ___ years old.",
+        "options": [
+          "red",
+          "nine",
+          "big",
+          "good"
+        ],
+        "answer": "nine",
+        "explanation": "回答年龄需要用数字，选项中只有 'nine'(9) 是数字。"
+      },
+      {
+        "id": 9,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "年龄与数量询问",
+        "question": "How many ___ do you have?",
+        "options": [
+          "pen",
+          "pencils",
+          "a pen",
+          "pens is"
+        ],
+        "answer": "pencils",
+        "explanation": "'How many' 后面必须接可数名词的复数形式，所以选 'pencils'。"
+      },
+      {
+        "id": 10,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "字母Vv-Zz的语音与书写",
+        "question": "What letter comes after 'Xx'?",
+        "options": [
+          "Ww",
+          "Vv",
+          "Yy",
+          "Zz"
+        ],
+        "answer": "Yy",
+        "explanation": "字母表顺序为 ...V, W, X, Y, Z...，所以 X 后面是 Y。"
+      },
+      {
+        "id": 11,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基数词1-10的认读",
+        "question": "One, two, three, ___, five. What is missing?",
+        "options": [
+          "six",
+          "seven",
+          "four",
+          "eight"
+        ],
+        "answer": "four",
+        "explanation": "按数字顺序排列：1, 2, 3, 4, 5。缺失的是 4，即 'four'。"
+      },
+      {
+        "id": 12,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "年龄与数量询问",
+        "question": "— How many books? — ___",
+        "options": [
+          "I am fine.",
+          "Five.",
+          "I am five.",
+          "It is red."
+        ],
+        "answer": "Five.",
+        "explanation": "'How many' 问数量，应该直接用数字回答。'I am five.' 是回答年龄的。"
+      },
+      {
+        "id": 13,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "年龄与数量询问",
+        "question": "— How old are you? — ___",
+        "options": [
+          "I am eight.",
+          "Eight books.",
+          "How are you?",
+          "I have eight."
+        ],
+        "answer": "I am eight.",
+        "explanation": "问年龄用 'How old are you?'，回答用 'I am + 数字.' 句型。"
+      },
+      {
+        "id": 14,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Vv-Zz的语音与书写",
+        "question": "Which one is a vowel (元音字母)?",
+        "options": [
+          "Vv",
+          "Ww",
+          "Yy",
+          "Zz"
+        ],
+        "answer": "Yy",
+        "explanation": "在 Vv, Ww, Yy, Zz 中，Yy 有时作为元音字母使用（如 fly, my），其他三个都是辅音字母。"
+      },
+      {
+        "id": 15,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "年龄与数量询问",
+        "question": "I have ___ fingers (手指) on one hand (一只手).",
+        "options": [
+          "ten",
+          "five",
+          "four",
+          "three"
+        ],
+        "answer": "five",
+        "explanation": "常识题结合数字考查：一只手有 5 根手指，5 的英文是 'five'。两只手才是 'ten'。"
+      },
+      {
+        "id": 16,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基数词1-10的认读",
+        "question": "The number after five is ___.",
+        "options": [],
+        "answer": "six",
+        "explanation": "5 后面的数字是 6，英文拼写为 'six'。注意全部小写。"
+      },
+      {
+        "id": 17,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "年龄与数量询问",
+        "question": "How ___ cats can you see?",
+        "options": [],
+        "answer": "many",
+        "explanation": "'How many' 是固定搭配，用来询问可数名词的数量。"
+      },
+      {
+        "id": 18,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "年龄与数量询问",
+        "question": "I am ___ years old. (数字 10)",
+        "options": [],
+        "answer": "ten",
+        "explanation": "数字 10 的英文单词是 'ten'，按要求全小写填写。"
+      },
+      {
+        "id": 19,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Vv-Zz的语音与书写",
+        "question": "The last letter of the alphabet (字母表最后一个字母) is ___.",
+        "options": [],
+        "answer": "z",
+        "explanation": "英文字母表共26个字母，最后一个是 Zz，题目要求小写，填 'z'。"
+      },
+      {
+        "id": 20,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基数词1-10的认读",
+        "question": "请将下列英文数字与对应的中文意思连线配对。",
+        "options": [
+          "one",
+          "four",
+          "seven",
+          "ten",
+          "十",
+          "七",
+          "四",
+          "一"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "one=一(A-4), four=四(B-3), seven=七(C-2), ten=十(D-1)。"
+      },
+      {
+        "id": 21,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Vv-Zz的语音与书写",
+        "question": "请将下列英文字母与对应的大/小写字母配对。",
+        "options": [
+          "Vv",
+          "Ww",
+          "Xx",
+          "Yy",
+          "ww",
+          "yy",
+          "vv",
+          "xx"
+        ],
+        "answer": "A-3,B-1,C-4,D-2",
+        "explanation": "Vv对应vv(A-3), Ww对应ww(B-1), Xx对应xx(C-4), Yy对应yy(D-2)。"
+      },
+      {
+        "id": 22,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "年龄与数量询问",
+        "question": "将下列单词排成一个正确的句子：",
+        "options": [
+          "old",
+          "are",
+          "you",
+          "How",
+          "?"
+        ],
+        "answer": "How,old,are,you,?",
+        "explanation": "疑问句结构：How old + are + you + ? 意为 '你多大了？'。注意句首 H 大写。"
+      },
+      {
+        "id": 23,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "年龄与数量询问",
+        "question": "将下列单词排成一个正确的句子：",
+        "options": [
+          "many",
+          "How",
+          "dogs",
+          "?"
+        ],
+        "answer": "How,many,dogs,?",
+        "explanation": "特殊疑问句结构：How many + 复数名词 + ? 意为 '有多少只狗？'"
+      }
+    ]
+  },
+  "exam": {
+    "title": "PEP三年级上册 Unit 6 Useful Numbers 期末复习测试卷",
+    "total_score": 100,
+    "time_minutes": 60,
+    "questions": [
+      {
+        "id": 1,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "基数词1-10的认读",
+        "question": "'nine' 表示数字 9。",
+        "options": [],
+        "answer": "对",
+        "explanation": "'nine' 是数字 9 的正确英文拼写。"
+      },
+      {
+        "id": 2,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "字母Vv-Zz的语音与书写",
+        "question": "字母 'Ww' 的小写形式是 'w'。",
+        "options": [],
+        "answer": "对",
+        "explanation": "'Ww' 由大写 'W' 和小写 'w' 组成。"
+      },
+      {
+        "id": 3,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "年龄与数量询问",
+        "question": "'How many' 后面通常接单数名词，比如 'apple'。",
+        "options": [],
+        "answer": "错",
+        "explanation": "'How many' 意为 '多少'，后面必须接可数名词的复数形式，如 'apples'。"
+      },
+      {
+        "id": 4,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "基数词1-10的认读",
+        "question": "数字 '3' 的英文单词是 'tree'。",
+        "options": [],
+        "answer": "错",
+        "explanation": "数字 3 的英文是 'three'，'tree' 的意思是 '树'，两者拼写不同。"
+      },
+      {
+        "id": 5,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 3,
+        "knowledge_point": "字母Vv-Zz的语音与书写",
+        "question": "在字母表中，'Yy' 排在 'Zz' 的后面。",
+        "options": [],
+        "answer": "错",
+        "explanation": "字母表顺序是 ...X, Y, Z。'Yy' 排在 'Zz' 的前面，而不是后面。"
+      },
+      {
+        "id": 6,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基数词1-10的认读",
+        "question": "Which word means '六'?",
+        "options": [
+          "five",
+          "six",
+          "seven",
+          "eight"
+        ],
+        "answer": "six",
+        "explanation": "'six' 对应中文数字 '六'。"
+      },
+      {
+        "id": 7,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "年龄与数量询问",
+        "question": "— How many pencils? — ___",
+        "options": [
+          "I am six.",
+          "Six.",
+          "My name is Tom.",
+          "It is blue."
+        ],
+        "answer": "Six.",
+        "explanation": "询问数量的 'How many' 提问，应直接用数字作答，故选 'Six.'。"
+      },
+      {
+        "id": 8,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "字母Vv-Zz的语音与书写",
+        "question": "Which letter comes before 'Vv'?",
+        "options": [
+          "Ww",
+          "Uu",
+          "Xx",
+          "Zz"
+        ],
+        "answer": "Uu",
+        "explanation": "字母表顺序为 ...T, U, V, W...，所以 V 前面是 U。"
+      },
+      {
+        "id": 9,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "年龄与数量询问",
+        "question": "— How old are you? — I am ___.",
+        "options": [
+          "ten boy",
+          "ten",
+          "a ten",
+          "ten year"
+        ],
+        "answer": "ten",
+        "explanation": "回答年龄直接说 'I am + 数字.'，不需要加 year 或 boy 等词。"
+      },
+      {
+        "id": 10,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "基数词1-10的认读",
+        "question": "Two and three is ___.",
+        "options": [
+          "four",
+          "five",
+          "six",
+          "seven"
+        ],
+        "answer": "five",
+        "explanation": "数学计算题：2 + 3 = 5，5 的英文是 'five'。"
+      },
+      {
+        "id": 11,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "年龄与数量询问",
+        "question": "I have two hands. I have ___ fingers.",
+        "options": [
+          "five",
+          "eight",
+          "ten",
+          "six"
+        ],
+        "answer": "ten",
+        "explanation": "常识推理：人有两只手，每只手5根手指，一共10根手指，10 是 'ten'。"
+      },
+      {
+        "id": 12,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "字母Vv-Zz的语音与书写",
+        "question": "Which group is in the correct alphabetical order (字母表顺序)?",
+        "options": [
+          "X, W, V",
+          "V, W, X",
+          "Z, Y, X",
+          "W, V, X"
+        ],
+        "answer": "V, W, X",
+        "explanation": "正确的字母表顺序是 V(22), W(23), X(24)。B选项完全正确。"
+      },
+      {
+        "id": 13,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "年龄与数量询问",
+        "question": "— How many birds? — I see ___.",
+        "options": [
+          "three bird",
+          "three birds",
+          "birds three",
+          "bird three"
+        ],
+        "answer": "three birds",
+        "explanation": "数字+复数名词。3只鸟应该是 'three birds'，bird 要加 s 变复数。"
+      },
+      {
+        "id": 14,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "基数词1-10的认读",
+        "question": "What is the next number: one, three, five, ___?",
+        "options": [
+          "six",
+          "seven",
+          "eight",
+          "nine"
+        ],
+        "answer": "seven",
+        "explanation": "观察规律：1, 3, 5 都是奇数，每次加2。5 + 2 = 7，即 'seven'。"
+      },
+      {
+        "id": 15,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "年龄与数量询问",
+        "question": "Tom is 8. Lily is 9. Lily is ___ than (比) Tom.",
+        "options": [
+          "old",
+          "older",
+          "young",
+          "younger"
+        ],
+        "answer": "older",
+        "explanation": "Lily 9岁，Tom 8岁，Lily 比 Tom 大。虽然比较级超纲，但结合语境和排除法，older 最合适。"
+      },
+      {
+        "id": 16,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基数词1-10的认读",
+        "question": "The number before two is ___.",
+        "options": [],
+        "answer": "one",
+        "explanation": "2 前面的数字是 1，英文为 'one'。"
+      },
+      {
+        "id": 17,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "年龄与数量询问",
+        "question": "How ___ are you? I am seven.",
+        "options": [],
+        "answer": "old",
+        "explanation": "'How old are you?' 是询问年龄的固定句型，空格处填 'old'。"
+      },
+      {
+        "id": 18,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "基数词1-10的认读",
+        "question": "Four and four is ___.",
+        "options": [],
+        "answer": "eight",
+        "explanation": "4 + 4 = 8，8 的英文单词是 'eight'。"
+      },
+      {
+        "id": 19,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "年龄与数量询问",
+        "question": "I have ___ eyes. (数字 2)",
+        "options": [],
+        "answer": "two",
+        "explanation": "常识题：人有两只眼睛，2 的英文是 'two'。"
+      },
+      {
+        "id": 20,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "基数词1-10的认读",
+        "question": "将下列英文数字与对应的阿拉伯数字配对。",
+        "options": [
+          "two",
+          "five",
+          "eight",
+          "ten",
+          "10",
+          "8",
+          "5",
+          "2"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "two=2(A-4), five=5(B-3), eight=8(C-2), ten=10(D-1)。"
+      },
+      {
+        "id": 21,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "年龄与数量询问",
+        "question": "将左侧英文问答与右侧中文意思配对。",
+        "options": [
+          "How old are you?",
+          "How many books?",
+          "I am six.",
+          "Seven dogs.",
+          "七只狗。",
+          "我六岁。",
+          "多少本书？",
+          "你多大了？"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "How old are you?=你多大了？(A-4); How many books?=多少本书？(B-3); I am six.=我六岁。(C-2); Seven dogs.=七只狗。(D-1)"
+      },
+      {
+        "id": 22,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "年龄与数量询问",
+        "question": "将下列单词排成一个正确的句子：",
+        "options": [
+          "am",
+          "I",
+          "old",
+          "years",
+          "eight",
+          "."
+        ],
+        "answer": "I,am,eight,years,old,.",
+        "explanation": "陈述句结构：主语(I) + 谓语(am) + 表语(eight years old) + 句号(.)。意为 '我八岁了。'"
+      },
+      {
+        "id": 23,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "年龄与数量询问",
+        "question": "将下列单词排成一个正确的句子：",
+        "options": [
+          "see",
+          "I",
+          "cats",
+          "six",
+          "."
+        ],
+        "answer": "I,see,six,cats,.",
+        "explanation": "主谓宾结构：I(主语) + see(谓语) + six cats(宾语) + .(标点)。意为 '我看见六只猫。'"
+      }
+    ]
+  },
+  "knowledge_summary": [
+    {
+      "point": "基数词1-10的认读",
+      "core_concept": "掌握 one 到 ten 这十个基础英文数字的拼写、发音及排序。",
+      "key_formula": "记忆口诀：one two three, four five six, seven eight nine ten。注意易混淆拼写：three(three不是tree)、eight(含有gh不发音)、five(以ve结尾)。",
+      "common_mistakes": [
+        "将 three 拼写成 tree；",
+        "将 eight 拼成 eght 或 eitht；",
+        "数字顺序记忆混乱，特别是 six 和 seven 的位置颠倒。"
+      ],
+      "tips": "建议通过唱英文数字歌谣、数手指、看车牌号等方式进行日常高频练习，建立数字与英文单词的条件反射。"
+    },
+    {
+      "point": "年龄与数量询问",
+      "core_concept": "熟练运用 'How old are you?' 询问年龄，运用 'How many + 复数名词?' 询问物品数量。",
+      "key_formula": "语法规则：\n1. 问年龄：How old + be动词 + 主语? → 答：I am + 数字.\n2. 问数量：How many + 可数名词复数 + 一般疑问句? → 答：数字. / I have + 数字 + 名词复数.\n⚠️ 核心考点：How many 后面必须加名词复数（如 apples, books, pens）。",
+      "common_mistakes": [
+        "How many 后面忘记加复数，错误地说成 'How many apple'；",
+        "混淆问年龄和问数量，用 'How many are you?' 来问年龄；",
+        "回答年龄时画蛇添足，说成 'I am ten years' 漏掉 old。"
+      ],
+      "tips": "对比记忆法：看到 old 想到年龄(age)，看到 many 想到数量(quantity)。做填空题时，务必检查 how many 后的名词有没有加 -s 或 -es。"
+    },
+    {
+      "point": "字母Vv-Zz的语音与书写",
+      "core_concept": "掌握字母表最后五个字母 Vv, Ww, Xx, Yy, Zz 的大小写规范书写及其在字母表中的先后顺序。",
+      "key_formula": "记忆点：\n1. 字母表顺序：V(22) -> W(23) -> X(24) -> Y(25) -> Z(26)。\n2. 大小写对比：V-v, W-w, X-x, Y-y, Z-z。其中 Ww 和 w 形状相似但大小不同，Xx 和 x 仅大小区别。",
+      "common_mistakes": [
+        "把小写 v 写成 u，或者把大写 W 写成两个 V 连在一起不规范；",
+        "记错字母顺序，认为 Y 在 Z 后面；",
+        "书写时占格错误，如小写字母没有写在四线三格的中间格。"
+      ],
+      "tips": "书空练习法：用手指在空中边念边写大小写字母。可以玩 '找邻居' 游戏，例如问 'X 的邻居是谁？' 答 'W 和 Y'，以此强化字母表顺序记忆。"
+    }
+  ]
+}

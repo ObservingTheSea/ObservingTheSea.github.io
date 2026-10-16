@@ -9,6 +9,8 @@ extension PassageKind {
         case .story:              return "故事"
         case .song:               return "儿歌"
         case .dialogue:           return "对话"
+        case .phonics:            return "发音"
+        case .vocabulary:         return "单词"
         }
     }
     var symbol: String {
@@ -18,6 +20,8 @@ extension PassageKind {
         case .story:              return "book.fill"
         case .song:               return "music.note"
         case .dialogue:           return "bubble.left.and.bubble.right.fill"
+        case .phonics:            return "textformat.abc"
+        case .vocabulary:         return "character.book.closed.fill"
         }
     }
 }

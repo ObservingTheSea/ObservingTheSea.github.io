@@ -43,8 +43,9 @@ export default async function BookPage({ params }: { params: Promise<{ book: str
       {/* 访问即成为「当前教材」（首页据此直达本页） */}
       <ActiveBookSync bookId={bookId} grade={book.grade} />
 
-      {/* 移动端顶栏：当前教材徽章（可换书） + stats */}
-      <div className="lg:hidden bg-white border-b border-bg-softer sticky top-0 z-30">
+      {/* 移动端顶栏：当前教材徽章（可换书） + stats。
+          高度写死 53（py-2 + 徽章 h-9 + 1px 底边），PathMap 的 top-[53px] 与之对齐。 */}
+      <div className="lg:hidden h-[53px] bg-white border-b border-bg-softer sticky top-0 z-30">
         <div className="max-w-md mx-auto px-4 py-2 flex items-center justify-between gap-2">
           <CurrentBookBadge book={book} gradeBooks={gradeBooks} />
           <StatsBar compact />

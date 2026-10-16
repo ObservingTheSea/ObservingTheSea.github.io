@@ -89,7 +89,20 @@ PASSAGE_EXTRACT_PROMPT = """# 角色
 # 只抽取
 - 课文标题（含古诗标题、儿歌标题、英语 Story / Let's read / Let's talk 标题）
 - 课文正文全文（古诗、儿歌、散文、记叙文、英语短文、英语对话）
+- 英语 Letters and sounds 里可朗读的发音内容（kind 用 phonics，见下方）
+- 英语 Let's learn 和 Listen and do（见下方）
 - 作者（如页面显式印有）
+
+# 英语发音（kind = phonics，必须抽取）
+同一页通常有好几块，只收下面两类，各自单独成篇，page_in_batch 用该块所在页：
+- Listen, repeat and chant：每个单词一句，不要把同一张卡片上的两个词合成一句。例如 ill、kid、job、jet、Kim、kite、leg、lion 是八个 sentence。
+- Can you read the words?：每个单词一句。例如 big、dig、Jim、lab、led。
+标题就用栏目标题：Letters and sounds 或 Can you read the words?。
+
+# 英语 Let's learn 和 Listen and do（必须抽取）
+这两块和同页的 Listen and chant 分开，各自单独成篇，page_in_batch 用该块所在页。
+- Let's learn：标题用 Let's learn，kind 用 vocabulary，不要用 phonics 或 song。图上的单词每个一词一句。带括号的别称跟在同一个词后面，例如 grandmother (grandma)、baby sister 都各自只占一句。气泡或句子框里的完整句子各一句；同一个气泡里换行的文字拼回一句，例如 Hello! My name / is Mike Black. 写成 "Hello! My name is Mike Black."。
+- Listen and do：标题用 Listen and do，kind 用 song。严格按原文每一行一句，例如 Wave your hand. Hello! 是一句，不要和上面的单词合成一篇。
 
 # 一定要跳过（不要放进 passages）
 - 目录、封面、版权页、编委会、前言
@@ -98,7 +111,8 @@ PASSAGE_EXTRACT_PROMPT = """# 角色
 - 练习题、思考题、"读一读写一写"、"我会认/我会写"字表
 - 课后"词语表""字词表""四会词"
 - 语文园地、口语交际、习作、快乐读书吧
-- 英语的 Let's learn 单词表、Let's do、Let's check、Story time 之外的练习
+- 英语的 Let's check，以及圈选、连线、打勾这类练习。Let's learn 和 Listen and do 不要跳过
+- Letters and sounds 里的圈一圈（Listen and circle）、描红（Write and say）、页底字母表横条。这些没有可朗读的词句
 
 # 输出要求（严格 JSON，不要 markdown 代码块包裹，不要任何额外说明文字）
 {{
@@ -119,7 +133,7 @@ PASSAGE_EXTRACT_PROMPT = """# 角色
 }}
 
 字段说明：
-- kind: 取值 poem / ancient_poem / prose / story / song / dialogue 之一
+- kind: 取值 poem / ancient_poem / prose / story / song / dialogue / phonics / vocabulary 之一。Letters and sounds 的单词和认读单词用 phonics。Let's learn 用 vocabulary。Listen and do 用 song。不要把这三类互相替代
 - author: 没有标注就写 null
 - page_in_batch: 本篇课文在**这个 PDF 批次**里的第几页（从 1 开始数）。
   **不要**读页眉/页脚的印刷页码，那个和 PDF 物理页不一样。直接从头数：这个 PDF 的第 1 页、第 2 页……第 10 页
@@ -130,6 +144,8 @@ PASSAGE_EXTRACT_PROMPT = """# 角色
 - 中文古诗/儿歌：按原文换行切分，每行作为一个 sentence
 - 英文散文/故事：按 . ? ! 切分，保留标点
 - 英文对话：每个 speaker 的一次发言作为一个 sentence（含前面的 "Sarah: "）
+- 英语发音（phonics）：每个单词一个 sentence。同一张图上并排的两个词也要拆开，例如 apple 和 bag 是两句，不要写成 "apple bag"
+- 英语 Let's learn（vocabulary）：每个图注单词一句，每句例句一句。别称括号留在原词后面。不要把 Listen and do 的口令行并进这一篇
 - **歌谣 / 诗 / 韵文 / 字母歌 / chant：严格按原文换行或标点分行，每一行/每一句作为独立 sentence。
   绝对不要把多行合并到同一个字符串里。**例如 ABC song 的
   `Aa Bb Cc Dd Ee Ff Gg,` `Hh Ii Jj Kk Ll Mm Nn,` 必须是两个独立的 sentence 元素

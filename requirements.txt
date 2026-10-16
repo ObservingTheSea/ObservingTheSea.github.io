@@ -1,0 +1,24 @@
+# scripts/ 直接依赖
+# 安装: pip install -r requirements.txt
+
+# 题库 / 故事生成（scripts/quiz, scripts/stories, scripts/passages）
+openai
+requests
+pypdf
+
+# 课文页渲染 / App 图标
+pymupdf
+Pillow
+
+# DashScope API TTS（scripts/tts/api_tts.py, ui_tts.py, test_api.py）
+dashscope
+python-dotenv
+soundfile
+
+# 本地模型 TTS（scripts/tts/batch_tts.py）
+# CUDA 环境建议按 scripts/tts/WINDOWS_SETUP.md 单独装 torch
+# torch
+# qwen-tts
+
+# 可选：CUDA 推理加速，未安装时 batch_tts.py 会回退到 sdpa
+# flash-attn

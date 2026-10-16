@@ -9,6 +9,8 @@
  * bookId 规则：
  *   - math 维持 `g1up` 等老格式（兼容老用户 localStorage 进度）
  *   - 非 math 学科带前缀：`chinese-g1up` / `english-g3up` / `science-g1up`
+ *   - 「X年级上/下册」之后的四位年份是版本：`english-g3up-2022`
+ *     没有年份的原版不加后缀，避免冲掉已有进度
  */
 
 import { createHash } from "crypto";
@@ -510,17 +512,26 @@ const FILENAME_PATTERNS: { regex: RegExp; grade: number; semester: "up" | "down"
 
 const GRADE_NAMES = ["", "一", "二", "三", "四", "五", "六"];
 
+/** 「X年级上/下册」之后的四位年份。与 scripts/quiz/subjects.py parse_book_id 对齐。 */
+const EDITION_RE = /^[-_·.\s（(]*((?:19|20)\d{2})/;
+
+function parseEdition(tail: string): string | undefined {
+  return EDITION_RE.exec(tail)?.[1];
+}
+
 function parseStem(
   stem: string,
   subjectId: SubjectId,
-): { grade: number; semester: "up" | "down"; bookId: string } | null {
+): { grade: number; semester: "up" | "down"; bookId: string; edition?: string } | null {
   for (const p of FILENAME_PATTERNS) {
-    if (p.regex.test(stem)) {
-      // bookId 命名规则：math 维持原状，其他学科加前缀
-      const baseId = `g${p.grade}${p.semester}`;
-      const bookId = subjectId === "math" ? baseId : `${subjectId}-${baseId}`;
-      return { grade: p.grade, semester: p.semester, bookId };
-    }
+    const m = p.regex.exec(stem);
+    if (!m) continue;
+    // bookId 命名规则：math 维持原状，其他学科加前缀；有年份再加版本后缀
+    const baseId = `g${p.grade}${p.semester}`;
+    const bookIdBase = subjectId === "math" ? baseId : `${subjectId}-${baseId}`;
+    const edition = parseEdition(stem.slice(m.index + m[0].length));
+    const bookId = edition ? `${bookIdBase}-${edition}` : bookIdBase;
+    return { grade: p.grade, semester: p.semester, bookId, edition };
   }
   return null;
 }
@@ -542,7 +553,7 @@ async function processTextbook(
     return null;
   }
 
-  const { grade, semester, bookId } = parsed;
+  const { grade, semester, bookId, edition } = parsed;
   const outline: Outline = JSON.parse(
     await fs.readFile(path.join(outlineDir, outlineFile), "utf-8"),
   );
@@ -671,6 +682,8 @@ async function processTextbook(
 
   const semesterName = semester === "up" ? "上册" : "下册";
   const gradeName = `${GRADE_NAMES[grade]}年级`;
+  const editionLabel = edition ? `${edition}版` : undefined;
+  const volumeName = `${gradeName}${semesterName}`;
   const book: Book = {
     id: bookId,
     grade,
@@ -679,8 +692,11 @@ async function processTextbook(
     gradeName,
     semesterName,
     subjectName: subject.name,
-    textbookName: `${gradeName}${semesterName}`,
-    fullName: `${subject.publisherLabel}小学${subject.name}${gradeName}${semesterName}`,
+    textbookName: editionLabel ? `${volumeName} · ${editionLabel}` : volumeName,
+    fullName: editionLabel
+      ? `${subject.publisherLabel}小学${subject.name}${volumeName} · ${editionLabel}`
+      : `${subject.publisherLabel}小学${subject.name}${volumeName}`,
+    ...(edition ? { edition } : {}),
     unitsCount: outline.units.length,
     lessonsCount: allLessons.length,
   };
@@ -738,9 +754,17 @@ async function main() {
 
     console.log(`\n📘 处理学科: ${subject.name} (${subject.id}) — ${outlineFiles.length} 本教材`);
 
+    const seenBookIds = new Map<string, string>();
     for (const outlineFile of outlineFiles) {
       const result = await processTextbook(subject, outlineFile, outlineDir, quizDir);
       if (!result) continue;
+      const prev = seenBookIds.get(result.book.id);
+      if (prev) {
+        console.warn(
+          `  ⚠️  bookId 冲突 ${result.book.id}：「${prev}」与「${outlineFile}」落到同一本书，后写的会覆盖。文件名在「年级册」后加上年份（如 -2022）即可分开。`,
+        );
+      }
+      seenBookIds.set(result.book.id, outlineFile);
       if (booksWithPassages.has(result.book.id)) {
         result.book.hasPassages = true;
       }
@@ -756,19 +780,25 @@ async function main() {
     }
   }
 
-  // 排序：先按学科 (math 最前)，再按学期 (上 → 下)，再按年级
+  // 排序：学科 (math 最前) → 学期 (上 → 下) → 年级 → 版本（原版在前，年份升序）
   const subjectOrder: Record<string, number> = {
     math: 0,
     chinese: 1,
     english: 2,
     science: 3,
   };
+  const editionRank = (edition?: string) => {
+    if (!edition) return -1;
+    const n = Number(edition);
+    return Number.isFinite(n) ? n : 9999;
+  };
   books.sort((a, b) => {
     const sa = subjectOrder[a.subject ?? "math"] ?? 99;
     const sb = subjectOrder[b.subject ?? "math"] ?? 99;
     if (sa !== sb) return sa - sb;
     if (a.semester !== b.semester) return a.semester === "up" ? -1 : 1;
-    return a.grade - b.grade;
+    if (a.grade !== b.grade) return a.grade - b.grade;
+    return editionRank(a.edition) - editionRank(b.edition);
   });
 
   const index: SiteIndex = {

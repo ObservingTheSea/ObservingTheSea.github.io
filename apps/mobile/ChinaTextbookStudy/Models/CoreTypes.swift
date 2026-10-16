@@ -178,6 +178,8 @@ struct Book: Codable, Hashable, Identifiable {
     var subjectName: String?
     var textbookName: String
     var fullName: String
+    /// 课标/教材年份。缺省表示原版，id 不加后缀。
+    var edition: String? = nil
     var unitsCount: Int
     var lessonsCount: Int
     var hasPassages: Bool?
@@ -192,6 +194,10 @@ enum PassageKind: String, Codable, Hashable {
     case poem
     case ancientPoem = "ancient_poem"
     case prose, story, song, dialogue
+    /// 英语 Letters and sounds。旧数据没有这个值，解码不受影响。
+    case phonics
+    /// 英语 Let's learn。旧数据没有这个值，解码不受影响。
+    case vocabulary
 }
 
 struct PassageSentence: Codable, Hashable {

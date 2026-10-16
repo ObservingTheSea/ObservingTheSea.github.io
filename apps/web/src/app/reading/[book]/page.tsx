@@ -41,6 +41,8 @@ const KIND_LABEL: Record<string, string> = {
   story: "故事",
   song: "歌谣",
   dialogue: "对话",
+  phonics: "发音",
+  vocabulary: "单词",
 };
 
 /** Pick the "main" page image — the one matching pdfPage, or middle of array */
@@ -78,7 +80,6 @@ export default async function ReadingListPage({
         badge={<SubjectBadge book={book} />}
         flatOnDesktop
       />
-
       <div className="max-w-md lg:max-w-none mx-auto px-4 lg:px-0 py-5 lg:pt-2 space-y-3 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-3">
         {doc.passages.map(p => {
           const audioReady = p.sentences.some(s => s.audio);

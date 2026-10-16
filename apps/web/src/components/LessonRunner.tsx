@@ -260,12 +260,19 @@ export function LessonRunner({ lesson, chestSlot = null }: LessonRunnerProps) {
   const hearts = useProgressStore(s => s.hearts);
   const gems = useProgressStore(s => s.gems);
   const backdropId = useProgressStore(s => s.equippedBackdrop);
+  // 默认「干净简洁」不写死浅色，交给 .lesson-canvas 在暗色下换成 night 底。
+  // 浅色装饰背景同样不进暗色（否则浅色字会糊在浅色渐变上）；星空/极光这类
+  // 深色场景（needsOverlay）暗色下继续用。
   const backdropStyle = useMemo<React.CSSProperties>(() => {
     const item = getCosmeticById(backdropId) as LessonBackdrop | undefined;
-    if (!item || item.type !== "lesson_backdrop") {
-      return { background: "#F7F7F7" };
+    if (!item || item.type !== "lesson_backdrop" || item.id === "backdrop_default") {
+      return {};
     }
-    return { background: item.data.background };
+    const vars: Record<string, string> = { "--lesson-bg": item.data.background };
+    if (item.data.needsOverlay) {
+      vars["--lesson-bg-dark"] = item.data.background;
+    }
+    return vars as React.CSSProperties;
   }, [backdropId]);
   const prefersReduced = useReducedMotion();
 
@@ -1004,7 +1011,7 @@ export function LessonRunner({ lesson, chestSlot = null }: LessonRunnerProps) {
   return (
     <motion.main
       animate={shakeControls}
-      className="min-h-screen flex flex-col relative"
+      className="lesson-canvas h-screen flex flex-col relative"
       style={backdropStyle}
     >
       {/* +XP 飘字层 —— fixed 定位独立于 layout，不影响滚动 */}
@@ -1281,25 +1288,26 @@ export function LessonRunner({ lesson, chestSlot = null }: LessonRunnerProps) {
         total={total}
       />
 
-      {/* 吉祥物 + 气泡 */}
-      <div className="max-w-md lg:max-w-2xl mx-auto w-full px-5 pt-2 flex items-end gap-3 min-h-[96px]">
-        <Mascot
-          mood={phase === "checked" ? mascotMood : "happy"}
-          size={72}
-          reactTo={mascotReact}
-          reactKey={mascotReactKey}
-        />
-        <div className="mb-2 h-8 flex items-end">
-          <AnimatePresence mode="wait">
-            {bubbleText && (
-              <SpeechBubble key={bubbleKey} text={bubbleText} tone={bubbleTone} />
-            )}
-          </AnimatePresence>
-        </div>
-      </div>
+      
 
       {/* Question area */}
-      <div className="flex-1 flex flex-col items-center justify-start px-5 py-4">
+      <div className="flex-1 flex flex-col items-center justify-start px-5 pb-4 overflow-auto">
+        {/* 吉祥物 + 气泡 */}
+        <div className="max-w-md lg:max-w-2xl mx-auto w-full pb-2 flex items-end gap-3 min-h-[96px]">
+          <Mascot
+            mood={phase === "checked" ? mascotMood : "happy"}
+            size={72}
+            reactTo={mascotReact}
+            reactKey={mascotReactKey}
+          />
+          <div className="mb-2 h-8 flex items-end">
+            <AnimatePresence mode="wait">
+              {bubbleText && (
+                <SpeechBubble key={bubbleKey} text={bubbleText} tone={bubbleTone} />
+              )}
+            </AnimatePresence>
+          </div>
+        </div>
         <div className="w-full max-w-md lg:max-w-2xl">
           {/* "NEW WORD" 紫色胶囊 tag —— 仿 Duolingo 题型标签 */}
           <div className="mb-3 inline-flex items-center gap-1.5 flex-wrap">
@@ -1943,7 +1951,7 @@ function StreakAct({
         }
         filename={`liansheng-${outcome.streakAfter}tian.png`}
         shareText={`我已经在聪聪学堂连续学习 ${outcome.streakAfter} 天啦！`}
-        className="btn-chunky-secondary px-10 mx-auto block mt-6"
+        className="btn-chunky-secondary px-10 mx-auto block mt-6 mr-6"
       />
 
       <ActContinueButton onClick={onContinue} />
@@ -2408,7 +2416,7 @@ function IntroCard({
   const Icon = current.icon;
 
   return (
-    <main className="min-h-screen bg-bg-soft flex flex-col">
+    <main className="h-screen bg-bg-soft flex flex-col">
       {/* 顶栏：关闭 + 进度点 */}
       <div className="bg-white border-b border-bg-softer">
         <div className="max-w-md lg:max-w-2xl mx-auto px-4 py-3 flex items-center gap-3">
@@ -2447,119 +2455,121 @@ function IntroCard({
         </div>
       </div>
 
-      {/* 单元 & 课程标题（小） */}
-      <div className="max-w-md lg:max-w-2xl mx-auto w-full px-5 pt-3 text-center">
-        <div className="text-xs font-bold text-ink-softer uppercase tracking-wide">
-          第 {lesson.unitNumber} 单元 · {lesson.unitTitle}
+      <div className="flex-1 overflow-y-auto">
+        {/* 单元 & 课程标题（小） */}
+        <div className="max-w-md lg:max-w-2xl mx-auto w-full px-5 pt-3 text-center">
+          <div className="text-xs font-bold text-ink-softer uppercase tracking-wide">
+            第 {lesson.unitNumber} 单元 · {lesson.unitTitle}
+          </div>
+          <div className="text-base font-extrabold text-ink-light mt-0.5 truncate">
+            {lesson.title}
+          </div>
         </div>
-        <div className="text-base font-extrabold text-ink-light mt-0.5 truncate">
-          {lesson.title}
-        </div>
-      </div>
 
-      {/* 主内容：单页聚焦 */}
-      <div className="flex-1 flex items-center px-5 py-4">
-        <div className="max-w-md lg:max-w-2xl mx-auto w-full">
-          <AnimatePresence mode="wait" custom={direction}>
-            <motion.div
-              key={pageIdx}
-              custom={direction}
-              initial={{ x: direction * 50, opacity: 0, scale: 0.96 }}
-              animate={{ x: 0, opacity: 1, scale: 1 }}
-              exit={{ x: direction * -50, opacity: 0, scale: 0.96 }}
-              transition={{ type: "spring", damping: 20, stiffness: 240 }}
-              className="flex flex-col items-center text-center"
-            >
-              {/* 吉祥物 + 气泡 */}
-              <div className="flex items-end gap-2 mb-2 min-h-[96px]">
-                <motion.div
-                  initial={{ y: 14, scale: 0.8, opacity: 0 }}
-                  animate={{ y: 0, scale: 1, opacity: 1 }}
-                  transition={{ type: "spring", damping: 12, stiffness: 220, delay: 0.05 }}
-                >
-                  <Mascot
-                    mood={current.mascotMood}
-                    size={84}
-                    reactTo="levelup"
-                    reactKey={mascotReactKey}
-                  />
-                </motion.div>
-                <motion.div
-                  initial={{ y: 8, scale: 0, opacity: 0 }}
-                  animate={{ y: 0, scale: 1, opacity: 1 }}
-                  transition={{ type: "spring", damping: 14, stiffness: 240, delay: 0.18 }}
-                  className="mb-3"
-                >
-                  <SpeechBubble
-                    text={current.bubbleText}
-                    tone={
-                      current.tone === "mistake"
-                        ? "danger"
-                        : current.tone === "concept" || current.tone === "rule"
-                        ? "primary"
-                        : "neutral"
-                    }
-                  />
-                </motion.div>
-              </div>
-
-              {/* 图标徽章 + 脉冲光环 */}
+        {/* 主内容：单页聚焦 */}
+        <div className="flex-1 flex items-center px-5 py-4">
+          <div className="max-w-md lg:max-w-2xl mx-auto w-full">
+            <AnimatePresence mode="wait" custom={direction}>
               <motion.div
-                initial={{ scale: 0.5, rotate: -20, opacity: 0 }}
-                animate={{ scale: 1, rotate: 0, opacity: 1 }}
-                transition={{ type: "spring", damping: 10, stiffness: 220, delay: 0.12 }}
-                className="relative mb-4"
+                key={pageIdx}
+                custom={direction}
+                initial={{ x: direction * 50, opacity: 0, scale: 0.96 }}
+                animate={{ x: 0, opacity: 1, scale: 1 }}
+                exit={{ x: direction * -50, opacity: 0, scale: 0.96 }}
+                transition={{ type: "spring", damping: 20, stiffness: 240 }}
+                className="flex flex-col items-center text-center"
               >
-                {/* 脉冲光圈 */}
-                <motion.div
-                  aria-hidden
-                  animate={{ scale: [1, 1.4, 1], opacity: [0.5, 0, 0.5] }}
-                  transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute inset-0 rounded-full"
-                  style={{ backgroundColor: `${current.accent}33` }}
-                />
-                {/* 悬浮漂浮的图标圆 */}
-                <motion.div
-                  animate={{ y: [0, -4, 0] }}
-                  transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-                  className={`relative w-20 h-20 rounded-full ${current.iconBg} flex items-center justify-center`}
-                  style={{ boxShadow: `0 6px 0 0 ${current.accent}44` }}
-                >
+                {/* 吉祥物 + 气泡 */}
+                <div className="flex items-end gap-2 mb-2 min-h-[96px]">
                   <motion.div
-                    animate={{ rotate: [0, -6, 6, -4, 4, 0] }}
-                    transition={{ duration: 0.9, delay: 0.3 }}
+                    initial={{ y: 14, scale: 0.8, opacity: 0 }}
+                    animate={{ y: 0, scale: 1, opacity: 1 }}
+                    transition={{ type: "spring", damping: 12, stiffness: 220, delay: 0.05 }}
                   >
-                    <Icon className={`w-10 h-10 ${current.iconColor}`} />
+                    <Mascot
+                      mood={current.mascotMood}
+                      size={84}
+                      reactTo="levelup"
+                      reactKey={mascotReactKey}
+                    />
+                  </motion.div>
+                  <motion.div
+                    initial={{ y: 8, scale: 0, opacity: 0 }}
+                    animate={{ y: 0, scale: 1, opacity: 1 }}
+                    transition={{ type: "spring", damping: 14, stiffness: 240, delay: 0.18 }}
+                    className="mb-3"
+                  >
+                    <SpeechBubble
+                      text={current.bubbleText}
+                      tone={
+                        current.tone === "mistake"
+                          ? "danger"
+                          : current.tone === "concept" || current.tone === "rule"
+                          ? "primary"
+                          : "neutral"
+                      }
+                    />
+                  </motion.div>
+                </div>
+
+                {/* 图标徽章 + 脉冲光环 */}
+                <motion.div
+                  initial={{ scale: 0.5, rotate: -20, opacity: 0 }}
+                  animate={{ scale: 1, rotate: 0, opacity: 1 }}
+                  transition={{ type: "spring", damping: 10, stiffness: 220, delay: 0.12 }}
+                  className="relative mb-4"
+                >
+                  {/* 脉冲光圈 */}
+                  <motion.div
+                    aria-hidden
+                    animate={{ scale: [1, 1.4, 1], opacity: [0.5, 0, 0.5] }}
+                    transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute inset-0 rounded-full"
+                    style={{ backgroundColor: `${current.accent}33` }}
+                  />
+                  {/* 悬浮漂浮的图标圆 */}
+                  <motion.div
+                    animate={{ y: [0, -4, 0] }}
+                    transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+                    className={`relative w-20 h-20 rounded-full ${current.iconBg} flex items-center justify-center`}
+                    style={{ boxShadow: `0 6px 0 0 ${current.accent}44` }}
+                  >
+                    <motion.div
+                      animate={{ rotate: [0, -6, 6, -4, 4, 0] }}
+                      transition={{ duration: 0.9, delay: 0.3 }}
+                    >
+                      <Icon className={`w-10 h-10 ${current.iconColor}`} />
+                    </motion.div>
                   </motion.div>
                 </motion.div>
-              </motion.div>
 
-              {/* 标题 */}
-              <motion.div
-                initial={{ y: 12, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ type: "spring", damping: 16, stiffness: 260, delay: 0.2 }}
-                className="flex items-center justify-center gap-3 mb-4"
-              >
-                <h1 className="text-3xl font-extrabold text-ink leading-tight">
-                  {current.title}
-                </h1>
-                {current.titleAudio && (
-                  <TTSButton src={current.titleAudio} label="朗读讲解" />
-                )}
-              </motion.div>
+                {/* 标题 */}
+                <motion.div
+                  initial={{ y: 12, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ type: "spring", damping: 16, stiffness: 260, delay: 0.2 }}
+                  className="flex items-center justify-center gap-3 mb-4"
+                >
+                  <h1 className="text-3xl font-extrabold text-ink leading-tight">
+                    {current.title}
+                  </h1>
+                  {current.titleAudio && (
+                    <TTSButton src={current.titleAudio} label="朗读讲解" />
+                  )}
+                </motion.div>
 
-              {/* 内容（继承父级居中） */}
-              <motion.div
-                initial={{ y: 10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.28, duration: 0.35 }}
-                className="w-full max-w-prose mx-auto"
-              >
-                {current.render(playingMistakeIdx)}
+                {/* 内容（继承父级居中） */}
+                <motion.div
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.28, duration: 0.35 }}
+                  className="w-full max-w-prose mx-auto"
+                >
+                  {current.render(playingMistakeIdx)}
+                </motion.div>
               </motion.div>
-            </motion.div>
-          </AnimatePresence>
+            </AnimatePresence>
+          </div>
         </div>
       </div>
 

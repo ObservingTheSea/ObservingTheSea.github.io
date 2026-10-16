@@ -25,5 +25,6 @@ export default function BookPathSection({
   outline: BookOutlineWithLessons;
   book: Book;
 }) {
+  
   return <BookPathView bookId={bookId} outline={outline} book={book} />;
 }

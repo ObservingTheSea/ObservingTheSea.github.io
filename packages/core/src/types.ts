@@ -119,8 +119,10 @@ export interface Book {
   gradeName: string; // '三年级'
   semesterName: string; // '上册'
   subjectName?: string; // '数学'（显示用）
-  textbookName: string; // '三年级上册'
+  textbookName: string; // '三年级上册'；有版本时为 '三年级上册 · 2022版'
   fullName: string; // '人教版小学数学三年级上册'
+  /** 课标/教材年份。缺省表示原版，bookId 不加后缀 */
+  edition?: string; // '2022'
   unitsCount: number;
   lessonsCount: number;
   /** 该书是否有课文听读数据（由 build-data 注入） */
@@ -139,7 +141,11 @@ export type PassageKind =
   | "prose"
   | "story"
   | "song"
-  | "dialogue";
+  | "dialogue"
+  /** 英语 Letters and sounds：词对 / 认读单词。不走诗歌居中排版。 */
+  | "phonics"
+  /** 英语 Let's learn：图注单词和例句。逐条点读，不走诗歌居中排版。 */
+  | "vocabulary";
 
 export interface PassageSentence {
   text: string;

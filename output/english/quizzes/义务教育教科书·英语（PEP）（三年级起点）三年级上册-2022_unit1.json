@@ -1,0 +1,727 @@
+{
+  "textbook": "人教版PEP英语三年级上册",
+  "unit": "第1单元 Making friends",
+  "unit_number": 1,
+  "unit_test": {
+    "title": "PEP三年级上册第1单元 Making friends 单元测试",
+    "total_score": 100,
+    "time_minutes": 40,
+    "questions": [
+      {
+        "id": 1,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "自我介绍与社交问候",
+        "question": "'Hello' 和 'Hi' 都可以用来打招呼。",
+        "options": [],
+        "answer": "对",
+        "explanation": "'Hello' 和 'Hi' 都是常见的英语问候语，意思是'你好'。"
+      },
+      {
+        "id": 2,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "身体部位词汇辨识",
+        "question": "'eye' 的意思是嘴巴。",
+        "options": [],
+        "answer": "错",
+        "explanation": "'eye' 的意思是眼睛，'mouth' 才是嘴巴。"
+      },
+      {
+        "id": 3,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "祈使句动作指令理解",
+        "question": "'Wave your hand.' 的意思是挥挥手。",
+        "options": [],
+        "answer": "对",
+        "explanation": "'wave' 是挥动的意思，'hand' 是手，所以整句话的意思是挥挥手。"
+      },
+      {
+        "id": 4,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "良好友谊行为表达",
+        "question": "'share' 的意思是打架。",
+        "options": [],
+        "answer": "错",
+        "explanation": "'share' 的意思是分享，好朋友之间应该学会 share（分享）。"
+      },
+      {
+        "id": 5,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "自我介绍与社交问候",
+        "question": "当别人对你说 'Nice to meet you.' 时，你可以回答 'Nice to meet you, too.'",
+        "options": [],
+        "answer": "对",
+        "explanation": "初次见面时，对方说'很高兴见到你'，我们通常回答'我也很高兴见到你'，加上 too 表示'也'。"
+      },
+      {
+        "id": 6,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "自我介绍与社交问候",
+        "question": "你想向新朋友介绍自己叫 Mike，你应该说：",
+        "options": [
+          "A. I'm Mike.",
+          "B. I'm a boy.",
+          "C. Hello, Mike.",
+          "D. My name is a boy."
+        ],
+        "answer": "A. I'm Mike.",
+        "explanation": "自我介绍用 'I'm...' 或 'My name is...' 加自己的名字。选项A符合规范。"
+      },
+      {
+        "id": 7,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "身体部位词汇辨识",
+        "question": "下面哪个单词的意思是'耳朵'？",
+        "options": [
+          "A. eye",
+          "B. ear",
+          "C. mouth",
+          "D. hand"
+        ],
+        "answer": "B. ear",
+        "explanation": "ear 是耳朵，eye 是眼睛，mouth 是嘴巴，hand 是手。"
+      },
+      {
+        "id": 8,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "祈使句动作指令理解",
+        "question": "老师想让你指一指你的嘴巴，她会说：",
+        "options": [
+          "A. Wave your hand.",
+          "B. Point to your ear.",
+          "C. Point to your mouth.",
+          "D. Clap your hands."
+        ],
+        "answer": "C. Point to your mouth.",
+        "explanation": "'Point to' 是指向的意思，'mouth' 是嘴巴，所以选C。"
+      },
+      {
+        "id": 9,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "良好友谊行为表达",
+        "question": "好朋友之间应该互相帮助，'帮助'的英文是：",
+        "options": [
+          "A. share",
+          "B. help",
+          "C. listen",
+          "D. smile"
+        ],
+        "answer": "B. help",
+        "explanation": "help 是帮助，share 是分享，listen 是倾听，smile 是微笑。"
+      },
+      {
+        "id": 10,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "自我介绍与社交问候",
+        "question": "当你第一次见到新朋友时，你应该说：",
+        "options": [
+          "A. Goodbye!",
+          "B. Nice to meet you.",
+          "C. Thank you.",
+          "D. I'm sorry."
+        ],
+        "answer": "B. Nice to meet you.",
+        "explanation": "初次见面用 'Nice to meet you.'（很高兴见到你）来打招呼。"
+      },
+      {
+        "id": 11,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "身体部位词汇辨识",
+        "question": "'Look at my hand.' 这句话中 'hand' 的意思是：",
+        "options": [
+          "A. 头",
+          "B. 手臂",
+          "C. 手",
+          "D. 脚"
+        ],
+        "answer": "C. 手",
+        "explanation": "hand 的意思是手。head 是头，arm 是手臂，foot 是脚。"
+      },
+      {
+        "id": 12,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "祈使句动作指令理解",
+        "question": "'Wave your arm.' 这个指令要求你做什么动作？",
+        "options": [
+          "A. 挥动你的手臂",
+          "B. 指着你的手臂",
+          "C. 拍拍你的手",
+          "D. 闭上你的眼睛"
+        ],
+        "answer": "A. 挥动你的手臂",
+        "explanation": "'wave' 是挥动，'arm' 是手臂，所以指令是挥动你的手臂。"
+      },
+      {
+        "id": 13,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "良好友谊行为表达",
+        "question": "'We ___ together.' 我们在一起玩。空格处应填：",
+        "options": [
+          "A. play",
+          "B. point",
+          "C. wave",
+          "D. meet"
+        ],
+        "answer": "A. play",
+        "explanation": "'play together' 是一起玩的意思，是描述友谊行为的常用短语。"
+      },
+      {
+        "id": 14,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "自我介绍与社交问候",
+        "question": "— Hello, I'm Sarah. — ________",
+        "options": [
+          "A. Hi, I'm John.",
+          "B. Point to your mouth.",
+          "C. Wave your hand.",
+          "D. I have an ear."
+        ],
+        "answer": "A. Hi, I'm John.",
+        "explanation": "别人向你打招呼并自我介绍时，你也应该回应问候并介绍自己。"
+      },
+      {
+        "id": 15,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "良好友谊行为表达",
+        "question": "当朋友说话时，我们应该认真听。'听'的英文是：",
+        "options": [
+          "A. smile",
+          "B. listen",
+          "C. share",
+          "D. help"
+        ],
+        "answer": "B. listen",
+        "explanation": "listen 是听，smile 是微笑，share 是分享，help 是帮助。认真倾听是好朋友的表现。"
+      },
+      {
+        "id": 16,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "自我介绍与社交问候",
+        "question": "I ___ a girl. (am / is / are)",
+        "options": [],
+        "answer": "am",
+        "explanation": "主语是 I 时，be动词用 am。I am... 意为'我是……'。"
+      },
+      {
+        "id": 17,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "身体部位词汇辨识",
+        "question": "Point to your ___. (指向你的眼睛，填写一个身体部位的英文单词)",
+        "options": [],
+        "answer": "eye",
+        "explanation": "根据中文提示'眼睛'，对应的英文单词是 eye。"
+      },
+      {
+        "id": 18,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "祈使句动作指令理解",
+        "question": "___ your hand. (挥挥你的手，填写表示'挥动'的英文单词)",
+        "options": [],
+        "answer": "wave",
+        "explanation": "wave 是挥动的意思，'Wave your hand.' 意为挥挥你的手。注意填空题全部小写。"
+      },
+      {
+        "id": 19,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "良好友谊行为表达",
+        "question": "Good friends ___ with each other. (好朋友互相分享，填写表示'分享'的英文单词)",
+        "options": [],
+        "answer": "share",
+        "explanation": "share 是分享的意思，好朋友之间要学会 share。"
+      },
+      {
+        "id": 20,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "身体部位词汇辨识",
+        "question": "请将下列英文身体部位单词与对应的中文意思连线配对。",
+        "options": [
+          "eye",
+          "mouth",
+          "ear",
+          "hand",
+          "手",
+          "耳朵",
+          "嘴巴",
+          "眼睛"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "eye 对应眼睛(4)，mouth 对应嘴巴(3)，ear 对应耳朵(2)，hand 对手(1)。"
+      },
+      {
+        "id": 21,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "良好友谊行为表达",
+        "question": "请将下列描述友谊的英文动词与对应的中文意思连线配对。",
+        "options": [
+          "share",
+          "help",
+          "listen",
+          "smile",
+          "微笑",
+          "倾听",
+          "帮助",
+          "分享"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "share 对应分享(4)，help 对应帮助(3)，listen 对应倾听(2)，smile 对应微笑(1)。"
+      },
+      {
+        "id": 22,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "自我介绍与社交问候",
+        "question": "将下列单词排列成一个正确的句子：",
+        "options": [
+          "name",
+          "is",
+          "My",
+          "Chen",
+          "Jie"
+        ],
+        "answer": "My,name,is,Chen,Jie",
+        "explanation": "正确语序为：My name is Chen Jie.（我的名字是陈洁。）注意句首字母大写。"
+      },
+      {
+        "id": 23,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "祈使句动作指令理解",
+        "question": "将下列单词排列成一个正确的祈使句：",
+        "options": [
+          "to",
+          "your",
+          "Point",
+          "mouth"
+        ],
+        "answer": "Point,to,your,mouth",
+        "explanation": "正确语序为：Point to your mouth.（指向你的嘴巴。）祈使句以动词原形开头，句首字母大写。"
+      }
+    ]
+  },
+  "exam": {
+    "title": "PEP三年级上册第1单元 Making friends 综合考试",
+    "total_score": 100,
+    "time_minutes": 60,
+    "questions": [
+      {
+        "id": 1,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 1,
+        "knowledge_point": "自我介绍与社交问候",
+        "question": "'My name is...' 可以用来做自我介绍。",
+        "options": [],
+        "answer": "对",
+        "explanation": "'My name is...' 和 'I'm...' 都可以用来做自我介绍，意思是'我的名字是……'。"
+      },
+      {
+        "id": 2,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "祈使句动作指令理解",
+        "question": "'Point to your ear.' 的意思是摸摸你的耳朵。",
+        "options": [],
+        "answer": "错",
+        "explanation": "'point to' 是指向的意思，不是摸(touch)。所以这句话的意思是'指向你的耳朵'。"
+      },
+      {
+        "id": 3,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 2,
+        "knowledge_point": "良好友谊行为表达",
+        "question": "'play together' 的意思是一起玩。",
+        "options": [],
+        "answer": "对",
+        "explanation": "'play' 是玩，'together' 是一起，合起来就是一起玩。"
+      },
+      {
+        "id": 4,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 3,
+        "knowledge_point": "身体部位词汇辨识",
+        "question": "'arm' 和 'hand' 是同一个身体部位。",
+        "options": [],
+        "answer": "错",
+        "explanation": "'arm' 是手臂，'hand' 是手，它们是不同的身体部位。"
+      },
+      {
+        "id": 5,
+        "type": "true_false",
+        "score": 2,
+        "difficulty": 3,
+        "knowledge_point": "良好友谊行为表达",
+        "question": "好朋友不需要互相帮助(help)和分享(share)。",
+        "options": [],
+        "answer": "错",
+        "explanation": "好朋友之间应该互相帮助、分享、倾听和微笑，这些都是良好的友谊行为。"
+      },
+      {
+        "id": 6,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 1,
+        "knowledge_point": "自我介绍与社交问候",
+        "question": "有人对你说 'Hi!'，你可以怎么回答？",
+        "options": [
+          "A. Hello!",
+          "B. Goodbye!",
+          "C. I'm a cat.",
+          "D. Point to your ear."
+        ],
+        "answer": "A. Hello!",
+        "explanation": "别人用 'Hi' 打招呼时，我们可以用 'Hello' 或 'Hi' 回应。"
+      },
+      {
+        "id": 7,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "身体部位词汇辨识",
+        "question": "Which one is NOT a body part? (哪一个不是身体部位？)",
+        "options": [
+          "A. eye",
+          "B. book",
+          "C. ear",
+          "D. mouth"
+        ],
+        "answer": "B. book",
+        "explanation": "book 是书，属于学习用品；eye(眼睛)、ear(耳朵)、mouth(嘴巴)都是身体部位。"
+      },
+      {
+        "id": 8,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "祈使句动作指令理解",
+        "question": "老师说 'Wave your hand.'，你应该怎么做？",
+        "options": [
+          "A. 闭上眼睛",
+          "B. 挥挥手",
+          "C. 指嘴巴",
+          "D. 拍拍手"
+        ],
+        "answer": "B. 挥挥手",
+        "explanation": "'wave' 是挥动，'hand' 是手，所以指令是挥挥手。"
+      },
+      {
+        "id": 9,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "良好友谊行为表达",
+        "question": "当你和朋友发生矛盾时，好朋友应该怎么做？",
+        "options": [
+          "A. Don't listen.",
+          "B. Smile and help.",
+          "C. Don't share.",
+          "D. Don't play together."
+        ],
+        "answer": "B. Smile and help.",
+        "explanation": "好朋友应该微笑(smile)并互相帮助(help)，而不是拒绝倾听、分享或一起玩耍。"
+      },
+      {
+        "id": 10,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "自我介绍与社交问候",
+        "question": "— Nice to meet you. — ________",
+        "options": [
+          "A. I'm fine.",
+          "B. Nice to meet you, too.",
+          "C. Wave your hand.",
+          "D. Point to your eye."
+        ],
+        "answer": "B. Nice to meet you, too.",
+        "explanation": "当别人说 'Nice to meet you.' 时，礼貌的回答是 'Nice to meet you, too.'（我也很高兴见到你。）"
+      },
+      {
+        "id": 11,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "身体部位词汇辨识",
+        "question": "我有两只眼睛和一张嘴巴。'眼睛'和'嘴巴'分别是：",
+        "options": [
+          "A. ear, mouth",
+          "B. eye, hand",
+          "C. eye, mouth",
+          "D. arm, ear"
+        ],
+        "answer": "C. eye, mouth",
+        "explanation": "eye 是眼睛，mouth 是嘴巴。ear 是耳朵，hand 是手，arm 是手臂。"
+      },
+      {
+        "id": 12,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "祈使句动作指令理解",
+        "question": "下面哪个指令是让你指向你的手臂？",
+        "options": [
+          "A. Point to your arm.",
+          "B. Wave your arm.",
+          "C. Point to your hand.",
+          "D. Wave your hand."
+        ],
+        "answer": "A. Point to your arm.",
+        "explanation": "'Point to' 是指向，'arm' 是手臂，所以 'Point to your arm.' 是指向你的手臂。"
+      },
+      {
+        "id": 13,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "良好友谊行为表达",
+        "question": "'Friends ___ and ___ each other.' 朋友们互相倾听和帮助。空格依次应填：",
+        "options": [
+          "A. listen; help",
+          "B. wave; point",
+          "C. eye; ear",
+          "D. hand; arm"
+        ],
+        "answer": "A. listen; help",
+        "explanation": "listen 是倾听，help 是帮助。这两个词描述了朋友之间的良好行为。"
+      },
+      {
+        "id": 14,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "自我介绍与社交问候",
+        "question": "下面哪组对话是正确的交友问候？",
+        "options": [
+          "A. — I'm Tom. — Point to your mouth.",
+          "B. — Hello! — Hi! I'm Lily.",
+          "C. — Nice to meet you. — Wave your hand.",
+          "D. — My name is Bob. — I have an ear."
+        ],
+        "answer": "B. — Hello! — Hi! I'm Lily.",
+        "explanation": "交友问候应该是相互打招呼和自我介绍，选项B是规范的问候对话。"
+      },
+      {
+        "id": 15,
+        "type": "choice",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "良好友谊行为表达",
+        "question": "关于交朋友(making friends)，下面哪种行为是不好的？",
+        "options": [
+          "A. Share toys with friends.",
+          "B. Help friends.",
+          "C. Don't listen to friends.",
+          "D. Smile at friends."
+        ],
+        "answer": "C. Don't listen to friends.",
+        "explanation": "不听朋友说话(Don't listen to friends)是不好的行为。好朋友应该 share(分享)、help(帮助)和 smile(微笑)。"
+      },
+      {
+        "id": 16,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "自我介绍与社交问候",
+        "question": "Nice to ___ you. (很高兴见到你，填写缺失的单词)",
+        "options": [],
+        "answer": "meet",
+        "explanation": "'Nice to meet you.' 是初次见面的标准问候语，meet 是遇见、见到的意思。"
+      },
+      {
+        "id": 17,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "身体部位词汇辨识",
+        "question": "I have two ___. (我有两只耳朵，填写 ear 的正确形式)",
+        "options": [],
+        "answer": "ears",
+        "explanation": "two 后面接可数名词复数，ear 的复数形式是 ears。"
+      },
+      {
+        "id": 18,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "祈使句动作指令理解",
+        "question": "___ to your eye. (指向你的眼睛，填写表示'指向'的英文单词)",
+        "options": [],
+        "answer": "point",
+        "explanation": "'point to' 是固定搭配，意思是'指向……'。填空题答案需全小写。"
+      },
+      {
+        "id": 19,
+        "type": "fill_blank_text",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "良好友谊行为表达",
+        "question": "Let's ___ together. (让我们一起玩吧，填写表示'玩'的英文单词)",
+        "options": [],
+        "answer": "play",
+        "explanation": "'play together' 是一起玩的意思。let's 后面接动词原形 play。"
+      },
+      {
+        "id": 20,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "自我介绍与社交问候",
+        "question": "请将下列英文交际用语与对应的中文意思连线配对。",
+        "options": [
+          "Hello",
+          "Nice to meet you",
+          "I'm Wu Binbin",
+          "Goodbye",
+          "再见",
+          "我是吴斌斌",
+          "很高兴见到你",
+          "你好"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "Hello 对应你好(4)，Nice to meet you 对应很高兴见到你(3)，I'm Wu Binbin 对应我是吴斌斌(2)，Goodbye 对应再见(1)。"
+      },
+      {
+        "id": 21,
+        "type": "matching",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "祈使句动作指令理解",
+        "question": "请将下列英文动作指令与对应的中文意思连线配对。",
+        "options": [
+          "Wave your hand",
+          "Point to your mouth",
+          "Clap your hands",
+          "Touch your ear",
+          "摸摸你的耳朵",
+          "拍拍你的手",
+          "指向你的嘴巴",
+          "挥挥你的手"
+        ],
+        "answer": "A-4,B-3,C-2,D-1",
+        "explanation": "Wave your hand 对应挥挥你的手(4)，Point to your mouth 对应指向你的嘴巴(3)，Clap your hands 对应拍拍你的手(2)，Touch your ear 对应摸摸你的耳朵(1)。"
+      },
+      {
+        "id": 22,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 2,
+        "knowledge_point": "自我介绍与社交问候",
+        "question": "将下列单词排列成一个正确的句子：",
+        "options": [
+          "meet",
+          "to",
+          "Nice",
+          "you"
+        ],
+        "answer": "Nice,to,meet,you",
+        "explanation": "正确语序为：Nice to meet you.（很高兴见到你。）句首单词首字母大写。"
+      },
+      {
+        "id": 23,
+        "type": "word_order",
+        "score": 5,
+        "difficulty": 3,
+        "knowledge_point": "祈使句动作指令理解",
+        "question": "将下列单词排列成一个正确的祈使句：",
+        "options": [
+          "your",
+          "Wave",
+          "hand"
+        ],
+        "answer": "Wave,your,hand",
+        "explanation": "正确语序为：Wave your hand.（挥挥你的手。）祈使句以动词原形 Wave 开头，句首字母大写。"
+      }
+    ]
+  },
+  "knowledge_summary": [
+    {
+      "point": "自我介绍与社交问候",
+      "core_concept": "掌握基本的英语打招呼和自我介绍用语，建立初步的跨文化交际意识。",
+      "key_formula": "句型公式：① I'm + 名字. / My name is + 名字. ② Hello! / Hi! ③ Nice to meet you. → Nice to meet you, too.",
+      "common_mistakes": [
+        "把 'I'm' 写成 'I is' 或 'I am is'。",
+        "忘记在 'Nice to meet you' 后加 'too' 来回应。",
+        "混淆 'meet' 和 'meat' 的拼写。"
+      ],
+      "tips": "记忆口诀：见面先说 Hi/Hello，介绍自己用 I'm，初次见面真高兴，Nice to meet you 记心中。"
+    },
+    {
+      "point": "身体部位词汇辨识",
+      "core_concept": "认读并理解常见身体部位的英文单词，能将英文单词与身体实际部位对应。",
+      "key_formula": "核心词汇：eye(眼睛), ear(耳朵), mouth(嘴巴), hand(手), arm(手臂)。单数变复数一般直接加 -s，如 eyes, ears。",
+      "common_mistakes": [
+        "混淆 ear(耳朵) 和 eye(眼睛) 的拼写和发音。",
+        "混淆 hand(手) 和 arm(手臂) 所指代的部位。",
+        "忘记复数加 s，例如 two eye (应为 two eyes)。"
+      ],
+      "tips": "可以用 TPR（全身反应法），边指自己的身体部位边大声说出英文单词，加深肌肉记忆。"
+    },
+    {
+      "point": "祈使句动作指令理解",
+      "core_concept": "听懂简单的祈使句指令，并能做出相应的肢体动作，理解动词与身体部位的搭配。",
+      "key_formula": "句型结构：动词原形 + 你的身体部位。例如：Wave your hand. / Point to your mouth. 常用动词：wave(挥动), point to(指向), clap(拍), touch(触摸)。",
+      "common_mistakes": [
+        "不理解 'point to' 是一个整体短语，漏掉 'to'。",
+        "混淆 wave(挥动) 和 clap(拍手) 的动作含义。",
+        "在祈使句句首错误地加上主语，如 You wave your hand。"
+      ],
+      "tips": "和同学一起玩 'Simon says' 游戏，一个人发指令，其他人做动作，在游戏中自然习得祈使句。"
+    },
+    {
+      "point": "良好友谊行为表达",
+      "core_concept": "理解并运用描述友谊积极行为的动词和短语，培养良好的社交品质。",
+      "key_formula": "核心词汇：share(分享), help(帮助), listen(倾听), smile(微笑), play together(一起玩)。",
+      "common_mistakes": [
+        "拼写错误，如把 share 拼成 shar，把 listen 拼成 lisen。",
+        "不理解这些词汇在交友语境中的具体含义。",
+        "误用词性，将动词当作名词使用。"
+      ],
+      "tips": "画一幅'好朋友树'，在每个苹果上写下一个代表好朋友的英文单词（如 share, help），通过视觉联想帮助记忆。"
+    }
+  ]
+}

@@ -41,13 +41,13 @@ AUDIO_ROOT = ROOT / "frontend" / "public" / "audio"
 # 保留原 manifest 的 (学科, 年级) 多样性。
 SPEAKER_MAP = {
     # 中文条目用的
-    "vivian":   "Cherry",   # 芊悦 - 阳光积极，低中年级主力
-    "serena":   "Serena",   # 苏瑶 - 温柔，高年级
-    "uncle_fu": "Maia",     # 四月 - 知性温柔，科学讲解
+    "vivian": "Cherry",  # 芊悦 - 阳光积极，低中年级主力
+    "serena": "Serena",  # 苏瑶 - 温柔，高年级
+    "uncle_fu": "Maia",  # 四月 - 知性温柔，科学讲解
     # 英文条目用的（Cherry/Serena 原生支持英文，中英混合也 OK）
-    "sohee":    "Cherry",   # 原低年级英语女声
-    "ryan":     "Cherry",   # 原中年级英语男声
-    "dylan":    "Serena",   # 原高年级英语男声
+    "sohee": "Cherry",  # 原低年级英语女声
+    "ryan": "Cherry",  # 原中年级英语男声
+    "dylan": "Serena",  # 原高年级英语男声
 }
 
 # 归一化 instruction 里的语速描述。manifest 里为低年级写了 "语速很慢"，
@@ -58,7 +58,10 @@ SPEED_REPLACEMENTS = [
     ("语速适中", "语速自然"),
     ("语速正常", "语速自然"),
     # 额外去掉低年级数学里会拖慢节奏的描述
-    ("，数字一个一个念清楚，遇到加减乘除稍微停顿一下，让小朋友能跟上", "，数字和运算符吐字清晰"),
+    (
+        "，数字一个一个念清楚，遇到加减乘除稍微停顿一下，让小朋友能跟上",
+        "，数字和运算符吐字清晰",
+    ),
     # 英文
     ("Read slowly and clearly", "Read clearly at a natural pace"),
     ("Read slowly", "Read at a natural pace"),
@@ -74,11 +77,12 @@ def normalize_instruction(ins: str | None) -> str | None:
         ins = ins.replace(old, new)
     return ins
 
+
 # language mapping
 LANG_MAP = {
     "Chinese": "Chinese",
     "English": "English",
-    "Auto":    "Auto",
+    "Auto": "Auto",
 }
 
 _FFMPEG = shutil.which("ffmpeg")
@@ -110,18 +114,28 @@ def write_mp3(path: Path, audio, sr: int):
     try:
         sf.write(tmp_path, audio, sr, format="WAV")
         subprocess.run(
-            [_FFMPEG, "-y", "-loglevel", "error",
-             "-i", tmp_path,
-             "-codec:a", "libmp3lame", "-qscale:a", "5",
-             str(path)],
+            [
+                _FFMPEG,
+                "-y",
+                "-loglevel",
+                "error",
+                "-i",
+                tmp_path,
+                "-codec:a",
+                "libmp3lame",
+                "-qscale:a",
+                "5",
+                str(path),
+            ],
             check=True,
         )
     finally:
         os.unlink(tmp_path)
 
 
-def synth_one(item, audio_root: Path, model: str, api_key: str,
-              max_retries: int = 6) -> tuple[bool, str]:
+def synth_one(
+    item, audio_root: Path, model: str, api_key: str, max_retries: int = 6
+) -> tuple[bool, str]:
     """合成一条；返回 (成功与否, 错误信息)"""
     out_path = audio_root / item["audio_rel"]
     if out_path.exists():
@@ -151,7 +165,7 @@ def synth_one(item, audio_root: Path, model: str, api_key: str,
                 last_err = f"{resp.status_code} {resp.message}"
                 if resp.status_code in (429, 500, 502, 503, 504):
                     # 指数退避 + 抖动
-                    time.sleep(min(30, 2 ** attempt) + (attempt * 0.3))
+                    time.sleep(min(30, 2**attempt) + (attempt * 0.3))
                     continue
                 return False, last_err
 
@@ -177,11 +191,17 @@ def main():
     p.add_argument("--shard", default="0/1")
     p.add_argument("--subject", default="")
     p.add_argument("--field", default="")
-    p.add_argument("--endpoint", default="intl",
-                   choices=["intl", "beijing"],
-                   help="intl = 新加坡国际版，beijing = 北京")
-    p.add_argument("--language", default="all",
-                   help="只跑指定语言（默认 all，传 Chinese/English 过滤）")
+    p.add_argument(
+        "--endpoint",
+        default="intl",
+        choices=["intl", "beijing"],
+        help="intl = 新加坡国际版，beijing = 北京",
+    )
+    p.add_argument(
+        "--language",
+        default="all",
+        help="只跑指定语言（默认 all，传 Chinese/English 过滤）",
+    )
     p.add_argument("--dry-run", action="store_true")
     args = p.parse_args()
 
@@ -213,7 +233,9 @@ def main():
     if args.limit:
         pending = pending[: args.limit]
 
-    print(f"📊 总量: {len(manifest['items'])}  本次范围: {len(items)}  已跳过: {skipped}  待生成: {len(pending)}")
+    print(
+        f"📊 总量: {len(manifest['items'])}  本次范围: {len(items)}  已跳过: {skipped}  待生成: {len(pending)}"
+    )
     print(f"🌐 endpoint: {dashscope.base_http_api_url}")
     print(f"🎤 model: {args.model}   workers: {args.workers}")
     if args.dry_run or not pending:
@@ -252,8 +274,10 @@ def main():
                         flush=True,
                     )
 
-    print(f"\n🎉 完成。成功 {total - fail_final[0]} 失败 {fail_final[0]}，"
-          f"用时 {(time.time()-t0)/60:.1f} min")
+    print(
+        f"\n🎉 完成。成功 {total - fail_final[0]} 失败 {fail_final[0]}，"
+        f"用时 {(time.time()-t0)/60:.1f} min"
+    )
 
 
 # 简单共享计数（放外面以便 closure）
